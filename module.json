@@ -1,7 +1,7 @@
 {
   "id": "dnd5e-it",
   "title": "Traduzione D&D 5E ITA",
-  "description": "Traduzione in Italiano D&D 5E",
+  "description": "Traduzione in Italiano D&D 5E per Foundry VTT",
   "version": "5.1.2",
   "compatibility": {
     "minimum": "12",
