@@ -5307,11 +5307,11 @@
       "Name": "Consenti Riposi Individuali"
     },
     "AllowSummoning": {
-      "Hint": "Permette ai giocatori di usare le abilità di evocazione per evocare creture. I giocatori devono anche avere il permesso base 'Crea token' affinché questa funzionalità funzioni.",
+      "Hint": "Permette ai giocatori di usare le abilità di evocazione per evocare creture. I giocatori devono anche avere il permesso base Crea Token.",
       "Name": "Consenti Evocazione"
     },
     "AllowTransformation": {
-      "Hint": "Permette ai giocatori di trasformare i propri personaggi. I giocatori devono anche avere il permesso base 'Crea Personaggio' affinché questa funzionalità funzioni.",
+      "Hint": "Permette ai giocatori di trasformare i propri personaggi. I giocatori devono anche avere il permesso base Crea Personaggio e Crea Token.",
       "Name": "Consenti Trasformazione"
     }
   },
