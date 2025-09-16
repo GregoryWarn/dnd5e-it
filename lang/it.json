@@ -357,7 +357,8 @@
       },
       "Hint": "Permetti al giocatore di aumentare uno o più punteggi di Caratteristica oppure di scegliere un talento opzionale.",
       "Journal": {
-        "DescriptionEpic": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato. {recommendation} è raccomandato.</p>",
+        "DescriptionEpic": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato.",
+        "DescriptionEpicRecommendation": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato. {recommendation} è raccomandato.</p>",
         "DescriptionLegacy": "<p>Quando raggiungi il {firstLevelOrdinal} livello, e nuovamente al {otherLevelsOrdinal} livello, puoi aumentare di 2 un punteggio di Caratteristica a tua scelta, oppure puoi aumentare di 1 due punteggi di Caratteristica a tua scelta. Come di consueto, non puoi aumentare un punteggio di Caratteristica oltre {maxAbilityScore} utilizzando questa funzione.</p><p>Utilizzando la regola dei talenti opzionali, puoi rinunciare a questa funzione per scegliere al suo posto un talento a tua scelta.</p>",
         "DescriptionModern": "<p>Ottieni il talento di miglioramento del punteggio di Caratteristica o un altro talento di tua scelta per il quale sei idoneo. Ottieni nuovamente questa funzione ai livelli {class} {otherLevels}.</p>",
         "Name": "Miglioramento del Punteggio di Caratteristica"
@@ -1540,7 +1541,8 @@
       "SlotLevel": "Livello Slot"
     },
     "Target": {
-      "ThisItem": "Questo Oggetto"
+      "ThisItem": "Questo Oggetto",
+      "UnknownItem": "un oggetto sconosciuto"
     },
     "Type": {
       "Action": {
@@ -3655,6 +3657,7 @@
 "DND5E.SpellAbility": "Caratteristica Incantesimo",
 "DND5E.SpellAbilitySet": "Imposta come Caratteristica Incantesimo Primaria",
 "DND5E.SpellAdd": "Aggiungi Incantesimo",
+"DND5E.SpellAttackBonus": "Bonus Attacco Incantesimo",
 "DND5E.SpellCantrip": "Trucchetto",
 "DND5E.SpellCastConsume": "Consumare Slot Incantesimo?",
 "DND5E.SpellCastNoSlots": "Non hai slot di livello {level} disponibili per lanciare {name}",
