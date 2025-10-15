@@ -188,7 +188,11 @@
       "Header": "Azioni Bonus",
       "Label": "Azione Bonus"
     },
-    "Crew": {
+   "Crew": {
+      "Counted": {
+        "one": "{number} Azione Equipaggio",
+        "other": "{number} Azioni Equipaggio"
+      },
       "Header": "Azioni Equipaggio",
       "Label": "Azione Equipaggio"
     },
@@ -1467,6 +1471,9 @@
       },
       "Wand": {
         "Label": "Bacchetta"
+        },
+        "Wondrous": {
+        "Label": "Oggetto meraviglioso"
       }
     }
   },
@@ -2714,7 +2721,10 @@
     "other": "{number} punti ferita"
    },
   "DT": {
-    "Abbr": "Soglia Danno" 
+    "abbr": "Soglia danno"
+  },
+  "Other": {
+    "label": "Altre Opzioni"
   }
 },
 
@@ -3139,6 +3149,7 @@
 "DND5E.PropertyBase": "Base",
 "DND5E.PropertyTotal": "Totale",
 "DND5E.Public": "Pubblico",
+"DND5E.Quality": "Qualità",
 "DND5E.Quantity": "Quantità",
 "DND5E.QuantityAbbr": "Qtà",
 "DND5E.QuantityFormula": "Formula Quantità",
@@ -3407,21 +3418,39 @@
     "Rule": "Regola"
   }
 },
+
+"DND5E.MOVEMENT": {
+  "Action": {
+    "Configure": "Configura Velocità Movimento"
+  },
+  "FIELDS": {
+    "ignoredDifficultTerrain": {
+      "label": "Ignorato Terreno Difficile"
+    },
+    "special": {
+      "label": "Movimento speciale"
+    },
+    "speeds": {
+      "label": "Velocità Movimento"
+    },
+    "units": {
+      "label": "Unità"
+    }
+  },
+  "Hover": "Fluttuare",
+  "Type": {
+    "Burrow": "Scavare",
+    "Climb": "Scalare",
+    "Fly": "Volare",
+    "Swim": "Nuotare",
+    "Walk": "Camminare"
+  }
+},
+
 "DND5E.Movement": "Movimento",
-"DND5E.MovementConfig": "Configura Velocità di Movimento",
-"DND5E.MovementConfigHint": "Configura la velocità di movimento e gli attributi di movimento speciali.",
-"DND5E.MovementWalk": "Camminare",
-"DND5E.MovementBurrow": "Scavare",
-"DND5E.MovementClimb": "Arrampicarsi",
-"DND5E.MovementHover": "Fluttuare",
-"DND5E.MovementFly": "Volare",
-"DND5E.MovementSwim": "Nuotare",
 "DND5E.MovementLand": "Terra",
 "DND5E.MovementWater": "Acqua",
 "DND5E.MovementAir": "Aria",
-"DND5E.MovementSpeeds": "Velocità di Movimento",
-"DND5E.MovementUnits": "Unità",
-"DND5E.MovementIgnoredDifficultTerrain": "Terreno Difficile Ignorato",
 
 "DND5E.SAVE": {
   "Title": {
@@ -4662,6 +4691,11 @@
         "Label": "Anno"
       }
     },
+    "TRAVEL": {
+    "Day": "per giorno",
+    "Round": "per round",
+    "UnitLabel": "{unit} ({resolution})"
+    },
     "VOLUME": {
       "Label": "Unità di Volume",
       "CubicFoot": {
@@ -4873,14 +4907,116 @@
 "DND5E.Value": "Valore",
 
 "DND5E.VEHICLE": {
+   "Action": {
+    "Create": {
+      "Equipment": "Crea Equipaggiamento",
+      "Feature": "Crea Privilegio",
+      "Weapon": "Crea Arma"
+    },
+    "Crew": {
+      "Decrease": "Diminuisci",
+      "Increase": "Aumenta"
+    },
+    "Drop": {
+      "Animal": "Rilasciare animale da tiro",
+      "Crew": "Rilascia Equipaggio",
+      "Passengers": "Rilascia Passeggeri"
+    },
+    "Uncrew": "Senza equipaggio"
+  },
+  "Actions": {
+    "Ordinal": {
+      "one": "Azione {n}",
+      "two": "Azione {n}",
+      "few": "Azione {n}",
+      "other": "Azione {n}"
+    }
+  },
+  "Activation": {
+    "Crew": {
+      "label": "Azione Equipaggio"
+    }
+  },
+  "Crew": {
+    "Assigned": "Assegnato",
+    "Label": "Equipaggio",
+    "Passengers": "Passeggeri",
+    "Unassigned": "Non Assegnato"
+  },
+  "FIELDS": {
+    "attributes": {
+      "actions": {
+        "label": "Azioni",
+        "max": {
+          "hint": "Azioni intraprese con un equipaggio completo",
+          "label": "Massimo Azioni"
+        },
+        "spent": {
+          "label": "Azioni Spese"
+        },
+        "stations": {
+          "label": "Stazioni di azione"
+        },
+        "thresholds": {
+          "full": {
+            "label": "Equipaggio completo"
+          },
+          "mid": {
+            "label": "Equipaggio parziale"
+          },
+          "min": {
+            "label": "Equipaggio minimo"
+          },
+          "label": "Soglie"
+        }
+      },
+      "capacity": {
+        "cargo": {
+          "value": {
+            "label": "Cargo"
+          }
+        },
+        "label": "Capacità"
+      }
+    },
+    "crew": {
+      "max": {
+        "label": "Equipaggio"
+      }
+    },
+    "passengers": {
+      "max": {
+        "label": "Passeggeri"
+      }
+    },
+    "traits": {
+      "beam": {
+        "value": {
+          "label": "Trave"
+        }
+      },
+      "keel": {
+        "value": {
+          "label": "Chiglia"
+        }
+      }
+    }
+  },
+  "Mishap": {
+    "label": "Incidente",
+    "Threshold": {
+      "abbr": "Soglia Incidente",
+      "label": "Soglia Incidente"
+    }
+  },
   "MOUNTABLE": {
     "FIELDS": {
       "cover": {
         "label": "Copertura",
         "hint": "Copertura fornita all'equipaggio che utilizza questo equipaggiamento."
       },
-      "crewed": {
-        "label": "Con Equipaggio"
+      "crew": {
+        "label": "Equipaggio"
       },
       "hp": {
         "label": "Punti Ferita",
@@ -4903,41 +5039,37 @@
         },
         "value": {
           "label": "Velocità"
-        }
       }
     }
   }
 },
-
+"Option": {
+    "Abilities": "Mostra abilità",
+    "Initiative": "Mostra Iniziativa",
+    "Quality": "Mostra Qualita"
+  },
+  "Tabs": {
+    "Cargo": "Cargo",
+    "CrewPassengers": "Equipaggio & Passeggeri"
+  },
+  "Type": {
+    "Air": {
+      "label": "Veicolo aereo"
+    },
+    "label": "Tipo Veicolo",
+    "Land": {
+      "label": "Veicolo terra"
+    },
+    "Space": {
+      "label": "Veicolo spazi",
+    },
+    "Water": {
+      "label": "Veicolo acqua"
+    }
+  }
+},
+  
 "DND5E.Vehicle": "Veicolo",
-"DND5E.VehicleActions": "Azioni",
-"DND5E.VehicleActionsHint": "Azioni compiute con equipaggio completo",
-"DND5E.VehicleActionMax": "Azioni Massime",
-"DND5E.VehicleActionStations": "Stazioni di Azione",
-"DND5E.VehicleActionThresholds": "Soglie di Azione",
-"DND5E.VehicleActionThresholdsFull": "Equipaggio Completo",
-"DND5E.VehicleActionThresholdsMid": "Equipaggio Parziale",
-"DND5E.VehicleActionThresholdsMin": "Equipaggio Minimo",
-"DND5E.VehicleCargo": "Carico",
-"DND5E.VehicleCargoCapacity": "Capacità di Carico",
-"DND5E.VehicleCargoCrew": "Carico e Equipaggio",
-"DND5E.VehicleCreatureCapacity": "Capacità di Creature",
-"DND5E.VehicleCrew": "Equipaggio",
-"DND5E.VehicleCrewPassengers": "Equipaggio e Passeggeri",
-"DND5E.VehicleCrewed": "Con Equipaggio",
-"DND5E.VehicleCrewAction": "Azione dell'Equipaggio",
-"DND5E.VehicleEquipment": "Equipaggiamento del Veicolo",
-"DND5E.VehicleMishap": "Incidente",
-"DND5E.VehicleMishapThreshold": "Soglia dell'Incidente",
-"DND5E.VehiclePassengers": "Passeggeri",
-"DND5E.VehiclePassengerName": "Nome o Tipo del Passeggero",
-"DND5E.VehiclePassengerQuantity": "Quantità di Passeggeri",
-"DND5E.VehicleType": "Tipo di Veicolo",
-"DND5E.VehicleTypeAir": "Veicolo Aereo",
-"DND5E.VehicleTypeLand": "Veicolo Terrestre",
-"DND5E.VehicleTypeSpace": "Veicolo Spaziale",
-"DND5E.VehicleTypeWater": "Veicolo Acquatico",
-"DND5E.VehicleUncrewed": "Senza Equipaggio",
 "DND5E.Versatile": "Versatile",
 "DND5E.VersatileDamage": "Danno Versatile",
 "DND5E.VsDC": "vs CA.",
@@ -5016,6 +5148,7 @@
   "DC": "CD {dc} {check}",
   "DCPassiveShort": "CD {dc} {check} passiva ",
   "DCPassiveLong": "punteggio passivo {check} di {dc} o superiore",
+  "ItemActivity": "{item} ({activity})",
   "NoActorWarning": "Nessun personaggio selezionato o assegnato trovato per eseguire questo tiro.",
   "PassiveShort": "{check} passiva",
   "PassiveLong": "punteggio passivo {check}",
