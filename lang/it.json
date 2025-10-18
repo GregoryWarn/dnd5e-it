@@ -3438,6 +3438,7 @@
     }
   },
   "Hover": "Fluttuare",
+  "Speed": "Velocità Combattimento",
   "Type": {
     "Burrow": "Scavare",
     "Climb": "Scalare",
@@ -3448,9 +3449,6 @@
 },
 
 "DND5E.Movement": "Movimento",
-"DND5E.MovementLand": "Terra",
-"DND5E.MovementWater": "Acqua",
-"DND5E.MovementAir": "Aria",
 
 "DND5E.SAVE": {
   "Title": {
@@ -4597,15 +4595,34 @@
   }
 },
 
-  "DND5E.Travel": {
+"DND5E.TRAVEL": {
+  "FIELDS": {
+    "pace": {
+      "label": "Andatura"
+    },
+    "time": {
+      "hint": "Numero di ore di viaggio al giorno utilizzate per convertire la velocità di viaggio in andatura.",
+      "label": "Ore al Giorno"
+    }
+  },
   "Label": "Andatura Viaggio",
   "Pace": {
     "Fast": "Rapida",
     "Normal": "Normale",
     "Slow": "Lenta"
+  },
+  "Per": {
+    "Day": "Al Giorno",
+    "Hour": "All'ora"
+  },
+  "Speed": "Velocità Viaggio",
+  "Type": {
+    "Air": "Aria",
+    "Land": "Terra",
+    "Water": "Acqua"
   }
 },
-
+  
   "DND5E.Treasure": {
     "Categories": {
       "Any": "Qualsiasi",
@@ -4633,8 +4650,7 @@
   
   "DND5E.UNITS": {
     "DISTANCE": {
-      "Label": "Unità di Distanza",
-      "Foot": {
+        "Foot": {
         "Label": "Piedi",
         "Abbreviation": "ft"
       },
@@ -4642,6 +4658,7 @@
         "Label": "Chilometri",
         "Abbreviation": "km"
       },
+      "Label": "Unità di Distanza",
       "Meter": {
         "Label": "Metri",
         "Abbreviation": "m"
@@ -4692,10 +4709,18 @@
       }
     },
     "TRAVEL": {
-    "Day": "per giorno",
-    "Round": "per round",
-    "UnitLabel": "{unit} ({resolution})"
+    "Kilometer": {
+      "AbbreviationHour": "km/h",
+      "AbbreviationDay": "km/g",
+      "Label": "Kilometri"
     },
+    "Label": "Travel Unit",
+    "Mile": {
+      "AbbreviationDay": "mi/g",
+      "AbbreviationHour": "mph",
+      "Label": "Miglia"
+    }
+  },
     "VOLUME": {
       "Label": "Unità di Volume",
       "CubicFoot": {
