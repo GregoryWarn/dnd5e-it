@@ -2715,6 +2715,7 @@
       "Label": "Classe",
       "ArcaneShot": "Colpo Arcano",
       "ArtificerInfusion": "Infusione dell'Artefice",
+      "ArtificerPlan": "Piano dell'Artefice",
       "ChannelDivinity": "Incanalare Divinità",
       "DefensiveTactic": "Tattica Difensiva",
       "EldritchInvocation": "Supplica Occulta",
@@ -2762,17 +2763,19 @@
   "DND5E.Loot.Junk": "Robaccia",
   "DND5E.Loot.Material": "Materiale",
   "DND5E.Loot.Resource": "Risorsa",
+  "DND5E.Loot.Trade": "Bene commerciale",
   "DND5E.Loot.Treasure": "Tesoro",
   "DND5E.Flaws": "Difetti",
   "DND5E.FormulaCannotContainDiceError": "La formula {name} non può contenere espressioni con dadi.",
   
-  "DND5E.FORWARD": {
-    "Title": "Avanzamento",
+  "DND5E.FORWARD": { 
     "FIELDS": {
       "activity": {
         "label": "Attività Innescata"
       }
     },
+    "Hint": "Avvia un'altra attività su questo articolo con dettagli di consumo e ridimensionamento diversi.",
+    "Title": "Avanzamento",
     "Warning": {
       "NoActivity": "L'attività collegata deve essere configurata prima che l'attività di Avanzamento possa essere utilizzata."
     }
@@ -2878,7 +2881,13 @@
 "DND5E.Group": {
   "Action": {
     "ChangePace": "Cambia Andatura",
+    "Inventory": {
+      "Group": "Mostra Inventario Gruppo",
+      "Vehicle": "Mostra Inventario Veicolo"
+    },
     "Remove": "Rimuovi Membro",
+    "SetPrimaryVehicle": "Imposta veicolo primario",
+    "UnsetPrimaryVehicle": "Veicolo primario non impostato",
     "View": "Visualizza Membro"
   },
   "Config": {
@@ -2908,11 +2917,17 @@
   "TypeGeneric": "Gruppo",
   "TypeParty": "Gruppo",
   "Vehicle": {
-    "one": "Veicolo",
-    "other": "Veicoli"
+    "Count": {
+      "one": "Veicolo",
+      "other": "Veicoli"
+    },
+    "Primary": {
+      "label": "Veicolo Primario"
+    }
   },
   "Warning": {
-    "PhysicalItemOnly": "Sono supportati solo gli elementi fisici."
+    "PhysicalItemOnly": "Sono supportati solo gli elementi fisici.",
+    "PlaceMembers": "Errore posizionamento token nella scena."
   }
 },
 "DND5E.Habitat": {
@@ -2944,7 +2959,6 @@
 "DND5E.HalfProficient": "Mezza Competenza",
 
 "DND5E.HEAL": {
-  "Title": "Guarire",
   "FIELDS": {
     "healing": {
       "label": "Guarigione",
@@ -2991,7 +3005,9 @@
         "hint": "Tipo di guarigione inflitta o multiple per l'utente da selezionare."
       }
     }
-  }
+  },
+  "Hint": "Guarisci una creatura",
+  "Title": "Guarire"
 },
 
 "DND5E.Healing": "Guarigione",
@@ -3282,6 +3298,7 @@
   },
   "Label": "Resistenza Leggendaria",
   "LabelPl": "Resistenze Leggendarie",
+  "LairUses": "{normal}/Giorno, o {lair}/Giorno in Tana",
   "Max": "Massime Resistenze Leggendarie",
   "Ordinal": {
     "one": "{n}a Resistenza Leggendaria",
@@ -3346,8 +3363,22 @@
 "DND5E.Notes": "Note",
 
 "DND5E.NPC": {
-  "Label": "PNG",
+  "ActionCostCounted": {
+    "other": "Costa {number} Azioni"
+  },
   "FIELDS": {
+    "attributes": {
+      "price": {
+        "denomination": {
+          "label": "Denominazione"
+        },
+        "hint": "Il prezzo di ingaggio giornaliero o il prezzo di acquisto del bestiame.",
+        "label": "Costo",
+        "value": {
+          "label": "Quantità"
+        }
+      }
+    },
     "traits": {
       "important": {
         "hint": "I PNG importanti tracciano i salvataggi per la morte, i dadi vita e la lealtà (se abilitato). Qualsiasi PNG con livelli di classe è considerato importante indipendentemente da questa impostazione.",
@@ -3355,10 +3386,12 @@
       }
     }
   },
+  "Label": "PNG",
   "SECTIONS": {
     "Actions": "Azioni",
     "BonusActions": "Azioni Bonus",
     "LegendaryActions": "Azioni Leggendarie",
+    "MythicActions": "Azioni Mitiche",
     "Reactions": "Reazioni",
     "Traits": "Tratti"
   }
@@ -3514,9 +3547,12 @@
       "Nonmagical": "Non Magico",
       "Plants": "Piante o Sottobosco",
       "Rocks": "Macerie o Rocce",
-      "Liquid": "Liquido Superficiale",
+      "Liquid": "Liquido poco profondo",
+      "Mud": "Fango denso",
+      "Sand": "Sabbie mobili",
       "Slope": "Pendio Ripido",
-      "Snow": "Neve Alta"
+      "Snow": "Neve Alta",
+      "Webs": "Ragnatele appiccicose"
     }
   },
   "ROTATEAREA": {
@@ -3708,6 +3744,9 @@
     "Configure": "Configura Velocità Movimento"
   },
   "FIELDS": {
+    "bonus": {
+      "label": "Bonus Movimento"
+    },
     "ignoredDifficultTerrain": {
       "label": "Ignorato Terreno Difficile"
     },
@@ -3727,6 +3766,7 @@
     "Burrow": "Scavare",
     "Climb": "Scalare",
     "Fly": "Volare",
+    "Speed": "Velocità",
     "Swim": "Nuotare",
     "Walk": "Camminare"
   }
@@ -3735,10 +3775,6 @@
 "DND5E.Movement": "Movimento",
 
 "DND5E.SAVE": {
-  "Title": {
-    "one": "Tiro Salvezza",
-    "other": "Tiri Salvezza"
-  },
   "FIELDS": {
     "damage": {
       "label": "Danno Salvezza",
@@ -3781,7 +3817,12 @@
       }
     }
   },
-  "OnSave": "Alla Salvezza"
+  "Hint": "Richiedi un tiro salvezza con la possibilità di tirare i danni.",
+  "OnSave": "Su Salvezza",
+  "Title": {
+    "one": "Tiro Salvezza",
+    "other": "Tiri Salvezza"
+  }
 },
 
 "DND5E.SaveBonus": "Bonus al Tiro Salvezza",
@@ -3899,6 +3940,7 @@
 "DND5E.SkillSte": "Furtività",
 "DND5E.SkillSur": "Sopravvivenza",
 "DND5E.SkillRoll": "Tiro Prova {ability} ({skill})",
+"DND5E.SkillTitle": "{ability} ({skill})",
 "DND5E.SkillPromptTitle": "Prova {ability} ({skill})",
 "DND5E.SkillConfigureTitle": "Configura {skill}",
 "DND5E.SkillConfigure": "Configura Abilità",
@@ -4124,13 +4166,16 @@
     "Tool": "Scegli Strumento",
     "Weapon": "Scegli Arma"
   },
+  "ChooseList": "<em>Scegli {prefixes}:</em> {choices}",
+  "Currency": "Valuta",
   "DropHint": "Trascina l'oggetto qui per collegarlo",
-  "IfProficient": "Se Proficiente",
+  "IfProficient": "Se Competente",
   "Operator": {
     "AND": "Tutti i…",
     "OR": "Uno di…"
   },
-  "RequireProficiency": "Richiede Proficienza",
+  "Prefixes":  "abcdefghijklmnopqrstuvwxyz",
+  "RequireProficiency": "Richiede Competenza",
   "SpecificItem": "Oggetto Specifico",
   "Warning": {
     "Depth": "Sono consentiti solo tre livelli di profondità nell'equipaggiamento iniziale.",
@@ -4150,8 +4195,7 @@
   "DND5E.Subtype": "Sottotipo",
   "DND5E.Summary": "Riepilogo",
   
-  "DND5E.SUMMON": {
-    "Title": "Evocazione",
+  "DND5E.SUMMON": {    
     "FIELDS": {
       "bonuses": {
         "ac": {
@@ -4196,9 +4240,13 @@
           "label": "Attacchi Corrispondenti",
           "hint": "Modifica i valori per colpire sugli attacchi della creatura evocata per corrispondere a quelli dell'evocatore."
         },
+        "disposition": {
+        "label": "Abbina Disposizione",
+        "hint": "Modifica la disposizione della creatura evocata per adattarla a quella dell'evocatore."
+        },
         "proficiency": {
-          "label": "Proficienza Corrispondente",
-          "hint": "Modifica la proficienza della creatura evocata per corrispondere a quella dell'evocatore."
+          "label": "Competenza Corrispondente",
+          "hint": "Modifica la competenza della creatura evocata per corrispondere a quella dell'evocatore."
         },
         "saves": {
           "label": "Salvataggi Corrispondenti",
@@ -4257,11 +4305,6 @@
         }
       }
     },
-    "SECTIONS": {
-      "Changes": "Modifiche",
-      "Profiles": "Profili",
-      "Summoning": "Evocazione"
-    },
     "Action": {
       "Place": "Posiziona Evocazione",
       "Summon": "Evoca",
@@ -4271,6 +4314,7 @@
       "Label": "Modifiche Creatura",
       "Hint": "Modifiche che verranno fatte alla creatura evocata. Qualsiasi riferimento @ usato nelle seguenti formule si baserà sulle statistiche dell'evocatore. Le statistiche delle creature evocate possono essere referenziate usando @summon (es. @summon.attributes.hd.max per fare riferimento al numero di dadi vita della creatura)."
     },
+    "Hint": "Evoca una nuova creatura sulla scena.",
     "ItemChanges": {
       "Label": "Modifiche Oggetti",
       "Hint": "Modifiche fatte agli oggetti sulla creatura evocata."
@@ -4286,6 +4330,12 @@
       "Empty": "Clicca sul pulsante <i class=\"fas fa-plus\"></i> sopra per creare un profilo.",
       "EmptyDrop": "Clicca sul pulsante <i class=\"fas fa-plus\"></i> sopra per creare un profilo o trascina una creatura da evocare qui."
     },
+    "SECTIONS": {
+      "Changes": "Modifiche",
+      "Profiles": "Profili",
+      "Summoning": "Evocazione"
+    },
+    "Title": "Evocazione",
     "Warning": {
       "NoOwnership": "Devi avere la proprietà di '{actor}' per poterlo evocare.",
       "NoProfile": "Impossibile trovare il profilo di evocazione {profileId} su '{item}'.",
@@ -4560,23 +4610,6 @@
   "Selected": "Selezionato",
   "Targeted": "Targettato"
 },
-"DND5E.TokenRings": {
-  "BackgroundColor": "Colore di Sfondo",
-  "Effects": {
-    "Label": "Effetti",
-    "BackgroundWave": "Ondata di Sfondo",
-    "RingGradient": "Gradiente dell'Anello",
-    "RingPulse": "Pulsazione dell'Anello"
-  },
-  "Enabled": "Usa Anello Dinamico",
-  "RingColor": "Colore dell'Anello",
-  "ScaleCorrection": "Correzione della Scala",
-  "Subject": {
-    "Label": "Percorso del Soggetto",
-    "Hint": "Specifica esplicitamente un percorso per l'immagine sopra l'anello dinamico del token. Se non fornito, l'immagine del soggetto sarà quella del normale token."
-  },
-  "Title": "Anello Dinamico"
-},
 "DND5E.ToggleDescription": "Attiva/Disattiva Descrizione",
   
 "DND5E.TOOL": {
@@ -4718,6 +4751,7 @@
       }
     }
   },
+  "Hint": "Cambia un personaggio usando le statistiche di un altro.",
   "Preset": {
     "Appearance": {
       "Label": "Solo Aspetto"
@@ -4856,6 +4890,9 @@
       "Spells": {
         "Label": "Incantesimi"
       },
+      "TempHP": {
+        "Label": "PF Temporanei"
+      },
       "Vision": {
         "Label": "Visione"
       }
@@ -4898,6 +4935,10 @@
   "Per": {
     "Day": "Al Giorno",
     "Hour": "All'ora"
+  },
+  "Slowed": {
+    "Group": "L'andatura del gruppo rallenta perché un membro ha la velocità ridotta della metà o meno.",
+    "Member": "Questo membro del gruppo sta rallentando il resto del gruppo."
   },
   "Speed": "Velocità Viaggio",
   "Type": {
@@ -5189,7 +5230,6 @@
 },
 
 "DND5E.UTILITY": {
-  "Title": "Utilizzo",
   "FIELDS": {
     "roll": {
       "label": "Tiro",
@@ -5210,7 +5250,9 @@
         "hint": "Mostra il pulsante di tiro nella chat per tutti i giocatori."
       }
     }
-  }
+  },
+  "Hint": "Effettua un tiro arbitrario o indica che è stata eseguita un'altra azione non rappresentata da altri tipi di attività.",
+  "Title": "Utilizzo"
 },
 
 "DND5E.Value": "Valore",
@@ -5657,7 +5699,10 @@
   "AUTOMATION": {
     "Movement": {
       "Name": "Disabilita Automazione Movimento",
-      "Hint": "Non applicare penalità al movimento su terreno difficile o impedire alle creature di muoversi l'una attraverso l'altra secondo le regole."
+      "Hint": "Configura la quantità di automazione dei movimenti utilizzata dal sistema: automazione completa, incluso il blocco dei token, automazione parziale solo per terreni difficili o completamente disattivata.",
+      "Full": "Totale",
+      "NoBlocking": "Parziale",
+      "None": "Nessuno"
     }
   },
   "BLOODIED": {
