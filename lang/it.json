@@ -849,10 +849,15 @@
   "DND5E.AC": "CA",
   
   "DND5E.ATTACK": {
-    "Title": {
-      "one": "Attacco",
-      "other": "Attacchi"
-    },
+    "Attack": {
+    "mwak": "Attacco in Mischia",
+    "rwak": "Attacco a Distanza"
+  },
+  "Classification": {
+    "Spell": "Incantesimo",
+    "Unarmed": "Non Armato",
+    "Weapon": "Arma"
+  },
     "FIELDS": {
       "attack": {
         "label": "Dettagli Attacco",
@@ -904,19 +909,11 @@
         }
       }
     },
-    "Attack": {
-      "mwak": "Attacco Corpo a Corpo",
-      "rwak": "Attacco a Distanza"
-    },
-    "Classification": {
-      "Spell": "Incantesimo",
-      "Unarmed": "Non Armato",
-      "Weapon": "Arma"
-    },
     "Formatted": {
       "2014": "{type} {classification} Attacco",
       "2024": "{type} Tiro di Attacco"
     },
+    "Hint": "Effettua un tiro per colpire e tira i danni.",
     "Mode": {
       "Label": "Modalità di Attacco",
       "Offhand": "Mano Secondaria",
@@ -926,15 +923,19 @@
       "ThrownOffhand": "Lancio con Mano Secondaria",
       "TwoHanded": "Con Due Mani"
     },
+    "Title": {
+    "one": "Attacco",
+    "other": "Attacchi"
+    },
     "Type": {
-      "Melee": "Corpo a Corpo",
+      "Melee": "In Mischia",
       "Ranged": "A Distanza"
     },
     "Warning": {
       "NoQuantity": "Tentativo di attaccare con un'arma con quantità zero."
     },
     "Weapon": {
-      "Melee": "Arma Corpo a Corpo",
+      "Melee": "Arma da Mischia",
       "Ranged": "Arma a Distanza"
     }
   },
@@ -1094,7 +1095,229 @@
     }
   }
 },
-  
+
+"DND5E.CALENDAR": {
+  "Action": {
+    "AdvanceTime": "Avanza di {amount}",
+    "OpenCharacterSheet": "Apri Scheda Personaggio",
+    "OpenPartySheet": "Apri Scheda del Gruppo",
+    "ReverseTime": "Arretra di {amount}",
+    "SetDate": "Imposta Data"
+  },
+  "Component": {
+    "Day": "Giorno",
+    "Month": "Mese",
+    "Year": "Anno"
+  },
+  "Configuration": {
+    "DisabledMessage": "Il DM deve abilitare l'interfaccia del calendario prima che i giocatori possano usarla.",
+    "Hint": "Controlla se e come l’HUD del calendario viene mostrato.",
+    "Label": "Configura Calendario",
+    "Name": "Calendario",
+    "Preferences": "Preferenze Calendario",
+    "UnavailableMessage": "L'interfaccia calendario predefinita non è disponibile perché è stata disabilitata da un modulo."
+  },
+  "FIELDS": {
+    "calendar": {
+      "hint": "Questo calendario sarà utilizzato per tracciare il tempo di gioco.",
+      "label": "Calendario"
+    },
+    "enabled": {
+      "hint": "Consenti a tutti gli utenti di visualizzare e personalizzare l’interfaccia del calendario.",
+      "label": "Abilitato"
+    },
+    "formatters": {
+      "date": {
+        "label": "Formato Data"
+      },
+      "time": {
+        "label": "Formato Ora"
+      }
+    },
+    "visible": {
+      "label": "Mostra HUD del Calendario"
+    }
+  },
+  "Formatters": {
+    "Date": "Formattatori Data",
+    "ApproximateDate": {
+      "EarlySeason": "Inizio {season}",
+      "Label": "Data Approssimativa",
+      "LateSeason": "Fine {season}",
+      "MidSeason": "Metà {season}"
+    },
+    "ApproximateTime": {
+      "Afternoon": "Pomeriggio",
+      "Dawn": "Alba",
+      "Dusk": "Crepuscolo",
+      "Evening": "Sera",
+      "Label": "Orario Approssimativo",
+      "Midnight": "Mezzanotte",
+      "Morning": "Mattina",
+      "Night": "Notte",
+      "Noon": "Mezzogiorno",
+      "Sunrise": "Sorgere del Sole",
+      "Sunset": "Tramonto"
+    },
+    "HoursMinutes": {
+      "Format": "{H}:{M}",
+      "Label": "Ore e Minuti"
+    },
+    "HoursMinutesSeconds": {
+      "Format": "{H}:{M}:{S}",
+      "Label": "Ore, Minuti e Secondi"
+    },
+    "MonthDay": {
+      "Format": "{B} {D}",
+      "Label": "Mese e Giorno"
+    },
+    "MonthDayYear": {
+      "Format": "{B} {D}, {y}",
+      "Label": "Mese, Giorno e Anno"
+    },
+    "Time": "Formattatori Ora"
+  },
+  "Gregorian": "Calendario Gregoriano",
+  "Greyhawk": {
+    "Day": {
+      "Starday": "Starday",
+      "Sunday": "Sunday",
+      "Moonday": "Moonday",
+      "Godsday": "Godsday",
+      "Waterday": "Waterday",
+      "Earthday": "Earthday",
+      "Freeday": "Freeday"
+    },
+    "Festival": {
+      "Needfest": "Needfest",
+      "Growfest": "Growfest",
+      "Richfest": "Richfest",
+      "Brewfest": "Brewfest"
+    },
+    "Formatters": {
+      "MonthDay": "{B} {d}",
+      "MonthDayYear": "{B} {d}, {y}"
+    },
+    "Month": {
+      "Fireseek": "Fireseek",
+      "Readying": "Readying",
+      "Coldeven": "Coldeven",
+      "Planting": "Planting",
+      "Flocktime": "Flocktime",
+      "Wealsun": "Wealsun",
+      "Reaping": "Reaping",
+      "Godmonth": "Godmonth",
+      "Harvester": "Harvester",
+      "Patchwall": "Patchwall",
+      "Readyreat": "Ready’reat",
+      "Sunsebb": "Sunsebb"
+    },
+    "Name": "Calendario di Greyhawk",
+    "Season": {
+      "Spring": "Primavera",
+      "Summer": "Estate",
+      "Fall": "Autunno",
+      "Winter": "Inverno"
+    }
+  },
+  "Harptos": {
+    "Day": {
+      "One": "primo giorno",
+      "Two": "secondo giorno",
+      "Three": "terzo giorno",
+      "Four": "quarto giorno",
+      "Five": "quinto giorno",
+      "Six": "sesto giorno",
+      "Seven": "settimo giorno",
+      "Eight": "ottavo giorno",
+      "Nine": "nono giorno",
+      "Ten": "decimo giorno"
+    },
+    "Festival": {
+      "Midwinter": "Midwinter",
+      "Greengrass": "Greengrass",
+      "Midsummer": "Midsummer",
+      "Shieldmeet": "Shieldmeet",
+      "Highharvesttide": "Highharvesttide",
+      "FeastOfTheMoon": "La Festa della Luna"
+    },
+    "Formatters": {
+      "DayMonth": "{d} {B}",
+      "DayMonthYear": "{d} {B}, {y} DR",
+      "FestivalDayYear": "{day}, {Y} DR"
+    },
+    "Month": {
+      "Hammer": "Hammer",
+      "HammerCommon": "Deepwinter",
+      "Alturiak": "Alturiak",
+      "AlturiakCommon": "L’Artiglio dell’Inverno",
+      "Ches": "Ches",
+      "ChesCommon": "L’Artiglio dei Tramonti",
+      "Tarsakh": "Tarsakh",
+      "TarsakhCommon": "L’Artiglio delle Tempeste",
+      "Mirtul": "Mirtul",
+      "MirtulCommon": "Lo Scioglimento",
+      "Kythorn": "Kythorn",
+      "KythornCommon": "Il Tempo dei Fiori",
+      "Flamerule": "Flamerule",
+      "FlameruleCommon": "Summertide",
+      "Eleasias": "Eleasias",
+      "EleasiasCommon": "Highsun",
+      "Eleint": "Eleint",
+      "EleintCommon": "Il Declino",
+      "Marpenoth": "Marpenoth",
+      "MarpenothCommon": "Leaffall",
+      "Uktar": "Uktar",
+      "UktarCommon": "Il Marciume",
+      "Nightal": "Nightal",
+      "NightalCommon": "Il Calare"
+    },
+    "Name": "Calendario di Harptos (Forgotten Realms)",
+    "Season": {
+      "Spring": "Primavera",
+      "Summer": "Estate",
+      "Fall": "Autunno",
+      "Winter": "Inverno"
+    }
+  },
+  "Khorvaire": {
+    "Day": {
+      "Sul": "Sul",
+      "Mol": "Mol",
+      "Zol": "Zol",
+      "Wir": "Wir",
+      "Zor": "Zor",
+      "Far": "Far",
+      "Sar": "Sar"
+    },
+    "Formatters": {
+      "DayMonth": "{d} {B}",
+      "DayMonthYear": "{d} {B} {y} YK"
+    },
+    "Month": {
+      "Zarantyr": "Zarantyr",
+      "Olarune": "Olarune",
+      "Therendor": "Therendor",
+      "Eyre": "Eyre",
+      "Dravago": "Dravago",
+      "Nymm": "Nymm",
+      "Lharvion": "Lharvion",
+      "Barrakas": "Barrakas",
+      "Rhaan": "Rhaan",
+      "Sypheros": "Sypheros",
+      "Aryth": "Aryth",
+      "Vult": "Vult"
+    },
+    "Name": "Calendario di Khorvaire (Eberron)",
+    "Season": {
+      "Spring": "Primavera",
+      "Summer": "Estate",
+      "Autumn": "Autunno",
+      "Winter": "Inverno"
+    }
+  }
+},
+
 "DND5E.CAST": {
   "Title": "Incantare",
   "FIELDS": {
