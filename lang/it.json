@@ -1319,7 +1319,12 @@
 },
 
 "DND5E.CAST": {
-  "Title": "Incantare",
+  "Action": {
+    "RemoveSpell": "Rimuovi Incantesimo"
+  },
+  "Enchantment": {
+    "Name": "Modifiche Incantesimi"
+  },
   "FIELDS": {
     "spell": {
       "label": "Dettagli Incantesimo",
@@ -1358,16 +1363,12 @@
       }
     }
   },
+  "Hint": "Lancia un incantesimo attraverso un oggetto.",
   "SECTIONS": {
     "Spell": "Incantesimo",
     "Spellbook": "Incantesimi Aggiuntivi"
   },
-  "Action": {
-    "RemoveSpell": "Rimuovi Incantesimo"
-  },
-  "Enchantment": {
-    "Name": "Modifiche Incantesimo"
-  }
+  "Title": "Lancio"
 },
 
 "DND5E.Casting": "Lancio",
@@ -1432,6 +1433,8 @@
 "DND5E.CHATMESSAGE": {
   "Activities": "Attività",
   "Deltas": {
+    "Created": "Elemento Creato",
+    "Deleted": "Elemento Eliminato",
     "Recovery": "Recupero"
   },
     "REQUEST": {
@@ -1447,7 +1450,6 @@
 },
   
 "DND5E.CHECK": {
-  "Title": "Verifica",
   "FIELDS": {
     "check": {
       "label": "Dettagli Verifica",
@@ -1472,7 +1474,9 @@
       }
     }
   },
-  "ThisTool": "Questo Strumento"
+  "Hint": "Richiedi una prova di abilità, eventualmente assistita da un'abilità o da uno strumento.",
+  "ThisTool": "Questo Strumento",
+  "Title": "Prova"
 },
   
 "DND5E.CheckBonus": "Bonus Prova",
@@ -1835,6 +1839,7 @@
       },
       "Attribute": {
         "Label": "Attributo",
+        "NonEmbeddedHint": "Percorso dell'attributo da consumare (ad esempio attributi.esaurimento, incantesimi.patto.valore).",
         "PromptDecrease": "Consumare Attributo?",
         "PromptIncrease": "Ripristinare Attributo?",
         "PromptHintDecrease": "Ridurre <code>{attribute}</code> di <strong>{cost}</strong> (attualmente {current}).",
@@ -1855,6 +1860,7 @@
       },
       "ItemUses": {
         "Label": "Usi Oggetto",
+        "NonEmbeddedHint": "Identificatore dell'articolo o UUID dell'articolo nel compendio che verrà collegato automaticamente all'articolo corrispondente nel foglio.",
         "PromptDecrease": "Consumare Uso Oggetto?",
         "PromptIncrease": "Ripristinare Uso Oggetto?",
         "PromptHintDecrease": "Spendere <strong>{cost}</strong> {use} di {item} ({available} {availableUse} disponibili).",
@@ -1863,6 +1869,7 @@
       },
       "Material": {
         "Label": "Materiale",
+        "NonEmbeddedHint": "Identificatore dell'elemento o UUID dell'elemento nel compendio che verrà collegato automaticamente all'elemento corrispondente nel foglio.",
         "PromptDecrease": "Consumare Materiale?",
         "PromptIncrease": "Ripristinare Materiale?",
         "PromptHintDecrease": "Ridurre la quantità di {item} di <strong>{cost}</strong> ({quantity} rimanenti).",
@@ -1979,7 +1986,6 @@
 "DND5E.Current": "Attuale",
 
   "DND5E.DAMAGE": {
-    "Title": "Danno",
     "FIELDS": {
       "damage": {
         "label": "Danno",
@@ -2046,6 +2052,7 @@
         }
       }
     },
+    "Hint": "Danneggia una creatura senza alcun attacco o TS.",
     "Part": {
       "Action": {
         "Create": "Crea Parte del Danno",
@@ -2058,7 +2065,8 @@
       "None": "Nessuna Scalabilità",
       "Whole": "Ogni Livello",
       "WholeCantrip": "Scalabilità Cantrip"
-    }
+    },
+    "Title": "Danno"
   },
   
   "DND5E.DamImm": "Immunità al Danno",
@@ -2073,6 +2081,7 @@
       "Modification": "{type} Modifica",
       "Immunity": "{type} Immunità",
       "Resistance": "{type} Resistenza",
+      "Threshold": "Soglia Danno",
       "Vulnerability": "{type} Vulnerabilità"
     },
     "Downgrading": "Riducendo {source} a Resistenza",
@@ -2202,7 +2211,11 @@
       "Dissociate": "Dissocia Effetto"
     },
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> sopra per crearne uno, o seleziona un effetto esistente dal menu a tendina.",
-    "Label": "Effetti Disponibili"
+    "Label": "Effetti Disponibili",
+    "RIDER": {
+      "Activity": "Attività Cavaliere incantato",
+      "Effect": "Effetto Cavaliere incantato"
+    }
   },
   "DND5E.EffectsApplyTokens": "Applica ai token selezionati",
   "DND5E.EffectApplyWarningConcentration": "Applicare un effetto che è concentrato da un altro personaggio richiede permessi GM.",
@@ -2210,8 +2223,7 @@
   "DND5E.EffectsSearch": "Cerca effetti",
   
   "DND5E.ENCHANT": {
-    "Title": "Incantamento",
-  "FIELDS": {
+   "FIELDS": {
     "effects": {
       "level": {
         "label": "Limite Livello",
@@ -2272,25 +2284,28 @@
       }
     }
   },
-    "SECTIONS": {
+  "DropArea": "Posiziona qui l'oggetto per incantarlo…",
+  "Enchanted": "{current} &sol; {max} incantati",
+  "Enchantment": {
+    "Action": {
+      "Create": "Crea Incantamento",
+      "Delete": "Rimuovi Incantamento"
+    },
+    "Active": "{name} (attivo)",
+    "Empty": "Nessun incantesimo associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, oppure seleziona un incantesimo esistente dal menu a discesa."
+  },
+  "Hint": "Applica un incantesimo a un oggetto che ne modifica le statistiche o la funzionalità.",
+  "SECTIONS": {
     "Enchanting": "Incantamento",
     "Enchantments": "Incantamenti",
     "Restrictions": "Restrizioni"
   },
-  "DropArea": "Posiziona l'oggetto qui per incantarlo…",
-  "Enchanted": "{current} / {max} incantati",
-  "Enchantment": {
-    "Action": {
-      "Create": "Crea Incantamento",
-      "Delete": "Elimina Incantamento"
-    },
-    "Active": "{name} (attivo)",
-    "Empty": "Nessun incantamento associato. Usa il pulsante <i class=\"fas fa-plus\"></i> sopra per crearne uno, oppure seleziona un incantamento esistente dal menu a tendina."
-  },
+  "Title": "Incantare",
   "Warning": {
     "ConcentrationEnded": "Non è possibile applicare questo incantamento perché la concentrazione è terminata.",
     "MissingProperty": "L'oggetto deve avere una di queste proprietà per essere incantato: {validProperties}.",
     "NoMagicalItems": "Gli oggetti che sono già magici non possono essere incantati.",
+    "NoTargetActor": "Per incantare da un compendio è necessario assegnare un personaggio o selezionare un token.",
     "NoSubtype": "Solo gli oggetti {allowedType} possono essere incantati da questo incantamento, ma questo oggetto non ha un sottotipo.",
     "WrongType": "Gli oggetti di tipo {incorrectType} non possono essere incantati da questo incantamento, solo gli oggetti di tipo {allowedType} sono permessi."
     }
