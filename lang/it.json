@@ -227,6 +227,10 @@
       "Label": "Minuto"
     },
     "Mythic": {
+      "Counted": {
+        "one": "{number} Azione Mitica",
+        "other": "{number} Azioni Mitiche"
+      },
       "Header": "Azioni Mitiche",
       "Label": "Azione Mitica"
     },
@@ -263,7 +267,8 @@
 "DND5E.ACTIVITY": {
     "Action": {
       "Create": "Crea Attività",
-      "Delete": "Elimina Attività"
+      "Delete": "Elimina Attività",
+      "Edit": "Modifica Attività"
     },
     "Title": {
       "one": "Attività",
@@ -278,15 +283,56 @@
         }
       },
       "effects": {
-        "label": "Effetti Applicati"
+       "element": {
+        "level": {
+          "label": "Limite Livello",
+          "hint": "Gamma di livelli richiesti per applicare questo effetto.",
+          "max": {
+            "label": "Livello Massimo"
+          },
+          "min": {
+            "label": "Livello Minimo"
+          }
+        }
       },
-      "img": {
-        "label": "Icona"
-      },
-      "name": {
-        "label": "Nome"
-      }
+      "label": "Effetti Applicati"
     },
+    "img": {
+      "label": "Icona"
+    },
+    "name": {
+      "label": "Nome"
+    },
+    "visibility": {
+      "identifier": {
+        "hint": "Identificatore della classe a cui si applicano i limiti di livello. Se lasciato vuoto, viene utilizzato il livello del personaggio.",
+        "label": "Identificatore Classe"
+      },
+      "label": "Visibilità",
+      "level": {
+        "hint": "Gamma di livelli richiesti per utilizzare questa attività.",
+        "label": "Limite Livello",
+        "max": {
+          "label": "Livello Massimo"
+        },
+        "min": {
+          "label": "Livello Minimo"
+        }
+      },
+      "requireAttunement": {
+        "hint": "L'attività non sarà utilizzabile se l'oggetto richiede sintonizzazione e non è sintonizzato.",
+        "label": "Richiede Sintonia"
+      },
+      "requireIdentification": {
+        "hint": "L'attività non sarà utilizzabile se l'elemento non viene identificato.",
+        "label": "Richiede identificazione"
+      },
+      "requireMagic": {
+        "hint": "L'attività non sarà utilizzabile se la magia non è disponibile.",
+        "label": "Richiede Magia"
+      }
+    }
+  },
     "SECTIONS": {
       "Activation": "Attivazione",
       "Behavior": "Comportamento",
