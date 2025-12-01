@@ -407,7 +407,7 @@
       },
       "Hint": "Permetti al giocatore di aumentare uno o più punteggi di Caratteristica oppure di scegliere un talento opzionale.",
       "Journal": {
-        "DescriptionEpic": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato.",
+        "DescriptionEpic": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato.</p>",
         "DescriptionEpicRecommendation": "<p>Ottieni un Talento Epico o un altro talento a tua scelta per il quale sei qualificato. {recommendation} è raccomandato.</p>",
         "DescriptionLegacy": "<p>Quando raggiungi il {firstLevelOrdinal} livello, e nuovamente al {otherLevelsOrdinal} livello, puoi aumentare di 2 un punteggio di Caratteristica a tua scelta, oppure puoi aumentare di 1 due punteggi di Caratteristica a tua scelta. Come di consueto, non puoi aumentare un punteggio di Caratteristica oltre {maxAbilityScore} utilizzando questa funzione.</p><p>Utilizzando la regola dei talenti opzionali, puoi rinunciare a questa funzione per scegliere al suo posto un talento a tua scelta.</p>",
         "DescriptionModern": "<p>Ottieni il talento di miglioramento del punteggio di Caratteristica o un altro talento di tua scelta per il quale sei idoneo. Ottieni nuovamente questa funzione ai livelli {class} {otherLevels}.</p>",
@@ -1238,39 +1238,39 @@
       "Greengrass": "Greengrass",
       "Midsummer": "Midsummer",
       "Shieldmeet": "Shieldmeet",
-      "Highharvesttide": "Highharvesttide",
-      "FeastOfTheMoon": "La Festa della Luna"
+      "Highharvestide": "Highharvestide",
+      "FeastOfTheMoon": "The Feast of the Moon"
     },
     "Formatters": {
       "DayMonth": "{d} {B}",
       "DayMonthYear": "{d} {B}, {y} DR",
-      "FestivalDayYear": "{day}, {Y} DR"
+      "FestivalDayYear": "{day}, {y} DR"
     },
     "Month": {
       "Hammer": "Hammer",
       "HammerCommon": "Deepwinter",
       "Alturiak": "Alturiak",
-      "AlturiakCommon": "L’Artiglio dell’Inverno",
+      "AlturiakCommon": "The Claw of Winter",
       "Ches": "Ches",
-      "ChesCommon": "L’Artiglio dei Tramonti",
+      "ChesCommon": "The Claw of the Sunsets",
       "Tarsakh": "Tarsakh",
-      "TarsakhCommon": "L’Artiglio delle Tempeste",
+      "TarsakhCommon": "The Claw of the Storms",
       "Mirtul": "Mirtul",
-      "MirtulCommon": "Lo Scioglimento",
+      "MirtulCommon": "The Melting",
       "Kythorn": "Kythorn",
-      "KythornCommon": "Il Tempo dei Fiori",
+      "KythornCommon": "The Time of Flowers",
       "Flamerule": "Flamerule",
       "FlameruleCommon": "Summertide",
-      "Eleasias": "Eleasias",
-      "EleasiasCommon": "Highsun",
+      "Eleasis": "Eleasis",
+      "EleasisCommon": "Highsun",
       "Eleint": "Eleint",
-      "EleintCommon": "Il Declino",
+      "EleintCommon": "The Fading",
       "Marpenoth": "Marpenoth",
       "MarpenothCommon": "Leaffall",
       "Uktar": "Uktar",
-      "UktarCommon": "Il Marciume",
+      "UktarCommon": "The Rotting",
       "Nightal": "Nightal",
-      "NightalCommon": "Il Calare"
+      "NightalCommon": "The Drawing Down"
     },
     "Name": "Calendario di Harptos (Forgotten Realms)",
     "Season": {
