@@ -2,7 +2,7 @@
   "id": "dnd5e-it",
   "title": "Traduzione D&D 5E ITA",
   "description": "Traduzione in Italiano D&D 5E per Foundry VTT",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "compatibility": {
     "minimum": "12",
     "verified": "13"
@@ -39,5 +39,5 @@
   ],
   "url": "https://github.com/GregoryWarn/dnd5e-it",
   "manifest": "https://github.com/GregoryWarn/dnd5e-it/releases/latest/download/module.json",
-  "download": "https://github.com/GregoryWarn/dnd5e-it/releases/download/v5.2.3/module.zip"
+  "download": "https://github.com/GregoryWarn/dnd5e-it/releases/download/v5.2.4/module.zip"
   }
