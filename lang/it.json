@@ -1942,7 +1942,7 @@
   "DND5E.CreatureType": "Tipo di Creatura",
   "DND5E.CreatureTypeTitle": "Configura Tipo di Creatura",
   "DND5E.CreatureSwarm": "Stormo",
-  "DND5E.CreatureSwarmSize": "Dimensione Stormo",
+  "DND5E.CreatureSwarmSize": "Taglia Stormo",
   "DND5E.CreatureSwarmPhrase": "Stormo di {size} {type}",
   "DND5E.CreatureTag": "{size} {type}, {alignment}",
   "DND5E.CreatureTypeConfig": "Configura Tipo di Creatura",
@@ -2512,7 +2512,7 @@
         }
       },
       "size": {
-        "label": "Dimensione"
+        "label": "Taglia"
       },
       "trade": {
         "creatures": {
@@ -3891,7 +3891,7 @@
 "DND5E.SchoolIll": "Illusione",
 "DND5E.SchoolNec": "Necromanzia",
 "DND5E.SchoolTrs": "Trasmutazione",
-"DND5E.Size": "Dimensione",
+"DND5E.Size": "Taglia",
 "DND5E.SizeGargantuan": "Colossale",
 "DND5E.SizeGargantuanAbbr": "Gt",
 "DND5E.SizeHuge": "Enorme",
@@ -4224,8 +4224,8 @@
         }
       },
       "creatureSizes": {
-        "label": "Dimensioni Creatura",
-        "hint": "La creatura evocata e il token saranno cambiati in questa dimensione. Se vengono selezionate più dimensioni, il giocatore potrà scegliere tra queste dimensioni durante l'evocazione."
+        "label": "Taglie Creatura",
+        "hint": "La creatura evocata e il token saranno cambiati in questa taglia. Se vengono selezionate più taglie, il giocatore potrà scegliere tra queste taglie durante l'evocazione."
       },
       "creatureTypes": {
         "label": "Tipi di Creatura",
