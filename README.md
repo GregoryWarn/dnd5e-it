@@ -1,6 +1,7 @@
-# Traduzione D&D 5E ITA
+# Traduzione D&D 5e ITA
 
-Traduzione Italiana del sistema D&D 5E per Foundry VTT
+Traduzione Italiana del sistema D&D 5e per Foundry VTT
+Traduzione Italiana Compendio D&D 5e 2014
 
 GregoryWarn - ClaPSG
 
