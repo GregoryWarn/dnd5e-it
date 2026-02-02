@@ -815,6 +815,17 @@
   "DND5E.AttunementOverride": "Sostituisci Sintonizzazione",
   "DND5E.Attuned": "Sintonizzato",
   "DND5E.AreaOfEffect": {
+    "Description": {
+    "Full": "{sizes} {type}",
+    "FullCounted": "{count} {sizes} {type}",
+    "Height": "altezza",
+    "Length": "lunghezza",
+    "Radius": "raggio",
+    "SizeSimple": "{number}-{unit}",
+    "SizeType": "{number}-{unit}-{type}",
+    "Thickness": "spessore",
+    "Width": "larghezza"
+   },
     "Label": "Area di Effetto",
     "Size": {
       "Label": "Dimensione",
@@ -3214,9 +3225,13 @@
 "DND5E.JackOfAllTrades": "Factotum",
 
 "DND5E.JOURNALENTRY": {
+  "Action": {
+    "ConfigureNavigation": "Configura Navigazione"
+  },
   "Navigation": {
-    "Next": "Prossima",
+    "Next": "Successiva",
     "Previous": "Precedente",
+    "Title": "Navigazione",
     "Up": "Su"
   }
 },
@@ -3853,22 +3868,23 @@
 "DND5E.Shape": "Forma",
 
 "DND5E.SheetClass": {
-"Character": "Scheda Personaggio 5e Predefinita",
-"ClassSummary": "Scheda Riassunto Classe 5e Predefinita",
-"Container": "Scheda Contenitore 5e Predefinita",
-"DifficultTerrain": "Scheda terreno difficile predefinito 5e",
-"Encounter": "Scheda Incontro predefinito 5e",
-"Group": "Scheda Gruppo 5e Predefinita",
-"Item": "Scheda Oggetto 5e Predefinita",
-"JournalEntry": "Scheda Voce di Diario 5e Predefinita",
-"JournalEntryLegacy": "Scheda Voce di Diario 5e Legacy",
-"MapLocation": "Scheda Posizione Mappa 5e Predefinita",
-"NPC": "Scheda PNG 5e Predefinita",
-"RotateArea": "Scheda Area Rotazione 5e Predefinita",
-"Rule": "Scheda Regola 5e Predefinita",
-"SpellList": "Scheda Lista Incantesimi 5e Predefinita",
-"Token": "Scheda Token 5e Predefinita",
-"Vehicle": "Scheda Veicolo 5e Predefinita"
+  "Character": "Scheda Personaggio D&D 5e",
+  "ClassSummary": "Scheda Riassunto Classe D&D 5e",
+  "Container": "Scheda Contenitore D&D 5e",
+  "DifficultTerrain": "Scheda terreno difficile D&D 5e",
+  "Encounter": "Scheda Incontro D&D 5e",
+  "Group": "Scheda Gruppo D&D 5e",
+  "Item": "Scheda Oggetto D&D 5e",
+  "JournalEntry": "Scheda Voce Diario D&D 5e",
+  "JournalEntryLegacy": "Scheda Voce Diario D&D 5e Legacy",
+  "MapLocation": "Scheda Posizione Mappa D&D 5e",
+  "NPC": "Scheda PNG D&D 5e",
+  "RollTable": "Scheda Tiro Tabella D&D 5e",
+  "RotateArea": "Scheda Area Rotazione D&D 5e",
+  "Rule": "Scheda Regola D&D 5e",
+  "SpellList": "Scheda Lista Incantesimi D&D 5e",
+  "Token": "Scheda Token D&D 5e",
+  "Vehicle": "Scheda Veicolo D&D 5e"
 },
 
 "DND5E.SheetModeEdit": "Modifica",
@@ -4007,8 +4023,23 @@
 },
 "DND5E.Speed": "Velocità",
 "DND5E.SpeedSpecial": "Movimento Speciale",
-"DND5E.SpellAbility": "Caratteristica Incantesimo",
-"DND5E.SpellAbilitySet": "Imposta come Caratteristica Incantesimo Primaria",
+
+"DND5E.SPELL": {
+  "Embed": {
+    "CastingTimeTrigger": "{castingTime}, che parte da {trigger}",
+    "Tag": {
+      "Cantrip": "{school} Trucchetto",
+      "CantripLegacy": "{school} trucchetto",
+      "Classes": "{levelSchool} ({classes})",
+      "Leveled": "Livello {level} {school}",
+      "LeveledLegacy": "{levelOrdinal}-livello {school}",
+      "Ritual": "{levelSchool} (rituale)"
+    }
+  }
+},
+
+"DND5E.SpellAbility": "Caratteristica Incantatore",
+"DND5E.SpellAbilitySet": "Imposta come Caratteristica Incantatore Primaria",
 "DND5E.SpellAdd": "Aggiungi Incantesimo",
 "DND5E.SpellAttackBonus": "Bonus Attacco Incantesimo",
 "DND5E.SpellCantrip": "Trucchetto",
@@ -4078,6 +4109,7 @@
 "DND5E.SpellcastingClass": "{class} Incantamento",
 "DND5E.SpellComponent": "Componente Incantesimo",
 "DND5E.SpellComponents": "Componenti Incantesimo",
+"DND5E.SpellComponentsMaterial": "{components} ({materials})",
 "DND5E.SpellCreate": "Crea Incantesimo",
 "DND5E.SpellDC": "DC Incantesimo",
 "DND5E.SpellDetails": "Dettagli Incantesimo",
@@ -4303,7 +4335,11 @@
           "label": "Prompt di Evocazione",
           "hint": "Il giocatore dovrebbe essere invitato a posizionare l'evocazione? I giocatori potranno ancora evocare dalla scheda chat se il prompt è disabilitato."
         }
-      }
+      },
+       "tempHP": {
+         "label": "PF Temporanei",
+         "hint": "Conferisci alla creatura evocata PF temporanei, sostituendo eventuali PF temporanei esistenti."
+       }
     },
     "Action": {
       "Place": "Posiziona Evocazione",
@@ -4426,6 +4462,7 @@
     "Label": "Alleato",
     "Counted": {
       "any": "qualsiasi alleato",
+      "each": "ciascun alleato",
       "every": "ogni alleato",
       "one": "{number} alleato",
       "other": "{number} alleati"
@@ -4437,21 +4474,26 @@
   "Circle": {
     "Label": "Cerchio",
     "Counted": {
-      "one": "Cerchio {number}",
-      "other": "{number} cerchi"
+      "one": "{number} cerchio",
+      "other": "{number} cerchi",
+      "oneSized": "{sizes} Cerchio",
+      "otherSized": "{number} {sizes} Cerchi"
     }
   },
   "Cone": {
     "Label": "Cono",
     "Counted": {
-      "one": "Cono {number}",
-      "other": "{number} coni"
+      "one": "{number} cono",
+      "other": "{number} coni",
+      "oneSized": "{sizes} Cono",
+      "otherSized": "{number} {sizes} Coni"
     }
   },
   "Creature": {
     "Label": "Creatura",
     "Counted": {
       "any": "qualsiasi creatura",
+      "each": "ciascuna creatura",
       "every": "ogni creatura",
       "one": "{number} creatura",
       "other": "{number} creature"
@@ -4461,6 +4503,7 @@
     "Label": "Creatura o Oggetto",
     "Counted": {
       "any": "qualsiasi creatura o oggetto",
+      "each": "ciascuna creatura o oggetto",
       "every": "ogni creatura o oggetto",
       "one": "{number} creatura o oggetto",
       "other": "{number} creature o oggetti"
@@ -4469,28 +4512,35 @@
   "Cube": {
     "Label": "Cubo",
     "Counted": {
-      "one": "Cubo {number}",
-      "other": "{number} cubi"
+      "one": "{number} cubo",
+      "other": "{number} cubi",
+      "oneSized": "{sizes} Cubo",
+      "otherSized": "{number} {sizes} Cubi"
     }
   },
   "Cylinder": {
     "Label": "Cilindro",
     "Counted": {
-      "one": "Cilindro {number}",
-      "other": "{number} cilindri"
+      "one": "{number} cilindro",
+      "other": "{number} cilindri",
+      "oneSized": "{sizes} Cilindro",
+      "otherSized": "{number} {sizes} Cilindri"
     }
   },
   "Emanation": {
     "Label": "Emanazione",
     "Counted": {
       "one": "{number} emanazione",
-      "other": "{number} emanazioni"
+      "other": "{number} emanazioni",
+      "oneSized": "{sizes} Emanazione",
+      "otherSized": "{number} {sizes} Emanazioni"
     }
   },
   "Enemy": {
     "Label": "Nemico",
     "Counted": {
       "any": "qualsiasi nemico",
+      "each": "ciascun nemico",
       "every": "ogni nemico",
       "one": "{number} nemico",
       "other": "{number} nemici"
@@ -4500,13 +4550,16 @@
     "Label": "Linea",
     "Counted": {
       "one": "{number} linea",
-      "other": "{number} linee"
+      "other": "{number} linee",
+      "oneSized": "{sizes} Linea",
+      "otherSized": "{number} {sizes} Linee"
     }
   },
   "Object": {
     "Label": "Oggetto",
     "Counted": {
       "any": "qualsiasi oggetto",
+      "each": "ciascun oggetto",
       "every": "ogni oggetto",
       "one": "{number} oggetto",
       "other": "{number} oggetti"
@@ -4515,40 +4568,58 @@
   "Radius": {
     "Label": "Raggio",
     "Counted": {
-      "one": "Raggio {number}",
-      "other": "{number} raggi"
+      "one": "{number} raggio",
+      "other": "{number} raggi",
+      "oneSized": "{sizes} Raggio",
+      "otherSized": "{number} {sizes} Raggi"
     }
   },
   "Self": {
     "Label": "Incantatore"
   },
+  "Space": {
+      "Label": "Spazio",
+      "Counted": {
+        "any": "qualsiasi spazio",
+        "each": "ciascuno spazio",
+        "every": "ogni spazio",
+        "one": "{number} Spazio",
+        "other": "{number} Spazi"
+    }
+  },
   "Sphere": {
     "Label": "Sfera",
     "Counted": {
-      "one": "Sfera {number}",
-      "other": "{number} sfere"
+      "one": "{number} sfera",
+      "other": "{number} sfere",
+      "oneSized": "{sizes} Sfera",
+      "otherSized": "{number} {sizes} Sfere"
     }
   },
-  "Space": {
-    "Label": "Spazio",
+  "Special": {
+    "Label": "{special}",
     "Counted": {
-      "any": "qualsiasi spazio",
-      "every": "ogni spazio",
-      "one": "{number} spazio",
-      "other": "{number} spazi"
+      "any": "qualsiasi {special}",
+      "each": "ciascuno {special}",
+      "every": "ogni {special}",
+      "one": "{number} {special}",
+      "other": "{number} {special}"
     }
   },
   "Square": {
     "Label": "Quadrato",
     "Counted": {
-      "one": "Quadrato {number}",
-      "other": "{number} quadrati"
+      "one": "{number} quadrato",
+      "other": "{number} quadrati",
+      "oneSized": "{sizes} Quadrato",
+      "otherSized": "{number} {sizes} Quadrati"
     }
   },
   "Target": {
     "Label": "bersaglio",
     "Counted": {
       "any": "qualsiasi bersaglio",
+      "each": "ciascun bersaglio",
       "every": "ogni bersaglio",
       "one": "{number} bersaglio",
       "other": "{number} bersagli"
@@ -4558,13 +4629,16 @@
     "Label": "Muro",
     "Counted": {
       "one": "{number} muro",
-      "other": "{number} muri"
+      "other": "{number} muri",
+      "oneSized": "{sizes} Muro",
+      "otherSized": "{number} {sizes} Muri"
     }
   },
   "WillingCreature": {
     "Label": "Creatura consenziente",
     "Counted": {
       "any": "qualsiasi creatura consenziente",
+      "each": "ciascuna creatura consenziente",
       "every": "ogni creatura consenziente",
       "one": "{number} creatura consenziente",
       "other": "{number} creature consenzienti"
@@ -4975,22 +5049,26 @@
   
   "DND5E.UNITS": {
     "DISTANCE": {
-        "Foot": {
-        "Label": "Piedi",
-        "Abbreviation": "ft"
+      "Foot": {
+        "Abbreviation": "ft",
+        "Label": "Feet",
+        "Template": "foot"
       },
       "Kilometer": {
-        "Label": "Chilometri",
-        "Abbreviation": "km"
+        "Abbreviation": "km",
+        "Label": "Kilometri",
+        "Template": "kilometro"
       },
       "Label": "Unità di Distanza",
       "Meter": {
-        "Label": "Metri",
-        "Abbreviation": "m"
+      "Abbreviation": "m",
+      "Label": "Metri",
+      "Template": "metro"
       },
       "Mile": {
-        "Label": "Miglia",
-        "Abbreviation": "mi"
+       "Abbreviation": "mi",
+       "Label": "Miglia",
+       "Template": "miglio"
       }
     },
     "TIME": {
