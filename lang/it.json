@@ -700,7 +700,9 @@
     "Trait": {
       "Action": {
         "AddChoice": "Aggiungi scelta",
-        "RemoveChoice": "Rimuovi scelta"
+        "RemoveChoice": "Rimuovi scelta",
+        "RemoveTrait": "Rimuovi Tratto",
+        "SelectTrait": "Seleziona Tratto"
       },
       "ChoicesRemaining": "Seleziona ancora {count} {type}",
       "Details": "Dettagli tratti",
