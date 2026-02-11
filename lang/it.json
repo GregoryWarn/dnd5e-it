@@ -443,12 +443,21 @@
     },
     "HitPoints": {
       "Action": {
-        "Roll": "Tira {die}"
+        "RollClass": "Tira Punti Ferita {class}",
+        "RollDie": "Tira {die}"
       },
       "Average": "Media",
+      "Breakdown": {
+        "Average": "Medio",
+        "Bonus": "Bonus",
+        "Final": "Finale",
+        "Max": "Max",
+        "Previous": "Prec.",
+        "Roll": "Tira"
+     },
       "Hint": "Tieni traccia dei punti ferita del giocatore per ogni livello della classe.",
       "MaxAtFirstLevel": "Massimo al 1° livello: <strong>{max}</strong>",
-      "Roll": "Tira i punti ferita per {class}",
+      "Options": "Opzioni",
       "Starting": "Punti ferita al 1° livello",
       "TakeAverage": "Usa la media",
       "Title": "Punti Ferita",
@@ -646,6 +655,9 @@
       }
     },
     "Size": {
+      "Action": {
+        "SelectSize": "Seleziona Taglia"
+      },
       "DefaultHint": {
         "Multiple": "Scegli la tua taglia tra {sizes}.",
         "Single": "La tua taglia è {size}."
