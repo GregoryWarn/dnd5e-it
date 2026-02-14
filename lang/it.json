@@ -24,7 +24,8 @@
 "TYPES.ChatMessage": {
     "request": "Messaggio di Richiesta",
     "rest": "Messaggio di Riposo",
-    "turn": "Messaggio di Turno di Combattimento"
+    "turn": "Messaggio Turno Combattimento",
+    "usage": "Messaggio Utilizzo"
 },
 
 "TYPES.Item.background": "Background",
@@ -441,6 +442,18 @@
     "BackgroundProficiencies": "Competenze Background",
     "ChooseLanguages": "Scegli Linguaggi"
     },
+  "Deletion": {
+    "Delete": {
+      "Message": "Eliminando questo elemento verranno eliminate anche tutte le scelte di avanzamento effettuate per esso. Queste modifiche verranno rimosse dal tuo personaggio finché la casella di controllo sottostante sarà selezionata.",
+      "Title": "Conferma Eliminazione"
+    },
+    "LevelDown": {
+      "Message": "Diminuendo il livello di questa classe verranno eliminate anche tutte le scelte di avanzamento effettuate per essa. Queste modifiche verranno rimosse dal tuo personaggio finché la casella di controllo sottostante sarà selezionata.",
+      "Title": "Diminuisci Livello"
+    },
+    "Label": "Rimuovi Modifiche",
+    "Options": "Opzioni"
+  },
     "HitPoints": {
       "Action": {
         "RollClass": "Tira Punti Ferita {class}",
@@ -519,6 +532,7 @@
         }
       },
       "Hint": "Offri al giocatore una scelta di oggetti (come equipaggiamento, funzioni o incantesimi) che può selezionare per il suo personaggio a uno o più livelli.",
+      "Options": "Opzioni",
       "Replacement": {
         "None": "Nessuna sostituzione",
         "Title": "sostituisci"
@@ -788,9 +802,6 @@
   "DND5E.AdvancementConfiguredIncomplete": "Non Configurato",
   "DND5E.AdvancementCustomIcon": "Icona Personalizzata",
   "DND5E.AdvancementCustomTitle": "Titolo Personalizzato",
-  "DND5E.AdvancementDeleteConfirmationLabel": "Rimuovi modifiche all'avanzamento",
-  "DND5E.AdvancementDeleteConfirmationMessage": "Eliminando questo oggetto verranno eliminati anche tutte le scelte di avanzamento fatte per esso. Questi cambiamenti saranno rimossi dal tuo personaggio se la casella sottostante è selezionata.",
-  "DND5E.AdvancementDeleteConfirmationTitle": "Conferma Eliminazione",
   "DND5E.AdvancementFlowDropAreaHint": "Trascina un Oggetto qui per sceglierlo.",
   "DND5E.AdvancementHint": "Suggerimento",
   "DND5E.AdvancementItemTypeInvalidWarning": "Gli oggetti di tipo {type} non possono essere aggiunti con questo tipo di avanzamento.",
