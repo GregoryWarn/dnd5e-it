@@ -24,7 +24,8 @@
 "TYPES.ChatMessage": {
   "request": "Request Message",
   "rest": "Rest Message",
-  "turn": "Combat Turn Message"
+  "turn": "Combat Turn Message",
+  "usage": "Usage Message"
 },
 
 "TYPES.Item.background": "Background",
@@ -441,14 +442,35 @@
     "BackgroundProficiencies": "Background Proficiencies",
     "ChooseLanguages": "Choose Languages"
   },
+  "Deletion": {
+    "Delete": {
+      "Message": "Deleting this item will also delete all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+      "Title": "Confirm Deletion"
+    },
+    "LevelDown": {
+      "Message": "Decreasing the level for this class will also delete all advancement choice made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+      "Title": "Decrease Level"
+    },
+    "Label": "Remove Changes",
+    "Options": "Options"
+  },
   "HitPoints": {
     "Action": {
-      "Roll": "Roll {die}"
+      "RollClass": "Roll {class} Hit Points",
+      "RollDie": "Roll {die}"
     },
     "Average": "Average",
+    "Breakdown": {
+      "Average": "Avg.",
+      "Bonus": "Bonus",
+      "Final": "Final",
+      "Max": "Max",
+      "Previous": "Prev.",
+      "Roll": "Roll"
+    },
     "Hint": "Track the player's hit points for each level in the class.",
     "MaxAtFirstLevel": "Max at 1st Level: <strong>{max}</strong>",
-    "Roll": "Roll {class} Hit Points",
+    "Options": "Options",
     "Starting": "Hit Points at 1st Level",
     "TakeAverage": "Take Average",
     "Title": "Hit Points",
@@ -510,6 +532,7 @@
       }
     },
     "Hint": "Present the player with a choice of items (such as equipment, features, or spells) that they can choose for their character at one or more levels.",
+    "Options": "Options",
     "Replacement": {
       "None": "No Replacement",
       "Title": "replace"
@@ -646,6 +669,9 @@
     }
   },
   "Size": {
+    "Action": {
+      "SelectSize": "Select Size"
+    },
     "DefaultHint": {
       "Multiple": "Choose your size from either {sizes}.",
       "Single": "Your size is {size}."
@@ -700,7 +726,9 @@
   "Trait": {
     "Action": {
       "AddChoice": "Add Choice",
-      "RemoveChoice": "Remove Choice"
+      "RemoveChoice": "Remove Choice",
+      "RemoveTrait": "Remove Trait",
+      "SelectTrait": "Select Trait"
     },
     "ChoicesRemaining": "Select {count} more {type}",
     "Details": "Trait Details",
@@ -774,9 +802,6 @@
 "DND5E.AdvancementConfiguredIncomplete": "Not Configured",
 "DND5E.AdvancementCustomIcon": "Custom Icon",
 "DND5E.AdvancementCustomTitle": "Custom Title",
-"DND5E.AdvancementDeleteConfirmationLabel": "Remove advancement changes",
-"DND5E.AdvancementDeleteConfirmationMessage": "Deleting this item will also delete all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
-"DND5E.AdvancementDeleteConfirmationTitle": "Confirm Deletion",
 "DND5E.AdvancementFlowDropAreaHint": "Drop an Item here to choose it.",
 "DND5E.AdvancementHint": "Hint",
 "DND5E.AdvancementItemTypeInvalidWarning": "{type} items cannot be added with this advancement type.",
