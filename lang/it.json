@@ -2905,7 +2905,15 @@
 "DND5E.Formula": "Formula",
 "DND5E.FormulaMalformedError": "Problema nella preparazione della formula {property} all'interno di {name}.",
 "DND5E.FormulaMissingReferenceWarn": "La formula {property} all'interno di {name} ha riferimenti a dati mancanti: {references}",
-"DND5E.Gear": "Equipaggiamento",
+
+"DND5E.Gear": {
+  "Action": {
+    "Add": "Aggiungi ad Equipaggiamento",
+    "Remove": "Rimuovi da Equipaggiamento"
+  },
+  "Label": "Equipaggiamento"
+},
+
 "DND5E.Gender": "Genere",
 "DND5E.GlobalBonus": "Bonus Globale",
 "DND5E.GrantedAbilities": "Abilità Concesse",
@@ -3216,6 +3224,7 @@
     "Finesse": "Accurata",
     "Firearm": "Arma da Fuoco",
     "Focus": "Focus",
+    "Gear": "Equipaggiamento",
     "Heavy": "Pesante",
     "Light": "Leggera",
     "Loading": "Caricamento",
