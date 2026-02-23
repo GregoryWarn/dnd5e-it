@@ -372,6 +372,7 @@
         "other": "Massimo {points} punti per punteggio"
       },
       "Details": "Dettagli del miglioramento",
+      "EffectTargetHint": "Questo punteggio viene modificato da un effetto attivo. Il suo valore finale sarà {value}.",
       "Feat": {
         "ASIName": "Talento di miglioramento del punteggio di Caratteristica",
         "Hint": "Trascina un talento qui per sceglierlo al posto di un miglioramento del punteggio di Caratteristica."
@@ -2022,6 +2023,7 @@
 "DND5E.Current": "Attuale",
 
   "DND5E.DAMAGE": {
+    "All": "Tutti i danni",
     "FIELDS": {
       "damage": {
         "label": "Danno",
@@ -2095,6 +2097,12 @@
         "Delete": "Elimina Parte del Danno"
       }
     },
+    "PhysicalBypass": {
+      "Description": "{damageTypes} da attacchi che non sono {bypassTypes}",
+      "DescriptionShort": "Bypassato da Fonti {type}",
+      "Hint": "Queste proprietà dell'arma aggireranno la resistenza ai danni per i danni fisici.",
+      "Label": "Bypass Fisici"
+   },
     "Scaling": {
       "Half": "Ogni Altra Livello",
       "HalfCantrip": "Scalabilità Mezzo Cantrip",
@@ -2102,16 +2110,30 @@
       "Whole": "Ogni Livello",
       "WholeCantrip": "Scalabilità Cantrip"
     },
-    "Title": "Danno"
+    "Title": "Danno",
+    "Type": {
+      "Acid": "Acido",
+      "Bludgeoning": "Contundente",
+      "Cold": "Freddo",
+      "Fire": "Fuoco,
+      "Force": "Forza",
+      "Lightning": "Fulmine",
+      "Necrotic": "Necrotico",
+      "Piercing": "Perforante",
+      "Poison": "Veleno",
+      "Psychic": "Psichico",
+      "Radiant": "Radiante",
+      "Slashing": "Tagliente",
+      "Thunder": "Tuono"
+    }
   },
   
   "DND5E.DamImm": "Immunità al Danno",
   "DND5E.DamMod": "Modifica del Danno",
   "DND5E.DamRes": "Resistenze al Danno",
   "DND5E.DamVuln": "Vulnerabilità al Danno",
+  
   "DND5E.Damage": "Danno",
-  "DND5E.DamageAcid": "Acido",
-  "DND5E.DamageAll": "Tutti i Danni",
   "DND5E.DamageApplication": {
     "Change": {
       "Modification": "{type} Modifica",
@@ -2123,32 +2145,16 @@
     "Downgrading": "Riducendo {source} a Resistenza",
     "Ignoring": "Ignorando {source}"
   },
-  "DND5E.DamageBludgeoning": "Contundente",
-  "DND5E.DamageCold": "Freddo",
-  "DND5E.DamageFire": "Fuoco",
-  "DND5E.DamageForce": "Forza",
-  "DND5E.DamageLightning": "Fulmine",
   "DND5E.DamageModification": {
     "Label": "Modifica del Danno",
     "Hint": "Formule per quantità che verranno aggiunte al danno di tipo applicato a questo personaggio. I valori negativi ridurranno il danno ricevuto.",
     "BypassHint": "Queste proprietà delle armi bypasseranno la modifica del danno per danni fisici."
   },
-  "DND5E.DamageNecrotic": "Necrotico",
-  "DND5E.DamagePiercing": "Perforante",
-  "DND5E.DamagePhysical": "Fisico Non Magico",
-  "DND5E.DamagePhysicalBypass": "Bypass Fisico",
-  "DND5E.DamagePhysicalBypassHint": "Queste proprietà delle armi bypasseranno la resistenza al danno fisico.",
-  "DND5E.DamagePhysicalBypasses": "{damageTypes} da attacchi che non sono {bypassTypes}",
-  "DND5E.DamagePhysicalBypassesShort": "Bypassato da fonti {type}",
-  "DND5E.DamagePoison": "Veleno",
-  "DND5E.DamagePsychic": "Psichico",
-  "DND5E.DamageRadiant": "Radiante",
   "DND5E.DamageRoll": "Tiro del Danno",
-  "DND5E.DamageSlashing": "Tagliente",
   "DND5E.DamageThreshold": "Soglia del Danno",
-  "DND5E.DamageThunder": "Tuono",
   "DND5E.DamageType": "Tipo di Danno",
   "DND5E.DamageTypes": "Tipi di Danno",
+  
   "DND5E.Dawn": "Alba",
   "DND5E.Day": "Giorno",
   "DND5E.DeathSave": "Tiri Salvezza Morte",
@@ -3051,12 +3057,17 @@
     }
   },
   "Hint": "Guarisci una creatura",
-  "Title": "Guarire"
+  "Title": "Guarire",
+  "Type": {
+    "Maximum": "Punti Ferita Massimi",
+    "MaximumShort": "PF Max",
+    "Temporary": "Punti Ferita Temporanei",
+    "TemporaryShort": "PF Temp."
+  }
 },
 
 "DND5E.Healing": "Guarigione",
-"DND5E.HealingRoll": "Tiro di Guarigione",
-"DND5E.HealingTemp": "Punti Ferita Temporanei",
+"DND5E.HealingRoll": "Tiro Guarigione",
 "DND5E.Height": "Altezza",
 
 "DND5E.HITPOINTS": {
