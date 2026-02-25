@@ -3054,9 +3054,13 @@
       }
     }
   },
+  "HealingButton": "Guarigione",
+  "HealingRoll": "Tiro Guarigione",
   "Hint": "Guarisci una creatura",
   "Title": "Guarire",
   "Type": {
+    "Healing": "Punti Ferita",
+    "HealingShort": "Guarigione",
     "Maximum": "Punti Ferita Massimi",
     "MaximumShort": "PF Max",
     "Temporary": "Punti Ferita Temporanei",
@@ -3064,8 +3068,6 @@
   }
 },
 
-"DND5E.Healing": "Guarigione",
-"DND5E.HealingRoll": "Tiro Guarigione",
 "DND5E.Height": "Altezza",
 
 "DND5E.HITPOINTS": {
@@ -3508,7 +3510,7 @@
     "InvalidLevel": "devi essere almeno al livello {level}",
     "Message": "{actor} {requirements} per prendere questo {type}.",
     "MissingItem": "devi aver preso in precedenza {items}",
-    "NotRepeatable": "non devi averlo mai preso prima"
+    "NotRepeatable": "non devi avere mai preso {name} prima"
   }
 },
 "DND5E.Price": "Prezzo",
@@ -4053,6 +4055,10 @@
   }
 },
 
+"DND5E.SourceItem": {
+  "Label": "Elemento Sorgente",
+  "LockedHint": "La sorgente di questo elemento viene determinata automaticamente dall'elemento che lo concede e non può essere modificata."
+},
 "DND5E.Special": "Speciale",
 "DND5E.SpecialHint": "Valori speciali separati da punto e virgola.",
 "DND5E.SpecialTraits": "Tratti Speciali",
@@ -4196,7 +4202,6 @@
   "Formula": "Formula di Preparazione",
   "Mode": "Modalità Preparazione Incantesimo"
 },
-"DND5E.SpellSourceClass": "Classe di Origine",
 "DND5E.SpellPrepared": "Preparato",
 "DND5E.SpellProgArt": "Artificiere",
 "DND5E.SpellProgAvailable": "Slot Disponibili",
