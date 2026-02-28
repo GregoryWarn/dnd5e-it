@@ -5621,7 +5621,7 @@
   "DamageExtended": "<em>Colpo:</em> {damage} danno",
   "DamageDouble": "{first} più {second}",
   "DamageShort": "{formula} {type}",
-  "DamageLong": "{average} ({formula}) {type}",
+  "DamageLong": "{average} <span class=\"formula-group\">({formula})</span> {type}",
   "DC": "CD {dc} {check}",
   "DCPassiveShort": "CD {dc} {check} passiva ",
   "DCPassiveLong": "punteggio passivo {check} di {dc} o superiore",
