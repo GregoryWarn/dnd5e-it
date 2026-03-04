@@ -62,6 +62,13 @@
   "dnd5e.rotateArea": "Ruota Area"
 },
 
+"TYPES.HINTS": {
+  "RegionBehavior": {
+    "dnd5e.difficultTerrain": "Contrassegna una regione come terreno difficile e impostane il tipo e chi ne è interessato.",
+    "dnd5e.rotateArea": "Ruota token, tessere, muri e altri oggetti attorno a un punto di rotazione centrale."
+  }
+},
+  
 "DND5E.title": "D&D 5e",
 "DND5E.AbbreviationCR": "GS",
 "DND5E.AbbreviationConc": "Conc.",
@@ -4488,6 +4495,10 @@
       "size": {
         "label": "Dimensione dell'Area",
         "hint": "Dimensione dell'area di effetto sul suo asse principale."
+      },
+      "stationary": {
+          "label": "Stazionario",
+          "hint": "Emanazione non può essere spostata una volta posizionata."
       },
       "type": {
         "label": "Tipo di Area",
