@@ -3828,11 +3828,13 @@
     }
   },
   "Hover": "Fluttuare",
+  "HoverSpeed": "{speed} (fluttuare)",
   "Speed": "Velocità Combattimento",
   "Type": {
     "Burrow": "Scavare",
     "Climb": "Scalare",
     "Fly": "Volare",
+    "Jump": "Saltare",
     "Speed": "Velocità",
     "Swim": "Nuotare",
     "Walk": "Camminare"
