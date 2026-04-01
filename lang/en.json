@@ -3828,11 +3828,13 @@
     }
   },
   "Hover": "Hover",
+  "HoverSpeed": "{speed} (hover)",
   "Speed": "Combat Speed",
   "Type": {
     "Burrow": "Burrow",
     "Climb": "Climb",
     "Fly": "Fly",
+    "Jump": "Jump",
     "Speed": "Speed",
     "Swim": "Swim",
     "Walk": "Walk"
