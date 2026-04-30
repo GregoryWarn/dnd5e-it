@@ -1,10 +1,10 @@
-# Traduzione D&D 5ed - 5.5ed ITA
+# Traduzione D&D 5e - 5.5e ITA
 
-Traduzione Italiana del sistema D&D 5e per Foundry VTT
+Traduzione Italiana del sistema D&D 5e - 5.5e per Foundry VTT
 
-Traduzione Italiana Compendio D&D 5ed 2014
+Traduzione Italiana Compendio D&D 5e 2014
 
-Traduzione Italiana Compendio D&D 5.5ed 2024
+Traduzione Italiana Compendio D&D 5.5e 2024
 
 GregoryWarn - ClaPSG
 
