@@ -1,30 +1,30 @@
 {
-  "label": "Attori",
+  "label": "Personaggi",
   "folders": {
-    "Aberration": "Abberrazioni",
+    "Aberration": "Aberrazione",
     "Animated Objects": "Oggetti Animati",
-    "Beast": "Bestie",
-    "Celestial": "Celestiali",
+    "Beast": "Bestia",
+    "Celestial": "Celestiale",
     "Companions": "Famigli",
     "Conjurations": "Evocazioni",
     "Conjured Elementals": "Elementali Evocati",
-    "Construct": "Costrutti",
-    "Dragon": "Draghi",
-    "Elemental": "Elementali",
-    "Fey": "Folletti",
-    "Fiend": "Demoni",
-    "Giant": "Giganti",
+    "Construct": "Costrutto",
+    "Dragon": "Drago",
+    "Elemental": "Elementale",
+    "Fey": "Folletto",
+    "Fiend": "Demone",
+    "Giant": "Gigante",
     "Giant Insects": "Insetti Giganti",
-    "Humanoid": "Umanoidi",
+    "Humanoid": "Umanoide",
     "Magic Items": "Oggetti Magici",
     "Monstrosity": "Mostruosità",
-    "Ooze": "Melme",
-    "Otherworldly Steeds": "Otherworldly Steeds",
-    "Plant": "Vegetali",
+    "Ooze": "Melma",
+    "Otherworldly Steeds": "Cavalcature Ultraterrene",
+    "Plant": "Vegetale",
     "Summon Templates": "Modelli di Evocazioni",
     "Summons": "Evocazioni",
-    "Swarm": "Sciami",
-    "Undead": "Non Morti",
+    "Swarm": "Sciame",
+    "Undead": "Non Morto",
     "Vehicles": "Veicoli"
   },
   "entries": {
@@ -166,13 +166,13 @@
           "name": "Domina Mente"
         },
         "7gP0oX3L1RKRaBGH": {
-          "name": "Consume Memories"
+          "name": "Consuma Memorie"
         },
         "ko31Vae4lE8qo5Ez": {
           "name": "Lash"
         },
         "K4jKE3RzUp4lUv6z": {
-          "name": "Psychic Drain"
+          "name": "Risucchio Psichico"
         }
       }
     },
