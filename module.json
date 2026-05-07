@@ -4,7 +4,7 @@
   "description": "Traduzione in Italiano D&D 5E per Foundry VTT",
   "version": "5.3.3",
   "compatibility": {
-    "minimum": "12",
+    "minimum": "13",
     "verified": "14"
   },
   "relationships": {
