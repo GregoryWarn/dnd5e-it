@@ -1,16 +1,4 @@
 {
-"COMMON": {
-  "AreYouSure": "Sei Sicuro?",
-  "Cancel": "Cancella",
-  "Confirm": "Conferma",
-  "Default": "Predefinito",
-  "Delete": "Elimina",
-  "No": "No",
-  "None": "Nessuno",
-  "Unknown": "Sconosciuto",
-  "Yes": "Si"
-},
-
 "DOCUMENT.DND5E": {
   "Activity": "Attività",
   "Advancement": "Avanzamento",
@@ -1019,6 +1007,7 @@
   "DND5E.Background": "Background",
   "DND5E.BackgroundAdd": "Aggiungi BG",
   "DND5E.BackgroundName": "Nome BG",
+  "DND5E.BaseItem": "Elemento Base",
   
   "DND5E.Bastion": {
     "Action": {
@@ -1077,7 +1066,7 @@
   
   "DND5E.Biography": "Biografia",
   "DND5E.BiographyPublic": "Biografia Pubblica",
-  "DND5E.BiopgrahyPublicEdit": "Modifica Biografia Pubblica",
+  "DND5E.BiograhyPublicEdit": "Modifica Biografia Pubblica",
   "DND5E.Bonds": "Legami",
   "DND5E.Bonus": "Bonus",
   "DND5E.BonusAction": "Azione Bonus",
@@ -1409,8 +1398,8 @@
         "hint": "Componenti dell'incantesimo e tag da ignorare durante il lancio."
       },
       "spellbook": {
-        "label": "Visualizza nel Manuale degli Incantesimi",
-        "hint": "Visualizza l'incantesimo nella scheda degli incantesimi della scheda del personaggio."
+        "label": "Visualizza in Scheda Incantesimi",
+        "hint": "Visualizza l'incantesimo nella scheda degli incantesimi della scheda del personaggio. Gli oggetti devono possedere la proprietà Magico ed essere sintonizzati se richiedono sintonia."
       },
       "uuid": {
         "label": "Incantesimo da Lanciare"
@@ -1515,6 +1504,10 @@
         "label": "Caratteristica o Strumenti Associati",
         "hint": "Verifica la presenza di abilità usando competenza e bonus con queste abilità o strumenti."
       },
+      "bonus": {
+        "label": "Bonus Prova",
+        "hint": "Bonus aggiunto a tutte le prove effettuate utilizzando questa attività."
+      },
       "dc": {
         "label": "Classe di Difficoltà",
         "calculation": {
@@ -1525,6 +1518,10 @@
           "label": "Formula della CD",
           "hint": "Formula personalizzata o valore fisso per definire la CD della verifica."
         }
+      },
+      "visible": {
+        "label": "Visibile a Tutti",
+        "hint": "Visualizza pulsante di tiro in chat per tutti i giocatori."
       }
     }
   },
@@ -1710,6 +1707,7 @@
   "DND5E.ConcentratingMissingItem": "L'effetto su cui si concentra e che deve essere sostituito non esiste.",
   "DND5E.ConcentratingLimited": "Non sei in grado di concentrare su un ulteriore effetto.",
   "DND5E.ConcentrationLimit": "Limite di Concentrazione",
+  "DND5E.ConcentrationLost": "Perdita Concentratione",
   "DND5E.ConcentratingEnd": "Termina Concentrazione",
   "DND5E.ConcentratingItemless": "Concentrazione Senza Fonte",
   "DND5E.ConcentratingWarnLimit": "Non puoi mantenere concentrazione su più effetti!",
@@ -2887,6 +2885,10 @@
     "EnhancedDualWielding": {
       "Name": "Doppia Arma Potenziata",
       "Hint": "Consente attacchi extra con azione bonus utilizzando qualsiasi arma da mischia senza la proprietà a due mani."
+      },
+    "IgnoreArmorSpeedReduction": {
+      "Name": "Ignora Riduzione Velocità Armatura",
+      "Hint": "Ignora la riduzione alla velocità quando si indossa l'armatura senza soddisfare il requisito di forza."
     }
   },
   
@@ -2915,19 +2917,20 @@
   "DND5E.FlagsReliableTalent": "Dote Affidabile",
   "DND5E.FlagsReliableTalentHint": "Privilegio Dote Affidabile del Ladro.",
   "DND5E.FlagsRemarkableAthlete": "Atleta Straordinario",
-  "DND5E.FlagsRemarkableAthleteHint": "Metà Competenza (per eccesso) a Prove Caratteristica fisiche ed Iniziativa.",
+  "DND5E.FlagsRemarkableAthleteHint": "Vantaggio sui tiri Iniziativa e sulle Prove Atletica.",
+  "DND5E.FlagsRemarkableAthleteHintLegacy": "Metà Competenza (per eccesso) a Prove Caratteristica fisiche ed Iniziativa.",
   "DND5E.FlagsWeaponCritThreshold": "Soglia Colpo Critico con Armi",
   "DND5E.FlagsWeaponCritThresholdHint": "Una soglia di colpo critico ampliata per gli attacchi con armi.",
   "DND5E.FlagsSpellCritThreshold": "Soglia Colpo Critico con Incantesimi",
   "DND5E.FlagsSpellCritThresholdHint": "Una soglia di colpo critico ampliata per gli attacchi con incantesimi.",
   "DND5E.FlagsMeleeCriticalDice": "Dadi Danno Critico in Mischia",
   "DND5E.FlagsMeleeCriticalDiceHint": "Numero dadi di danno aggiuntivi per colpi critici con armi da mischia.",
-"DND5E.FlagsToolExpertise": "Maestria Strumento",
-"DND5E.FlagsToolExpertiseHint": "Raddoppia il tuo bonus di competenza per qualsiasi prova caratteristica effettuata che utilizzi la tua competenza con uno strumento.",
-"DND5E.Flat": "Fisso",
-"DND5E.Formula": "Formula",
-"DND5E.FormulaMalformedError": "Problema nella preparazione della formula {property} all'interno di {name}.",
-"DND5E.FormulaMissingReferenceWarn": "La formula {property} all'interno di {name} ha riferimenti a dati mancanti: {references}",
+  "DND5E.FlagsToolExpertise": "Maestria Strumento",
+  "DND5E.FlagsToolExpertiseHint": "Raddoppia il tuo bonus di competenza per qualsiasi prova caratteristica effettuata che utilizzi la tua competenza con uno strumento.",
+  "DND5E.Flat": "Fisso",
+  "DND5E.Formula": "Formula",
+  "DND5E.FormulaMalformedError": "Problema nella preparazione della formula {property} all'interno di {name}.",
+  "DND5E.FormulaMissingReferenceWarn": "La formula {property} all'interno di {name} ha riferimenti a dati mancanti: {references}",
 
 "DND5E.Gear": {
   "Action": {
@@ -3421,14 +3424,6 @@
 "DND5E.Minimum": "Minimo",
 "DND5E.Method": "Metodo",
 "DND5E.Modifier": "Modificatore",
-"DND5E.ModuleArtConfigH": "Configura quale grafica fornita dal modulo dovrebbe essere utilizzata.",
-"DND5E.ModuleArtConfigL": "Configura Grafica",
-"DND5E.ModuleArtConfigN": "Grafica Fornita dal Modulo",
-"DND5E.ModuleArtConfigPortraits": "Ritratti",
-"DND5E.ModuleArtConfigTokens": "Token",
-"DND5E.ModuleArtPriorityDecrease": "Diminuisci Priorità",
-"DND5E.ModuleArtPriorityHint": "Usa le frecce per regolare la priorità delle fonti di grafica. Quando un singolo personaggio ha grafica fornita da più fonti, verrà utilizzata quella con la priorità più alta.",
-"DND5E.ModuleArtPriorityIncrease": "Aumenta Priorità",
 "DND5E.Multiple": "Multiplo",
 "DND5E.Multiplier": "Moltiplicatore",
 "DND5E.MythicActionLabel": "Azione Mitica",
@@ -3883,6 +3878,10 @@
         "label": "Abilità della Sfida",
         "hint": "Abilità che possono essere tirate per tentare la salvezza."
       },
+      "bonus": {
+        "label": "Bonus Tiro Salvezza",
+        "hint": "Bonus aggiunto a tutti i tiri salvezza effettuati utilizzando questa attività."
+      },
       "dc": {
         "label": "Classe di Difficoltà",
         "calculation": {
@@ -3895,6 +3894,10 @@
         },
         "CustomFormula": "Formula Personalizzata",
         "DefaultFormula": "8 + @mod + @prof"
+        },
+      "visible": {
+        "label": "Visibile a Tutti",
+        "hint": "Visualizza il pulsante di tiro in chat per tutti i giocatori."
       }
     }
   },
@@ -5832,9 +5835,20 @@
 "MACRO.5eNoActorSelected": "Nessun personaggio selezionato o assegnato trovato da utilizzare con la macro.",
 "MACRO.5eUnownedWarn": "Puoi creare pulsanti macro solo per gli oggetti di cui sei il proprietario",
 
-"MIGRATION.5eBegin": "Applicazione della migrazione del sistema D&D 5e per la versione {version}. Per favore, sii paziente e non chiudere il gioco o spegnere il server.",
-"MIGRATION.5eComplete": "Migrazione del sistema D&D 5e alla versione {version} completata!",
-"MIGRATION.5eVersionTooOldWarning": "I dati del sistema D&D 5e provengono da una versione troppo vecchia di Foundry e non possono essere migrati affidabilmente alla versione più recente. Il processo sarà tentato, ma potrebbero verificarsi errori.",
+"MIGRATION.DND5E": {
+  "Compendium": {
+    "Failed": "Migrazione del compendio {compendium} non riuscita.",
+    "Migrate": "Migrazione del compendio {compendium} alla versione {version}.",
+    "Refresh": "Aggiornamento del compendio {compendium}."
+  },
+  "World": {
+    "Begin": "Applicazione della migrazione del sistema D&D 5e alla versione {version}. Attendere e non chiudere il gioco né arrestare il server.",
+    "Complete": "Migrazione del sistema D&D 5e alla versione {version} completata!"
+  },
+  "Warning": {
+    "VersionTooOld": "I dati del sistema D&D 5e provengono da una versione di Foundry troppo vecchia e non possono essere migrati in modo affidabile all'ultima versione. La procedura verrà comunque eseguita, ma potrebbero verificarsi errori."
+  }
+},
 
 "SETTINGS.5eAutoCollapseCardL": "Comprimi automaticamente le descrizioni degli oggetti in chat",
 "SETTINGS.5eAutoCollapseCardN": "Comprimi oggetti in chat",
@@ -5885,6 +5899,14 @@
       "All": "Usa il punteggio per tutti",
       "None": "Tira sempre per l'iniziativa",
       "NPCs": "Usa il punteggio per i PNG del DM"
+    },
+    "InitiativeGroupCombatants": {
+      "Name": "Raggruppa Combattenti",
+      "Hint": "Raggruppa nel combat tracker i combattenti che hanno lo stesso punteggio di iniziativa."
+    },
+    "InitiativeGroupRoll": {
+      "Name": "Tiro Unico per Creatura",
+      "Hint": "Utilizza lo stesso tiro di iniziativa per creature identiche."
     }
   },
   "CRITICAL": {
@@ -5901,6 +5923,16 @@
   "DEFAULTSKILLS": {
     "Name": "Competenze Predefinite",
     "Hint": "Le competenze predefinite che appaiono nelle schede dei PNG indipendentemente dal livello di competenza."
+  },
+  "ENCOUNTERS": {
+    "Name": "Incontri",
+    "EncounterPlacementBehavior": {
+      "Name": "Opzioni Posizionamento",
+      "Hint": "Configura se aggiungere i membri dell'incontro al combattimento quando vengono posizionati in una scena.",
+      "CreateCombatants": "Aggiungi al Combattimento",
+      "None": "Non fare nulla",
+      "RollInitiative": "Aggiungi al Combattimento e tira Iniziativa"
+    }
   },
   "General": "Generale",
   "LOYALTY": {
