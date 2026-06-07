@@ -1,16 +1,4 @@
 {
-"COMMON": {
-  "AreYouSure": "Are You Sure?",
-  "Cancel": "Cancel",
-  "Confirm": "Confirm",
-  "Default": "Default",
-  "Delete": "Delete",
-  "No": "No",
-  "None": "None",
-  "Unknown": "Unknown",
-  "Yes": "Yes"
-},
-
 "DOCUMENT.DND5E": {
   "Activity": "Activity",
   "Advancement": "Advancement",
@@ -1019,6 +1007,7 @@
 "DND5E.Background": "Background",
 "DND5E.BackgroundAdd": "Add Background",
 "DND5E.BackgroundName": "Background Name",
+"DND5E.BaseItem": "Base Item",
 
 "DND5E.Bastion": {
   "Action": {
@@ -1077,7 +1066,7 @@
 
 "DND5E.Biography": "Biography",
 "DND5E.BiographyPublic": "Public Biography",
-"DND5E.BiopgrahyPublicEdit": "Edit Public Biography",
+"DND5E.BiographyPublicEdit": "Edit Public Biography",
 "DND5E.Bonds": "Bonds",
 "DND5E.Bonus": "Bonus",
 "DND5E.BonusAction": "Bonus Action",
@@ -1409,8 +1398,8 @@
         "hint": "Spell components & tags to ignore while casting."
       },
       "spellbook": {
-        "label": "Display in Spellbook",
-        "hint": "Display spell in the Spells tab of the character sheet."
+        "label": "Display in Spells Tab",
+        "hint": "Display spell in the Spells tab of the character sheet. Items must have the Magical property and be attuned if they require attunement."
       },
       "uuid": {
         "label": "Spell to Cast"
@@ -1515,6 +1504,10 @@
         "label": "Associated Skills or Tools",
         "hint": "Present ability checks using proficiency and bonuses with these skills or tools."
       },
+      "bonus": {
+        "label": "Check Bonus",
+        "hint": "Bonus added to all checks made using this activity."
+      },
       "dc": {
         "label": "Difficulty Class",
         "calculation": {
@@ -1525,6 +1518,10 @@
           "label": "DC Formula",
           "hint": "Custom formula or flat value for defining the check DC."
         }
+      },
+      "visible": {
+        "label": "Visible to All",
+        "hint": "Display the rolling button in chat for all players."
       }
     }
   },
@@ -1710,6 +1707,7 @@
 "DND5E.ConcentratingMissingItem": "The effect that is concentrated on and to be replaced does not exist.",
 "DND5E.ConcentratingLimited": "You are not able to begin concentrating on an additional effect.",
 "DND5E.ConcentrationLimit": "Concentration Limit",
+"DND5E.ConcentrationLost": "Lost Concentration",
 "DND5E.ConcentratingEnd": "End Concentration",
 "DND5E.ConcentratingItemless": "Concentration With No Source",
 "DND5E.ConcentratingWarnLimit": "You cannot maintain concentration on more effects!",
@@ -2887,6 +2885,10 @@
   "EnhancedDualWielding": {
     "Name": "Enhanced Dual Wielding",
     "Hint": "Allow bonus action extra attacks using any melee weapon without the Two-Handed property."
+  },
+  "IgnoreArmorSpeedReduction": {
+    "Name": "Ignore Armor Speed Reduction",
+    "Hint": "Ignore the reduction to speed when wearing armor without meeting the strength requirement."
   }
 },
 
@@ -2915,7 +2917,8 @@
 "DND5E.FlagsReliableTalent": "Reliable Talent",
 "DND5E.FlagsReliableTalentHint": "Rogues Reliable Talent Feature.",
 "DND5E.FlagsRemarkableAthlete": "Remarkable Athlete",
-"DND5E.FlagsRemarkableAthleteHint": "Half-Proficiency (rounded-up) to physical Ability Checks and Initiative.",
+"DND5E.FlagsRemarkableAthleteHint": "Advantage on Initiative rolls and Athletics checks.",
+"DND5E.FlagsRemarkableAthleteHintLegacy": "Half-Proficiency (rounded-up) to physical Ability Checks and Initiative.",
 "DND5E.FlagsWeaponCritThreshold": "Weapon Critical Hit Threshold",
 "DND5E.FlagsWeaponCritThresholdHint": "An expanded critical hit threshold for weapon attacks.",
 "DND5E.FlagsSpellCritThreshold": "Spell Critical Hit Threshold",
@@ -3421,14 +3424,6 @@
 "DND5E.Minimum": "Minimum",
 "DND5E.Method": "Method",
 "DND5E.Modifier": "Modifier",
-"DND5E.ModuleArtConfigH": "Configure which module-provided art should be used.",
-"DND5E.ModuleArtConfigL": "Configure Art",
-"DND5E.ModuleArtConfigN": "Module-provided Art",
-"DND5E.ModuleArtConfigPortraits": "Portraits",
-"DND5E.ModuleArtConfigTokens": "Tokens",
-"DND5E.ModuleArtPriorityDecrease": "Decrease Priority",
-"DND5E.ModuleArtPriorityHint": "Use the arrows to adjust the priority of the art sources. When a single Actor has art provided from multiple sources, the one with the highest priority will be used.",
-"DND5E.ModuleArtPriorityIncrease": "Increase Priority",
 "DND5E.Multiple": "Multiple",
 "DND5E.Multiplier": "Multiplier",
 "DND5E.MythicActionLabel": "Mythic Action",
@@ -3883,6 +3878,10 @@
         "label": "Challenge Abilities",
         "hint": "Abilities that may be rolled to attempt to save."
       },
+      "bonus": {
+        "label": "Save Bonus",
+        "hint": "Bonus added to all saving throws made using this activity."
+      },
       "dc": {
         "label": "Difficulty Class",
         "calculation": {
@@ -3895,6 +3894,10 @@
         },
         "CustomFormula": "Custom Formula",
         "DefaultFormula": "8 + @mod + @prof"
+      },
+      "visible": {
+        "label": "Visible to All",
+        "hint": "Display the rolling button in chat for all players."
       }
     }
   },
@@ -5832,9 +5835,20 @@
 "MACRO.5eNoActorSelected": "No selected or assigned actor could be found to target with macro.",
 "MACRO.5eUnownedWarn": "You can only create macro buttons for owned Items",
 
-"MIGRATION.5eBegin": "Applying D&D 5e System Migration for version {version}. Please be patient and do not close your game or shut down your server.",
-"MIGRATION.5eComplete": "D&D 5e System Migration to version {version} completed!",
-"MIGRATION.5eVersionTooOldWarning": "Your D&D 5e system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.",
+"MIGRATION.DND5E": {
+  "Compendium": {
+    "Failed": "Migration failed for compendium {compendium}.",
+    "Migrate": "Migrating compendium {compendium} for version {version}.",
+    "Refresh": "Refreshing compendium {compendium}."
+  },
+  "World": {
+    "Begin": "Applying D&D 5e System Migration for version {version}. Please be patient and do not close your game or shut down your server.",
+    "Complete": "D&D 5e System Migration to version {version} completed!"
+  },
+  "Warning": {
+    "VersionTooOld": "Your D&D 5e system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur."
+  }
+},
 
 "SETTINGS.5eAutoCollapseCardL": "Automatically collapse Item Card descriptions in the Chat Log",
 "SETTINGS.5eAutoCollapseCardN": "Collapse Item Cards in Chat",
@@ -5885,6 +5899,14 @@
       "All": "Use Score for Everyone",
       "None": "Always Roll for Initiative",
       "NPCs": "Use Score for GM NPCs"
+    },
+    "InitiativeGroupCombatants": {
+      "Name": "Group Combatants",
+      "Hint": "Group combatants with the same initiative score in the encounter tracker."
+    },
+    "InitiativeGroupRoll": {
+      "Name": "Roll Once per Creature",
+      "Hint": "Use the same initiative roll for identical creatures."
     }
   },
   "CRITICAL": {
@@ -5901,6 +5923,16 @@
   "DEFAULTSKILLS": {
     "Name": "Default Skills",
     "Hint": "The default skills that appear on NPC sheets regardless of level of proficiency."
+  },
+  "ENCOUNTERS": {
+    "Name": "Encounters",
+    "EncounterPlacementBehavior": {
+      "Name": "Placement Options",
+      "Hint": "Configure whether to add encounter members to combat when placed on a scene.",
+      "CreateCombatants": "Add to Combat",
+      "None": "Do Nothing",
+      "RollInitiative": "Add to Combat and Roll Initiative"
+    }
   },
   "General": "General",
   "LOYALTY": {
