@@ -4296,6 +4296,7 @@
   "DND5E.SubclassDuplicateError": "Una sottoclasse con l'identificatore {identifier} esiste già su questo personaggio.",
   "DND5E.SubclassMismatchWarn": "La sottoclasse {name} non ha una classe corrispondente con identificatore '{class}'.",
   "DND5E.SubclassName": "Nome della Sottoclasse",
+  "DND5E.SubclassOf": "Sottoclasse {class}",
   "DND5E.Subtype": "Sottotipo",
   "DND5E.Summary": "Riepilogo",
   
