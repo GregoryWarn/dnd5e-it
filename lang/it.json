@@ -58,12 +58,14 @@
 "TYPES.Item.weaponPl": "Armi",
 
 "TYPES.RegionBehavior": {
+  "dnd5e.applyActiveEffect": "Applica Active Effect (5e)",
   "dnd5e.difficultTerrain": "Terreno Difficile",
   "dnd5e.rotateArea": "Ruota Area"
 },
 
 "TYPES.HINTS": {
   "RegionBehavior": {
+    "dnd5e.applyActiveEffect": "Applica Active Effects ai Token mentre sono all'interno della Regione e soddisfano determinati criteri.",
     "dnd5e.difficultTerrain": "Contrassegna una regione come terreno difficile e impostane il tipo e chi ne è interessato.",
     "dnd5e.rotateArea": "Ruota token, tessere, muri e altri oggetti attorno a un punto di rotazione centrale."
   }
@@ -518,7 +520,8 @@
         },
         "restriction": {
           "level": {
-            "Available": "Qualsiasi livello disponibile",
+            "Available": "Qualsiasi livello disponibile (Inclusi Trucchetti)",
+            "AvailableNoCantrips": "Qualsiasi livello disponibile (Esclusi Trucchetti)",
             "hint": "Consenti scelte solo per incantesimi di questo livello.",
             "label": "Livello dell'incantesimo"
           },
@@ -609,6 +612,32 @@
     "Hint": "Seleziona quali dei seguenti progressi verranno aggiunti a {name}.",
     "Selection": "Selezione Avanzamento",
     "Title": "Migrazione Avanzamento"
+    },
+    "ModifyItem": {
+      "Action": {
+        "AddChange": "Aggiungi modifica",
+        "DeleteChange": "Elimina modifica"
+      },
+      "Empty": {
+        "WithDropdown": "Nessuna modifica. Usa il pulsante <i class=\"fa-solid fa-plus\"></i> qui sopra per crearne una oppure seleziona un effetto esistente dal menu a discesa.",
+        "WithoutDropdown": "Nessuna modifica. Usa il pulsante <i class=\"fa-solid fa-plus\"></i> qui sopra per crearne una."
+      },
+      "FIELDS": {
+        "changes": {
+          "element": {
+            "enchantment": {
+              "label": "Incantamento applicato"
+            },
+            "identifiers": {
+              "hint": "Identificatori degli oggetti che verranno modificati da questo incantamento. Gli identificatori possono essere preceduti dal tipo di oggetto (ad esempio \"spell:mage-hand\").",
+              "label": "Oggetti modificati"
+            }
+          },
+          "label": "Modifiche agli oggetti"
+        }
+      },
+      "Hint": "Modifica oggetti esistenti tramite un incantamento.",
+      "Title": "Modifica oggetti"
     },
     "ScaleValue": {
       "Action": {
@@ -3599,6 +3628,26 @@
 "DND5E.RecoveryFormula": "Formula di Recupero",
 
 "DND5E.REGIONBEHAVIORS": {
+  "APPLYACTIVEEFFECT": {
+    "FIELDS": {
+      "dispositions": {
+        "hint": "Se impostato, applica gli effetti solo ai Token con queste disposizioni.",
+        "label": "Disposizioni"
+      },
+      "effects": {
+        "hint": "Gli effetti applicati ai Token all'interno della Regione.",
+        "label": "Effetti"
+      },
+      "sizes": {
+        "hint": "Se impostato, applica gli effetti solo ai Token di queste taglie.",
+        "label": "Taglie"
+      },
+      "types": {
+        "hint": "Se impostato, applica gli effetti solo ai Token che appartengono a questi tipi di creatura.",
+        "label": "Tipi"
+      }
+    }
+  },
   "DIFFICULTTERRAIN": {
     "FIELDS": {
       "ignoredDispositions": {
@@ -3718,6 +3767,11 @@
 
 "DND5E.REST": {
   "Configuration": "Configurazione Riposo",
+  "Duration": {
+    "Hint": "Quantità di tempo che trascorre durante il riposo.",
+    "Label": "Durata",
+    "UntilSunrise": "Riposo fino all'Alba"
+  },
   "HitDice": {
     "AutoSpend": {
       "Hint": "Spendi automaticamente i dadi vita finché non finiscono o la salute è completa.",
@@ -5869,13 +5923,19 @@
       "Full": "Totale",
       "NoBlocking": "Parziale",
       "None": "Nessuno"
+    },
+    "SenseVision": {
+      "Name": "Sincronizza sensi con la visione del Token",
+      "Hint": "Configura automaticamente la portata della visione del Token, la modalità di visione e le modalità di rilevamento in base ai sensi del personaggio.",
+      "Notice": "La visione e il rilevamento sono sincronizzati dai {senses} di questo personaggio.",
+      "Senses": "sensi"
     }
   },
   "BLOODIED": {
     "Name": "Stato Sanguinante",
     "Hint": "Configura se lo stato di sanguinante deve essere tracciato automaticamente e la sua visibilità.",
-    "All": "Mostra per Alleati & Nemici",
-    "Player": "Mostra solo per Alleati",
+    "All": "Mostra per Token Amichevoli, Neutrali e Ostili",
+    "Player": "Mostra solo per Token Amichevoli",
     "None": "Non mostrare mai"
   },
   "COLLAPSETRAYS": {
