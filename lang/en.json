@@ -58,12 +58,14 @@
 "TYPES.Item.weaponPl": "Weapons",
 
 "TYPES.RegionBehavior": {
+  "dnd5e.applyActiveEffect": "Apply Active Effect (5e)",
   "dnd5e.difficultTerrain": "Difficult Terrain",
   "dnd5e.rotateArea": "Rotate Area"
 },
 
 "TYPES.HINTS": {
   "RegionBehavior": {
+    "dnd5e.applyActiveEffect": "Apply Active Effects to Tokens while they are within the Region and meet certain criteria.",
     "dnd5e.difficultTerrain": "Mark a region as being difficult terrain and set its type and who it affects.",
     "dnd5e.rotateArea": "Rotate tokens, tiles, walls, and other objects around a central pivot point."
   }
@@ -518,7 +520,8 @@
       },
       "restriction": {
         "level": {
-          "Available": "Any Available Level",
+          "Available": "Any Available Level (Including Cantrips)",
+          "AvailableNoCantrips": "Any Available Level (Excluding Cantrips)",
           "hint": "Only allow choices from spells of this level.",
           "label": "Spell Level"
         },
@@ -609,6 +612,32 @@
     "Hint": "Select which of the following advancements will be added to {name}.",
     "Selection": "Advancement Selection",
     "Title": "Migrate Advancement"
+  },
+  "ModifyItem": {
+    "Action": {
+      "AddChange": "Add Change",
+      "DeleteChange": "Delete Change"
+    },
+    "Empty": {
+      "WithDropdown": "No changes. Use the <i class=\"fa-solid fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
+      "WithoutDropdown": "No changes. Use the <i class=\"fa-solid fa-plus\"></i> button above to create one."
+    },
+    "FIELDS": {
+      "changes": {
+        "element": {
+          "enchantment": {
+            "label": "Applied Enchantment"
+          },
+          "identifiers": {
+            "hint": "Identifiers for items that will be modified by this enchantment. Identifiers can be prefixed using the item type (e.g. \"spell:mage-hand\").",
+            "label": "Modified Items"
+          }
+        },
+        "label": "Item Changes"
+      }
+    },
+    "Hint": "Modify existing items using an enchantment.",
+    "Title": "Modify Items"
   },
   "ScaleValue": {
     "Action": {
@@ -3599,6 +3628,26 @@
 "DND5E.RecoveryFormula": "Recovery Formula",
 
 "DND5E.REGIONBEHAVIORS": {
+  "APPLYACTIVEEFFECT": {
+    "FIELDS": {
+      "dispositions": {
+        "hint": "If set, only apply effects to Tokens with these dispositions.",
+        "label": "Dispositions"
+      },
+      "effects": {
+        "hint": "The effects that are applied to Tokens within the Region.",
+        "label": "Effects"
+      },
+      "sizes": {
+        "hint": "If set, only apply effects to Tokens that are these sizes.",
+        "label": "Sizes"
+      },
+      "types": {
+        "hint": "If set, only apply effects to Tokens that are these creature types.",
+        "label": "Types"
+      }
+    }
+  },
   "DIFFICULTTERRAIN": {
     "FIELDS": {
       "ignoredDispositions": {
@@ -3718,6 +3767,11 @@
 
 "DND5E.REST": {
   "Configuration": "Rest Configuration",
+  "Duration": {
+    "Hint": "Amount of time to pass during the rest.",
+    "Label": "Duration",
+    "UntilSunrise": "Rest Until Sunrise"
+  },
   "HitDice": {
     "AutoSpend": {
       "Hint": "Automatically spend hit dice until they run out or health is full.",
@@ -5869,13 +5923,19 @@
       "Full": "Full",
       "NoBlocking": "Partial",
       "None": "None"
+    },
+    "SenseVision": {
+      "Name": "Sync Senses to Token Vision",
+      "Hint": "Automatically configure token vision range, vision mode, and detection modes based on the actor's senses.",
+      "Notice": "Vision and detection are synced from this actor's {senses}.",
+      "Senses": "senses"
     }
   },
   "BLOODIED": {
     "Name": "Bloodied Status",
     "Hint": "Configure whether the bloodied status is tracked automatically and its visibility.",
-    "All": "Display for Allies & Enemies",
-    "Player": "Only Display for Allies",
+    "All": "Display for Friendly, Neutral, & Hostile Tokens",
+    "Player": "Only Display for Friendly Tokens",
     "None": "Never Display"
   },
   "COLLAPSETRAYS": {
