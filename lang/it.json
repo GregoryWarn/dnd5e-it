@@ -7,55 +7,62 @@
   }
 },
 
-  "TYPES.Actor.character": "PG",
-  "TYPES.Actor.characterPl": "PG",
-  "TYPES.Actor.encounter": "Incontro",
-  "TYPES.Actor.encounterPl": "Incontri",
-  "TYPES.Actor.group": "Gruppo",
-  "TYPES.Actor.groupPl": "Gruppi",
-  "TYPES.Actor.npc": "PNG",
-  "TYPES.Actor.npcPl": "PNG",
-  "TYPES.Actor.vehicle": "Veicolo",
-  "TYPES.Actor.vehiclePl": "Veicoli",
-  
-  "TYPES.ActiveEffect.enchantment": "Incantamento",
-  "TYPES.ActiveEffect.enchantmentPl": "Incantamenti",
+ "TYPES.Actor": {
+  "character": "PG",
+  "characterPl": "PG",
+  "encounter": "Incontro",
+  "encounterPl": "Incontri",
+  "group": "Gruppo",
+  "groupPl": "Gruppi",
+  "npc": "PNG",
+  "npcPl": "PNG",
+  "vehicle": "Veicolo",
+  "vehiclePl": "Veicoli"
+},
+
+"TYPES.ActiveEffect": {
+  "enchantment": "Enchantment",
+  "enchantmentPl": "Enchantments"
+},
 
 "TYPES.ChatMessage": {
     "request": "Messaggio di Richiesta",
     "rest": "Messaggio di Riposo",
+    "timePassed": "Messaggio Tempo Trascorso",
     "turn": "Messaggio Turno Combattimento",
     "usage": "Messaggio Utilizzo"
 },
 
-"TYPES.Item.background": "Background",
-"TYPES.Item.backgroundPl": "Backgrounds",
-"TYPES.Item.container": "Contenitore",
-"TYPES.Item.containerPl": "Contenitori",
-"TYPES.Item.class": "Classe",
-"TYPES.Item.classPl": "Classi",
-"TYPES.Item.consumable": "Consumabile",
-"TYPES.Item.consumablePl": "Consumabili",
-"TYPES.Item.equipment": "Equipaggiamento",
-"TYPES.Item.equipmentPl": "Equipaggiamento",
-"TYPES.Item.facility": "Struttura",
-"TYPES.Item.facilityPl": "Strutture",
-"TYPES.Item.feat": "Privilegio",
-"TYPES.Item.featurePl": "Privilegi",
-"TYPES.Item.loot": "Bottino",
-"TYPES.Item.lootPl": "Bottino",
-"TYPES.Item.race": "Specie",
-"TYPES.Item.racePl": "Specie",
-"TYPES.Item.raceLegacy": "Razza",
-"TYPES.Item.raceLegacyPl": "Razze",
-"TYPES.Item.spell": "Incantesimo",
-"TYPES.Item.spellPl": "Incantesimi",
-"TYPES.Item.subclass": "Sottoclasse",
-"TYPES.Item.subclassPl": "Sottoclassi",
-"TYPES.Item.tool": "Strumento",
-"TYPES.Item.toolPl": "Strumenti",
-"TYPES.Item.weapon": "Arma",
-"TYPES.Item.weaponPl": "Armi",
+"TYPES.Item": {
+  "background": "Background",
+  "backgroundPl": "Backgrounds",
+  "container": "Contenitore",
+  "containerPl": "Contenitori",
+  "class": "Classe",
+  "classPl": "Classi",
+  "consumable": "Consumabile",
+  "consumablePl": "Consumabili",
+  "equipment": "Equipaggiamento",
+  "equipmentPl": "Equipaggiamento",
+  "facility": "Struttura",
+  "facilityPl": "Strutture",
+  "feat": "Privilegio",
+  "featurePl": "Privilegi",
+  "loot": "Bottino",
+  "lootPl": "Bottino",
+  "race": "Specie",
+  "racePl": "Specie",
+  "raceLegacy": "Razza",
+  "raceLegacyPl": "Razze",
+  "spell": "Incantesimo",
+  "spellPl": "Incantesimi",
+  "subclass": "Sottoclasse",
+  "subclassPl": "Sottoclassi",
+  "tool": "Strumento",
+  "toolPl": "Strumenti",
+  "weapon": "Arma",
+  "weaponPl": "Armi"
+},
 
 "TYPES.RegionBehavior": {
   "dnd5e.applyActiveEffect": "Applica Active Effect (5e)",
@@ -285,6 +292,24 @@
       "other": "Attività"
     },
     "FIELDS": {
+      "behaviors": {
+        "element": {
+          "level": {
+            "label": "Limite di Livello",
+            "hint": "Intervallo di livelli richiesto per applicare questo comportamento.",
+            "max": {
+              "label": "Livello Massimo"
+            },
+            "min": {
+              "label": "Livello Minimo"
+            }
+          },
+          "name": {
+            "label": "Nome"
+          }
+        },
+        "label": "Comportamenti dell'Area di Effetto"
+      },
       "description": {
         "label": "Descrizione",
         "chatFlavor": {
@@ -536,6 +561,9 @@
             "label": "Tipo"
           }
         },
+        "sorting": {
+          "label": "Modalità Ordinamento"
+        },
         "type": {
           "Any": "Qualsiasi",
           "hint": "Limita i tipi di oggetti che possono essere scelti.",
@@ -568,6 +596,9 @@
         "optional": {
           "label": "Opzionale",
           "hint": "Se l'intero avanzamento è contrassegnato come opzionale, i giocatori possono rinunciare a uno qualsiasi degli oggetti seguenti, altrimenti tutti gli oggetti non opzionali sono concessi."
+        },
+        "sorting": {
+          "label": "Modalità Ordinamento"
         }
       },
       "Hint": "Concedi al personaggio oggetti (come equipaggiamento, funzioni o incantesimi) quando raggiunge un certo livello.",
@@ -702,6 +733,18 @@
           "Hint": "Usa questo se non sei sicuro del tipo di valori della scala, o se il tipo non è importante.",
           "Identifier": "Questo valore scala per il livello attuale sarà disponibile in una formula usando:<br><copyable-text>@scale.{class}.{identifier}</copyable-text>",
           "Label": "Qualsiasi cosa"
+        },
+        "Usage": {
+          "FIELDS": {
+            "period": {
+              "label": "Periodo"
+            },
+            "value": {
+              "label": "Usi"
+            }
+          },
+          "Hint": "Usa questo per rappresentare gli usi degli elementi in un determinato periodo.",
+          "Label": "Utilizzo"
         }
       }
     },
@@ -897,22 +940,79 @@
     }
   },
   "DND5E.Armor": "Armatura",
+
+  "DND5E.ARMORCLASS": {
+    "Action": {
+      "Configure": "Configura Armatura",
+      "CreateFormula": "Crea Formula Personalizzata",
+      "DeleteFormula": "Elimina Formula Personalizzata"
+    },
+    "Calculation": {
+      "Armored": "Armatura Equipaggiata",
+      "Custom": "Personalizzata",
+      "Draconic": "Resilienza Draconica",
+      "Label": "Calcolo",
+      "Mage": "Armatura Magica",
+      "Natural": "Armatura Naturale",
+      "Unarmored": "Senza Armatura",
+      "UnarmoredBarbarian": "Difesa Senza Armatura (Barbaro)",
+      "UnarmoredBard": "Difesa Senza Armatura (Bardo)",
+      "UnarmoredMonk": "Difesa Senza Armatura (Monaco)"
+    },
+    "Condition": {
+      "Positive": "Deve avere {type}",
+      "Negative": "Non deve avere {type}"
+    },
+    "Configuration": "Configurazione",
+    "CurrentFormula": "Formula Attuale",
+    "CustomFormulas": {
+      "Empty": "Nessuna formula personalizzata. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne una."
+    },
+    "FIELDS": {
+      "attributes": {
+        "ac": {
+          "flat": {
+            "hint": "Valore numerico utilizzabile in una formula di Classe Armatura tramite @attributes.ac.flat.",
+            "label": "Valore Fisso"
+          },
+          "formulas": {
+            "element": {
+              "armored": {
+                "excluded": "Senza Armatura",
+                "label": "Con Armatura",
+                "required": "Armatura Richiesta"
+              },
+              "formula": {
+                "label": "Formula"
+              },
+              "label": {
+                "label": "Etichetta"
+              },
+              "shielded": {
+                "excluded": "Senza Scudo",
+                "label": "Con Scudo",
+                "required": "Scudo Richiesto"
+              }
+            },
+            "label": "Formule"
+          },
+          "label": "Classe Armatura",
+          "override": {
+            "hint": "Valore utilizzato al posto della Classe Armatura calcolata, ignorando copertura, scudo e qualsiasi altro bonus.",
+            "label": "Sovrascrivi"
+          },
+          "selectedFormulas": {
+            "hint": "Queste formule verranno utilizzate per il calcolo della Classe Armatura.",
+            "label": "Formule Selezionate"
+          }
+        }
+      }
+    },
+    "Flat": "Fisso",
+    "Formula": "Formula"
+  },
+  
   "DND5E.ArmorClass": "Classe Armatura",
-  "DND5E.ArmorClassEquipment": "Armatura Equipaggiata",
-  "DND5E.ArmorClassFlat": "Piatta",
-  "DND5E.ArmorClassUnarmored": "Senza Armatura",
-  "DND5E.ArmorClassNatural": "Armatura Naturale",
-  "DND5E.ArmorClassMage": "Armatura Magica",
-  "DND5E.ArmorClassMotionless": "Classe Armatura da Immobilità",
-  "DND5E.ArmorClassDraconic": "Resilienza Draconica",
-  "DND5E.ArmorClassUnarmoredMonk": "Difesa Senza Armatura (Monaco)",
-  "DND5E.ArmorClassUnarmoredBarbarian": "Difesa Senza Armatura (Barbaro)",
-  "DND5E.ArmorClassUnarmoredBard": "Difesa Senza Armatura (Bardo)",
-  "DND5E.ArmorClassCustom": "Formula Personalizzata",
-  "DND5E.ArmorConfig": "Configura Armatura",
-  "DND5E.ArmorConfigHint": "Compila la casella sopra per sostituire la classe armatura calcolata automaticamente.",
-  "DND5E.ArmorClassCalculation": "Calcolo",
-  "DND5E.ArmorClassFormula": "Formula",
   "DND5E.ArmorHeavyProficiency": "Pesante",
   "DND5E.ArmorLightProficiency": "Leggera",
   "DND5E.ArmorMediumProficiency": "Media",
@@ -1040,7 +1140,8 @@
   
   "DND5E.Bastion": {
     "Action": {
-      "BastionTurn": "Avanza Turno Bastione"
+      "Advance": "Avanza Turno Bastione",
+      "Maintain": "Mantieni Bastione"
     },
     "Attack": {
       "Automatic": "Risolvi Automaticamente",
@@ -1067,7 +1168,10 @@
       "Label": "Configura Bastioni",
       "Hint": "Opzioni di configurazione per il sistema Bastione come presentato nel DMG 2024."
     },
-    "Confirm": "Avanzare un turno bastione?",
+    "Confirm": {
+      "Advance": "Questa operazione farà avanzare di {duration} il progresso degli ordini di tutte le strutture del Bastione, assegnerà l'ordine di manutenzione a tutte le strutture inattive e riparerà tutte le strutture disattivate. Vuoi continuare?",
+      "Maintain": "Questa operazione assegnerà l'ordine di manutenzione a tutte le strutture del Bastione inattive e riparerà tutte le strutture disattivate. Vuoi continuare?"
+    },
     "Duration": {
       "Label": "Durata Turno Bastione (giorni)"
     },
@@ -1092,6 +1196,15 @@
     "Pending": "Transazione in sospeso"
     }
   },
+
+  "DND5E.BEHAVIOR": {
+    "Action": {
+      "Create": "Crea Comportamento",
+      "Delete": "Elimina Comportamento"
+    },
+    "Hint": "Questi comportamenti verranno applicati a qualsiasi area di effetto generata da questa attività.",
+    "Label": "Comportamento"
+  },
   
   "DND5E.Biography": "Biografia",
   "DND5E.BiographyPublic": "Biografia Pubblica",
@@ -1101,9 +1214,9 @@
   "DND5E.BonusAction": "Azione Bonus",
   "DND5E.BonusActionAbbr": "AB",
   "DND5E.BonusAttack": "Bonus Attacco",
-"DND5E.BonusDamage": "Bonus Danno",
-"DND5E.BonusSaveForm": "Aggiorna Bonus",
-"DND5E.BonusTitle": "Configura Bonus Personaggio",
+  "DND5E.BonusDamage": "Bonus Danno",
+  "DND5E.BonusSaveForm": "Aggiorna Bonus",
+  "DND5E.BonusTitle": "Configura Bonus Personaggio",
 
 "DND5E.BONUSES": {
   "FIELDS": {
@@ -1197,6 +1310,13 @@
     "enabled": {
       "hint": "Consenti a tutti gli utenti di visualizzare e personalizzare l’interfaccia del calendario.",
       "label": "Abilitato"
+    },
+    "dailyRecovery": {
+      "calendar": "Recupero tramite Calendario (con il passare del tempo)",
+      "default": "Predefinito (collegato all'impostazione di abilitazione del calendario)",
+      "hint": "Determina se gli usi limitati con recupero giornaliero, all'alba o al tramonto vengono ripristinati in base al calendario della campagna oppure tramite la finestra di dialogo del riposo.",
+      "label": "Modalità di Recupero Giornaliero",
+      "manual": "Recupero Manuale (tramite finestra di dialogo del riposo)"
     },
     "formatters": {
       "date": {
@@ -1387,7 +1507,18 @@
       "Autumn": "Autunno",
       "Winter": "Inverno"
     }
-  }
+   },
+    "TimePassage": {
+      "Midnight": "È iniziato un nuovo giorno.",
+      "Sunrise": "Il sole è sorto.",
+      "Sunset": "Il sole è tramontato.",
+      "SunsetSunrise": "Il sole è tramontato ed è sorta l'alba di un nuovo giorno.",
+      "TimePassed": {
+        "one": "È trascorso {number}.",
+        "other": "Sono trascorsi {number}."
+      },
+      "Title": "Scorrere del Tempo"
+    }
 },
 
 "DND5E.CAST": {
@@ -1511,10 +1642,13 @@
   },
     "REQUEST": {
     "Action": {
-      "Handle": "Gestisci richiesta"
+      "Handle": "Gestisci richiesta",
+      "Post": "Invia richiesta"
     },
+    "AnyOwner": "Ogni Proprietario",
     "Complete": "Richiesta soddisfatta",
-    "PartyMembers": "Membri Gruppo"
+    "PartyMembers": "Membri Gruppo",
+    "Title": "Richiesta"
   },
   "TURN": {
     "NoCombatant": "Il combattente non esiste più!"
@@ -1706,12 +1840,6 @@
   "DND5E.ConCharmed": "Affascinato",
   "DND5E.ConDeafened": "Assordato",
   "DND5E.ConDiseased": "Malato",
-  "DND5E.CONDITIONS": {
-    "RiderConditions": {
-      "label": "Condizioni di Status Separate",
-      "hint": "Quando questo Effetto Attivo è applicato, queste condizioni di status aggiuntive verranno applicate separatamente."
-    }
-  },
   "DND5E.ConExhaustion": "Indebolimento",
   "DND5E.ConFrightened": "Spaventato",
   "DND5E.ConGrappled": "Afferrato",
@@ -2104,6 +2232,10 @@
               "label": "Denominazione del Dado",
               "hint": "Denominazione del dado da tirare."
             },
+            "modifiers": {
+              "label": "Modificatori",
+              "hint": "Modificatori Tiro aggiunti al dado base."
+            },
             "number": {
               "label": "Numero di Dadi",
               "hint": "Numero di dadi da tirare."
@@ -2288,25 +2420,51 @@
   "DND5E.DurationUnits": "Unità di Durata",
   "DND5E.DurationValue": "Valore della Durata",
   "DND5E.Dusk": "Crepuscolo",
+  
   "DND5E.Effect": "Effetto",
-  "DND5E.Effects": "Effetti",
+  
   "DND5E.EFFECT": {
     "Action": {
       "Create": "Crea Effetto",
       "Delete": "Elimina Effetto",
-      "Dissociate": "Dissocia Effetto"
+      "Dissociate": "Dissocia Effetto",
+      "Search": "Cerca Effetti"
     },
-    "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> sopra per crearne uno, o seleziona un effetto esistente dal menu a tendina.",
+    "Application": {
+      "Action": {
+        "ApplyTokens": "Applica ai token selezionati"
+      },
+      "Header": "Effetti",
+      "Warning": {
+        "Concentration": "L'applicazione di un effetto che richiede la concentrazione di un altro personaggio richiede i permessi del GM.",
+        "Ownership": "Gli effetti non possono essere applicati a token di cui non sei il proprietario."
+      }
+    },
+    "BASE": {
+      "FIELDS": {
+        "magical": {
+          "hint": "Questo effetto proviene da una fonte magica e dovrebbe essere disattivato quando la magia non è disponibile.",
+          "label": "Magico"
+        }
+      }
+    },
+    "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa oppure trascinane uno da un compendio.",
     "Label": "Effetti Disponibili",
     "RIDER": {
       "Activity": "Attività Cavaliere incantato",
-      "Effect": "Effetto Cavaliere incantato"
+      "Effect": "Effetto Cavaliere incantato",
+      "FIELDS": {
+      "rider": {
+        "statuses": {
+          "hint": "Quando questo Effetto Attivo viene applicato, queste condizioni di stato aggiuntive verranno applicate separatamente.",
+          "label": "Condizioni di Stato Separate"
+        }
+      }
     }
   },
-  "DND5E.EffectsApplyTokens": "Applica ai token selezionati",
-  "DND5E.EffectApplyWarningConcentration": "Applicare un effetto che è concentrato da un altro personaggio richiede permessi GM.",
-  "DND5E.EffectApplyWarningOwnership": "Gli effetti non possono essere applicati a token che non possiedi.",
-  "DND5E.EffectsSearch": "Cerca effetti",
+  "Tab": "Effetti"
+  },
+
   
   "DND5E.ENCHANT": {
    "FIELDS": {
@@ -2375,7 +2533,8 @@
   "Enchantment": {
     "Action": {
       "Create": "Crea Incantamento",
-      "Delete": "Rimuovi Incantamento"
+      "Delete": "Rimuovi Incantamento",
+      "Dissociate": "Dissocia Incantamento"
     },
     "Active": "{name} (attivo)",
     "Empty": "Nessun incantesimo associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, oppure seleziona un incantesimo esistente dal menu a discesa."
@@ -2411,18 +2570,9 @@
       "Inactive": "Incantamenti Inattivi"
     },
     "FIELDS": {
-      "enchantment": {
-        "label": "Configurazione Incantamento",
-        "items": {
-          "max": {
-            "label": "Limite Oggetti",
-            "hint": "Formula per il numero massimo di incantamenti di questo tipo che possono essere attivi contemporaneamente."
-          },
-          "period": {
-            "label": "Periodo di Sostituzione",
-            "hint": "Quanto spesso gli incantamenti di questo tipo possono essere ri-assegnati a oggetti diversi."
-          }
-        }
+     "magical": {
+        "hint": "Questo incantamento è magico e dovrebbe essere disattivato quando la magia non è disponibile.",
+        "label": "Magico"
       }
     },
     "Items": {
@@ -2782,6 +2932,19 @@
       "cover": {
         "label": "Copertura",
         "hint": "Copertura fornita all'equipaggio da questa caratteristica del veicolo."
+      },
+      "enchant": {
+        "label": "Configurazione degli Incantamenti",
+        "items": {
+          "max": {
+            "label": "Limite di Oggetti",
+            "hint": "Formula per il numero massimo di incantamenti di questo tipo che possono essere attivi contemporaneamente."
+          },
+          "period": {
+            "label": "Periodo di Sostituzione",
+            "hint": "Determina con quale frequenza gli incantamenti di questo tipo possono essere riassegnati a oggetti diversi."
+          }
+        }
       },
       "properties": {
         "label": "Proprietà della Caratteristica"
@@ -3179,6 +3342,7 @@
 "DND5E.Ideals": "Ideali",
 "DND5E.Identified": "Identificato",
 "DND5E.Identifier": "Identificatore",
+"DND5E.IdentifierCustom": "Identificatore personalizzato",
 "DND5E.IdentifierError": "Un identificatore può contenere solo lettere (a-z), numeri (0-9), trattini (-) e underscore (_).",
 "DND5E.Identify": "Identifica",
 "DND5E.Immunities": "Immunità",
@@ -3857,6 +4021,7 @@
 },
 "DND5E.RollExample": "es. 1d4",
 "DND5E.RollMode": "Modalità Tiro",
+"DND5E.RollModifiers": "Modificatori",
 "DND5E.RollSituationalBonus": "Bonus Situazionale?",
 "DND5E.Rule": {
   "Tooltip": "Suggerimento",
@@ -4311,6 +4476,11 @@
 "DND5E.SpellUsage": "Uso Incantesimo",
 "DND5E.Spellbook": "Incantesimi",
 "DND5E.Spent": "Speso",
+"DND5E.SplitStack": {
+  "Action": "Dividi",
+  "Title": "Dividi Quantità"
+},
+
 "DND5E.StartingEquipment": {
   "Title": "Equipaggiamento Iniziale",
   "Action": {
@@ -4502,6 +4672,7 @@
     "Warning": {
       "NoOwnership": "Devi avere la proprietà di '{actor}' per poterlo evocare.",
       "NoProfile": "Impossibile trovare il profilo di evocazione {profileId} su '{item}'.",
+      "PlaceTokens": Errore posizionamento Evocazione nella scena.",
       "Wildcard": "Devi avere il permesso 'Usa il Browser di File' per evocare creature con grafica di tipo jolly."
     }
   },
@@ -4511,6 +4682,48 @@
   },
   "DND5E.Supply": "Fornitura",
   "DND5E.Suppressed": "Soppresso",
+  
+  "DND5E.TABLEOFCONTENTS": {
+    "Action": {
+      "Configure": "Configura Indice"
+    },
+    "FIELDS": {
+      "order": {
+        "label": "Ordine"
+      },
+      "position": {
+        "label": "Posizione"
+      },
+      "showPages": {
+        "label": "Mostra Pagine"
+      },
+      "title": {
+        "label": "Sovrascrittura Titolo"
+      },
+      "type": {
+        "label": "Tipo"
+      }
+    },
+    "HiddenPages": "Pagine Nascoste",
+    "HideAllPages": "Nascondi Tutte le Pagine",
+    "JournalEntry": "Voce Diario",
+    "NoFolder": "Nessuna Cartella",
+    "Special": {
+      "After": "Dopo {chapter}",
+      "End": "Fine dell'Indice"
+    },
+    "Title": "Indice",
+    "Type": {
+      "Appendix": "Appendice",
+      "Chapter": "Capitolo",
+      "Header": "Intestazione",
+      "Special": "Speciale"
+    },
+    "Warning": {
+      "DuplicateHeader": "È possibile impostare solo una voce con tipo Intestazione.",
+      "DuplicatePosition": "Ogni Capitolo e Appendice deve avere un valore di posizione univoco."
+    }
+  },
   
   "DND5E.TARGET": {
     "Action": {
@@ -4703,6 +4916,15 @@
       "other": "{number} raggi",
       "oneSized": "{sizes} Raggio",
       "otherSized": "{number} {sizes} Raggi"
+    }
+  },
+  "Ring": {
+    "Label": "Anello",
+    "Counted": {
+      "one": "{number} anello",
+      "other": "{number} anelli",
+      "oneSized": "Anello {sizes}",
+      "otherSized": "{number} Anelli {sizes}"
     }
   },
   "Self": {
