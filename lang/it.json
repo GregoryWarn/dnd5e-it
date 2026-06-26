@@ -649,6 +649,7 @@
         "AddChange": "Aggiungi modifica",
         "DeleteChange": "Elimina modifica"
       },
+      "DropHint": "Rilascia un Incantamento qui",
       "Empty": {
         "WithDropdown": "Nessuna modifica. Usa il pulsante <i class=\"fa-solid fa-plus\"></i> qui sopra per crearne una oppure seleziona un effetto esistente dal menu a discesa.",
         "WithoutDropdown": "Nessuna modifica. Usa il pulsante <i class=\"fa-solid fa-plus\"></i> qui sopra per crearne una."
@@ -2448,7 +2449,8 @@
         }
       }
     },
-    "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa oppure trascinane uno da un compendio.",
+    "DropHint": "Rilascia un Effetto Attivo qui",
+    "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
     "Label": "Effetti Disponibili",
     "RIDER": {
       "Activity": "Attività Cavaliere incantato",
