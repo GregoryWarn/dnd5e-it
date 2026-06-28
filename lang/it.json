@@ -4400,6 +4400,11 @@
 "DND5E.SizeTinyAbbr": "Tn",
 
 "DND5E.SKILL": {
+  "Formatter": {
+    "CheckBonus": "Bonus prova di {name}",
+    "PassiveBonus": "Bonus passivo di {name}",
+    "Proficiency": "Competenza in {name}"
+  },
   "SECTIONS": {
     "Details": "Dettagli {label}",
     "Bonuses": {
@@ -4749,6 +4754,14 @@
       "creatureTypes": {
         "label": "Tipi di Creatura",
         "hint": "La creatura evocata sarà cambiata in questo tipo. Se vengono selezionati più tipi, il giocatore potrà scegliere tra questi tipi durante l'evocazione."
+      },
+      "flat": {
+        "attack": {
+          "label": "Valore fisso al tiro per colpire"
+        },
+        "save": {
+          "label": "CD fissa del tiro salvezza"
+        }
       },
       "match": {
         "ability": {
@@ -5230,6 +5243,10 @@
 "DND5E.ToggleDescription": "Attiva/Disattiva Descrizione",
   
 "DND5E.TOOL": {
+  "Formatter": {
+    "CheckBonus": "Bonus prova di {name}",
+    "Proficiency": "Competenza in {name}"
+  },
   "SECTIONS": {
     "Details": "{label} Dettagli",
     "Bonuses": {
@@ -6064,6 +6081,42 @@
       }
     },
     "damage": {
+      "base": {
+        "bonus": {
+          "label": "Bonus ai danni base"
+        },
+        "custom": {
+          "enabled": {
+            "label": "Usa formula personalizzata per i danni base"
+          },
+          "formula": {
+            "label": "Formula personalizzata dei danni base"
+          }
+        },
+        "denomination": {
+          "label": "Tipo dado dei danni base"
+        },
+        "number": {
+          "label": "Numero dadi dei danni base"
+        },
+        "scaling": {
+          "formula": {
+            "label": "Formula incremento dei danni base"
+          },
+          "mode": {
+            "label": "Modalità incremento dei danni base"
+          },
+          "number": {
+            "label": "Valore incremento dei danni base"
+          }
+        },
+        "types": {
+          "label": "Tipi di danno base"
+        }
+      },
+      "bonus": {
+        "label": "Bonus ai danni"
+      },
       "hint": "Dadi di danno intrinseci dell'arma. Il modificatore di caratteristica e gli eventuali danni aggiuntivi saranno forniti automaticamente durante l'attacco."
     },
     "mastery": {
