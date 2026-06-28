@@ -94,6 +94,23 @@
     "SaveLabel": "TS {ability}",
     "Title": "Configura {ability}"
   },
+  "Formatter": {
+    "Check": {
+      "AdvantageMode": "Modalità Vantaggio Prove di {name}",
+      "Bonus": "Bonus Prove di {name}",
+      "Maximum": "Risultato Massimo Prove di {name}",
+      "Minimum": "Risultato Minimo Prove di {name}"
+    },
+    "Maximum": "Massimo di {name}",
+    "Save": {
+      "AdvantageMode": "Modalità Vantaggio ai Tiri Salvezza di {name}",
+      "Bonus": "Bonus ai Tiri Salvezza di {name}",
+      "Maximum": "Risultato Massimo dei Tiri Salvezza di {name}",
+      "Minimum": "Risultato Minimo dei Tiri Salvezza di {name}",
+      "Proficiency": "Competenza nei Tiri Salvezza di {name}"
+    },
+    "Score": "Punteggio di {name}"
+  },
   "SECTIONS": {
     "Bonuses": {
       "Label": "Bonus {ability}",
@@ -972,9 +989,27 @@
     "FIELDS": {
       "attributes": {
         "ac": {
+          "armor": {
+            "label": "Valore Armatura Equipaggiata"
+          },
+          "base": {
+            "label": "Classe Armatura Base"
+          },
+          "bonus": {
+            "label": "Bonus alla Classe Armatura"
+          },
+          "calc": {
+            "label": "Metodo Calcolo della Classe Armatura"
+          },
+          "cover": {
+            "label": "Classe Armatura dalla Copertura"
+          },
           "flat": {
             "hint": "Valore numerico utilizzabile in una formula di Classe Armatura tramite @attributes.ac.flat.",
             "label": "Valore Fisso"
+          },
+          "formula": {
+            "label": "Formula CA Extra"
           },
           "formulas": {
             "element": {
@@ -998,9 +1033,15 @@
             "label": "Formule"
           },
           "label": "Classe Armatura",
+          "min": {
+            "label": "Classe Armatura Minima"
+          },
           "override": {
             "hint": "Valore utilizzato al posto della Classe Armatura calcolata, ignorando copertura, scudo e qualsiasi altro bonus.",
             "label": "Sovrascrivi"
+          },
+          "shield": {
+            "label": "Valore Scudo Equipaggiato"
           },
           "selectedFormulas": {
             "hint": "Queste formule verranno utilizzate per il calcolo della Classe Armatura.",
@@ -1138,7 +1179,12 @@
   "DND5E.BackgroundAdd": "Aggiungi BG",
   "DND5E.BackgroundName": "Nome BG",
   "DND5E.BaseItem": "Elemento Base",
-  
+
+  "DND5E.BASE": {
+    "Image": "Immagine",
+    "Name": "Nome"
+  },
+
   "DND5E.Bastion": {
     "Action": {
       "Advance": "Avanza Turno Bastione",
@@ -1623,6 +1669,24 @@
 },
 "DND5E.Challenge": "Sfida",
 "DND5E.ChallengeRating": "Livello di Sfida",
+
+"DND5E.CHARACTER": {
+  "FIELDS": {
+    "traits": {
+      "weaponProf": {
+        "mastery": {
+          "bonus": {
+            "label": "Bonus Padronanza Armi"
+          },
+          "value": {
+            "label": "Padronanza Armi"
+          }
+        }
+      }
+    }
+  }
+},
+
 "DND5E.Charged": "Caricato",
 "DND5E.Charges": "Cariche",
 "DND5E.ChatContextDamage": "Applica come Danno",
@@ -1854,24 +1918,53 @@
   "DND5E.ConRestrained": "Trattenuto",
   "DND5E.ConStunned": "Stordito",
   "DND5E.ConUnconscious": "Privo di Sensi",
+  
   "DND5E.Concentration": "Concentrazione",
-  "DND5E.ConcentrationAbbr": "C",
-  "DND5E.ConcentrationBreak": "Interrompi Concentrazione",
-  "DND5E.ConcentrationBreakWarning": "Interrompere la concentrazione su un effetto attivo su altre creature richiede la presenza di un GM attivo.",
-  "DND5E.ConcentrationBonus": "Bonus di Concentrazione",
-  "DND5E.ConcentrationDuration": "Concentrazione, fino a {duration}",
-  "DND5E.ConcentratingOn": "Stai mantenendo la concentrazione sugli effetti di '{name}' {type}.",
-  "DND5E.ConcentratingEndChoice": "Stai concentrando su effetti provenienti da più di una fonte. Scegli quale effetto terminare.",
-  "DND5E.ConcentratingMissingItem": "L'effetto su cui si concentra e che deve essere sostituito non esiste.",
-  "DND5E.ConcentratingLimited": "Non sei in grado di concentrare su un ulteriore effetto.",
-  "DND5E.ConcentrationLimit": "Limite di Concentrazione",
-  "DND5E.ConcentrationLost": "Perdita Concentratione",
-  "DND5E.ConcentratingEnd": "Termina Concentrazione",
-  "DND5E.ConcentratingItemless": "Concentrazione Senza Fonte",
-  "DND5E.ConcentratingWarnLimit": "Non puoi mantenere concentrazione su più effetti!",
-  "DND5E.ConcentratingWarnLimitOptional": "Puoi terminare la concentrazione su uno dei tuoi effetti mantenuti per usare questo oggetto.",
-  "DND5E.ConcentratingWarnLimitZero": "Non puoi mantenere concentrazione su nessun effetto!",
-  "DND5E.ConcentrationConfigurationHint": "Configura i modificatori e bonus di concentrazione che si applicano a questa creatura.",
+  "DND5E.CONCENTRATION": {
+    "Abbreviation": "C",
+    "Action": {
+      "Break": "Interrompi la concentrazione",
+      "End": "Termina la concentrazione"
+    },
+    "Description": "Stai mantenendo la concentrazione sugli effetti di {type} '{name}'.",
+    "Duration": "Concentrazione, fino a {duration}",
+    "EndChoice": "Stai mantenendo la concentrazione sugli effetti di più di una fonte. Scegli quale effetto terminare.",
+    "FIELDS": {
+      "attributes": {
+        "concentration": {
+          "bonuses": {
+            "label": "Bonus alla concentrazione",
+            "save": {
+              "label": "Bonus al tiro salvezza di Concentrazione"
+            }
+          },
+          "label": "Concentrazione",
+          "limit": {
+            "label": "Limite di concentrazione"
+          },
+          "roll": {
+            "ability": "Caratteristica del tiro salvezza di Concentrazione",
+            "max": "Risultato massimo del tiro salvezza di Concentrazione",
+            "min": "Risultato minimo del tiro salvezza di Concentrazione",
+            "mode": "Modalità vantaggio del tiro salvezza di Concentrazione"
+          }
+        }
+      }
+    },
+    "Limit": {
+      "Hard": "Non puoi mantenere la concentrazione su altri effetti!",
+      "Optional": "Puoi terminare la concentrazione su uno degli effetti che stai mantenendo per utilizzare questo oggetto.",
+      "Reached": "Non puoi iniziare a concentrarti su un effetto aggiuntivo.",
+      "Zero": "Non puoi mantenere la concentrazione su alcun effetto!"
+    },
+    "Lost": "Concentrazione persa",
+    "NoSource": "Concentrazione senza fonte",
+    "Warning": {
+      "BreakWithoutGM": "Interrompere la concentrazione su un effetto attivo su altre creature richiede la presenza di un GM attivo.",
+      "MissingItem": "L'effetto su cui stai mantenendo la concentrazione e che deve essere sostituito non esiste."
+    }
+  },
+  
   "DND5E.ConsumeTitle": "Consumo Risorse",
   "DND5E.ConsumeAmount": "Quantità Consumo",
   "DND5E.ConsumeHint": {
@@ -1898,6 +1991,42 @@
   "DND5E.CONSUMABLE": {
     "FIELDS": {
       "damage": {
+        "base": {
+          "bonus": {
+            "label": "Bonus ai danni base"
+          },
+          "custom": {
+            "enabled": {
+              "label": "Usa una formula personalizzata per i danni base"
+            },
+            "formula": {
+              "label": "Formula personalizzata dei danni base"
+            }
+          },
+          "denomination": {
+            "label": "Tipo dado dei danni base"
+          },
+          "number": {
+            "label": "Numero dadi dei danni base"
+          },
+          "scaling": {
+            "formula": {
+              "label": "Formula progressione dei danni base"
+            },
+            "mode": {
+              "label": "Modalità progressione dei danni base"
+            },
+            "number": {
+              "label": "Valore progressione dei danni base"
+            }
+          },
+          "types": {
+            "label": "Tipi danno base"
+          }
+        },
+        "bonus": {
+          "label": "Bonus ai danni"
+        },
         "label": "Danno Munizioni",
         "replace": {
           "label": "Sostituisci Danno Arma",
@@ -2423,12 +2552,12 @@
   "DND5E.Dusk": "Crepuscolo",
   
   "DND5E.Effect": "Effetto",
-  
   "DND5E.EFFECT": {
     "Action": {
-      "Create": "Crea Effetto",
-      "Delete": "Elimina Effetto",
-      "Dissociate": "Dissocia Effetto",
+      "CreateEffect": "Crea Effetto",
+      "DeleteEffect": "Cancella Effetto",
+      "DissociateEffect": "Dissocia Effetto",
+      "EditEffect": "Modifica Effetto",
       "Search": "Cerca Effetti"
     },
     "Application": {
@@ -2449,9 +2578,16 @@
         }
       }
     },
+    "Category": {
+      "Temporary": "Effetti Temporanei",
+      "Passive": "Effetti Passivi",
+      "Inactive": "Effetti Inattivi",
+      "Unavailable": "Effetti Non Disponibili"
+    },
     "DropHint": "Rilascia un Effetto Attivo qui",
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
     "Label": "Effetti Disponibili",
+    "New": "Nuovo Effetto",
     "RIDER": {
       "Activity": "Attività Cavaliere incantato",
       "Effect": "Effetto Cavaliere incantato",
@@ -2464,10 +2600,20 @@
       }
     }
   },
+  "Status": {
+    "ChangeActive": "Imposta come attivo",
+    "ChangeInactive": "Imposta come inattivo",
+    "Inactive": "Inattivo",
+    "Passive": "Passivo",
+    "Temporary": "Temporaneo",
+    "Unavailable": "Non Disponibile"
+  },
+  "Suppressed": {
+    "Hint": "Origine elemento deve essere equipaggiata o sintonizzata affinché questi effetti siano attivi."
+  },
   "Tab": "Effetti"
   },
 
-  
   "DND5E.ENCHANT": {
    "FIELDS": {
     "effects": {
@@ -2609,6 +2755,44 @@
     "Members": "Membri"
   }
 },
+
+"DND5E.Encumbrance": "Ingombro",
+"DND5E.ENCUMBRANCE": {
+  "FIELDS": {
+    "attributes": {
+      "encumbrance": {
+        "bonuses": {
+          "encumbered": {
+            "label": "Bonus alla soglia di ingombro"
+          },
+          "heavilyEncumbered": {
+            "label": "Bonus alla soglia di ingombro pesante"
+          },
+          "maximum": {
+            "label": "Bonus alla capacità di carico massima"
+          },
+          "overall": {
+            "label": "Bonus a tutte le soglie di ingombro"
+          }
+        },
+        "multipliers": {
+          "encumbered": {
+            "label": "Moltiplicatore della soglia di ingombro"
+          },
+          "heavilyEncumbered": {
+            "label": "Moltiplicatore della soglia di ingombro pesante"
+          },
+          "maximum": {
+            "label": "Moltiplicatore della capacità di carico massima"
+          },
+          "overall": {
+            "label": "Moltiplicatore di tutte le soglie di ingombro"
+          }
+        }
+      }
+    }
+  }
+},
   
   "DND5E.Environment": "Ambiente",
   
@@ -2668,6 +2852,7 @@
   },
   
   "DND5E.Expertise": "Competenza",
+  "DND5E.Eyes": "Occhi",
   
   "DND5E.FACILITY": {
     "Action": {
@@ -3032,26 +3217,6 @@
     }
   },
   
-  "DND5E.EffectCreate": "Crea Effetto",
-  "DND5E.EffectToggle": "Attiva/Disattiva Effetto",
-  "DND5E.EffectEdit": "Modifica Effetto",
-  "DND5E.EffectEnable": "Abilita Effetto",
-  "DND5E.EffectDelete": "Elimina Effetto",
-  "DND5E.EffectDisable": "Disabilita Effetto",
-  "DND5E.EffectTemporary": "Effetti Temporanei",
-  "DND5E.EffectPassive": "Effetti Passivi",
-  "DND5E.EffectInactive": "Effetti Inattivi",
-  "DND5E.EffectNew": "Nuovo Effetto",
-  "DND5E.EffectType": {
-    "Inactive": "Inattivo",
-    "Passive": "Passivo",
-    "Temporary": "Temporaneo",
-    "Unavailable": "Non Disponibile"
-  },
-  "DND5E.EffectUnavailable": "Effetti Non Disponibili",
-  "DND5E.EffectUnavailableInfo": "L'oggetto sorgente deve essere equipaggiato o sintonizzato per attivare questi effetti.",
-  "DND5E.Encumbrance": "Ingombro",
-  "DND5E.Eyes": "Occhi",
   "DND5E.Faith": "Fede",
   "DND5E.FeatureActive": "Privilegi Attivi",
   "DND5E.FeatureAdd": " Aggiungi Privilegio",
@@ -3073,6 +3238,20 @@
   "DND5E.FilterGroupOrigin": "Raggruppa per Origine",
   "DND5E.FilterGroupAction": "Raggruppa per Azione",
   "DND5E.FilterNoSpells": "Nessun incantesimo trovato per questo set di filtri.",
+ 
+  "DND5E.FILTER": {
+    "Action": {
+      "Edit": "Modifica Filtri"
+    },
+    "Empty": "Nessun Filtro",
+    "Invalid": "Filtro Non Valido",
+    "Operator": {
+      "And": "e",
+      "Not": "non",
+      "Or": "o"
+    }
+  },
+
   "DND5E.NoSpellLevels": "Questo personaggio non ha livelli da incantatore, ma puoi aggiungere incantesimi manualmente.",
   
   "DND5E.FLAGS": {
@@ -4006,6 +4185,12 @@
 "DND5E.RitualAbbr": "R",
 
 "DND5E.ROLL": {
+  "Formatter": {
+    "AdvantageMode": "Modalità vantaggio di {name}",
+    "Maximum": "Risultato massimo di {name}",
+    "Minimum": "Risultato minimo di {name}",
+    "ModifierAbility": "Modificatore Caratteristica di {name}"
+  },
   "Range": {
     "Label": "Intervallo di Tiro",
     "Maximum": "Tiro Massimo",
@@ -4104,13 +4289,16 @@
         "hint": "Bonus aggiunto a tutti i tiri salvezza effettuati utilizzando questa attività."
       },
       "dc": {
-        "label": "Classe di Difficoltà",
+        "label": "Classe Difficoltà",
+        "bonus": {
+          "label": "Bonus CD"
+        },
         "calculation": {
-          "label": "Calcolo della CD",
+          "label": "Calcolo CD",
           "hint": "Metodo o caratteristica utilizzata per calcolare la classe di difficoltà."
         },
         "formula": {
-          "label": "Formula della CD",
+          "label": "Formula CD",
           "hint": "Formula personalizzata o valore fisso per definire la DC della salvezza."
         },
         "CustomFormula": "Formula Personalizzata",
