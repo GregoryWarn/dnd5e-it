@@ -915,6 +915,27 @@
   "DND5E.AdvancementTitle": "Avanzamento",
   "DND5E.Advantage": "Vantaggio",
   "DND5E.AdvantageMode": "Modalità Vantaggio",
+  
+  "DND5E.ADVENTURE": {
+    "Action": {
+      "Configure": "Configura avventura",
+      "Launch": "Avvia avventura"
+    },
+    "Finished": {
+      "one": "Preparazione di {adventure} completata.",
+      "other": "Preparazione di {number} avventure completata."
+    },
+    "ImportAction": {
+      "ActivateScene": "Attiva scena iniziale",
+      "CustomizeWorld": "Personalizza i dettagli del mondo",
+      "DisplayJournal": "Mostra diario introduttivo"
+    },
+    "Warning": {
+      "JournalMissing": "Impossibile trovare la voce del diario `{id}` da visualizzare per {adventure}.",
+      "SceneMissing": "Impossibile trovare la scena `{id}` da attivare per {adventure}."
+    }
+  },
+  
   "DND5E.Age": "Età",
   "DND5E.Alignment": "Allineamento",
   "DND5E.AlignmentCE": "Caotico Malvagio",
@@ -929,6 +950,7 @@
   "DND5E.Amount": "Quantità",
   "DND5E.Appearance": "Aspetto",
   "DND5E.Apply": "Applica",
+  "DND5E.AttributeScores": "Punteggi Attributi",
   "DND5E.Attunement": "Sintonizzazione",
   "DND5E.AttunementMax": "Numero Massimo di Oggetti Sintonizzati",
   "DND5E.AttunementNone": "Sintonizzazione Non Richiesta",
@@ -1249,6 +1271,7 @@
       "Create": "Crea Comportamento",
       "Delete": "Elimina Comportamento"
     },
+    "Empty": "Nessun comportamento associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno.",
     "Hint": "Questi comportamenti verranno applicati a qualsiasi area di effetto generata da questa attività.",
     "Label": "Comportamento"
   },
@@ -2153,6 +2176,7 @@
       "Delete": "Elimina Obiettivo di Consumo",
       "RefundResource": "Rimborsa Risorsa"
     },
+    "Empty": "Nessun consumo associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungere risorse da consumare.",
     "Scaling": {
       "Amount": "Quantità",
       "Automatic": "Automatico",
@@ -2396,6 +2420,8 @@
         }
       }
     },
+    "Empty": "Nessun danno configurato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungere componenti del danno.",
+    "EmptyExceptBase": "Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungere componenti del danno aggiuntive.",
     "Hint": "Danneggia una creatura senza alcun attacco o TS.",
     "Part": {
       "Action": {
@@ -3175,6 +3201,7 @@
       "Origin": "Privilegio di Origine"
     },
     "Monster": "Mostro",
+    "PietyTrait": "Tratto di Pietà",
     "Species": "Specie",
     "SpeciesLegacy": "Razza",
     "SupernaturalGift": {
@@ -3872,6 +3899,18 @@
 "DND5E.PassivePerception": "Percezione Passiva",
 "DND5E.Period": "Periodo",
 "DND5E.PersonalityTraits": "Tratti della Personalità",
+
+"DND5E.PIETY": {
+  "Configure": "Configura Pietà",
+  "Label": "Pietà",
+  "FIELDS": {
+    "value": {
+      "label": "Punteggio di Pietà",
+      "hint": "L'attuale punteggio di Pietà di questo personaggio."
+    }
+  }
+},
+
 "DND5E.Portrait": "Ritratto",
 "DND5E.Prepared": "Preparato",
 "DND5E.Preparation": "Preparazione",
@@ -4346,6 +4385,7 @@
 "DND5E.Shape": "Forma",
 
 "DND5E.SheetClass": {
+  "AdventureImporter": "D&D 5e Adventure Importer",
   "Character": "Scheda Personaggio D&D 5e",
   "ClassSummary": "Scheda Riassunto Classe D&D 5e",
   "Container": "Scheda Contenitore D&D 5e",
@@ -5205,6 +5245,36 @@
   "PlaceTemplate": "Impossibile posizionare il modello misurato."
   }
 },
+
+"DND5E.TELEPORT": {
+  "Action": {
+    "Teleport": "Teletrasporta"
+  },
+  "FIELDS": {
+    "teleport": {
+      "label": "Distanza",
+      "hint": "Imposta la distanza massima di teletrasporto.",
+      "override": {
+        "label": "Sovrascrivi",
+        "hint": "Ignora la gittata normale dell'attività e imposta manualmente la distanza massima di teletrasporto."
+      },
+      "units": {
+        "label": "Unità di distanza"
+      },
+      "value": {
+        "label": "Distanza massima"
+      }
+    }
+  },
+  "Hint": "Teletrasporta un token verso una destinazione scelta.",
+  "SECTIONS": {
+    "Teleport": "Teletrasporto"
+  },
+  "Title": "Teletrasporto",
+  "Warning": {
+    "InvalidDistance": "Il teletrasporto non può essere utilizzato nelle scene che non supportano unità di movimento."
+  }
+},
   
 "DND5E.Target": "Bersaglio",
 "DND5E.TargetPl": "Bersagli",
@@ -5370,15 +5440,20 @@
         "label": "Personalizza",
         "hint": "Utilizza impostazioni di trasformazione personalizzate anziché quelle predefinite fornite dal preset selezionato."
       },
+      "formless": {
+        "hint": "Consente alla creatura di rimuovere tutte le forme e tornare allo stato predefinito.",
+        "label": "Senza forma"
+      },
       "identifier": {
         "label": "Identificatore Classe",
         "hint": "Identificatore utilizzato per determinare se il livello del personaggio o un livello di classe specifico debba essere utilizzato per i limiti del livello del profilo."
       },
       "mode": {
         "label": "Modalità",
-        "hint": "Imposta come vengono selezionate le creature sorgente della trasformazione.",
-        "CR": "Tramite Grado Sfida",
-        "Direct": "Tramite Link Diretto"
+        "hint": "Determina come vengono stabilite le modifiche della trasformazione.",
+        "CR": "Statistiche della creatura (per Grado di Sfida)",
+        "Direct": "Statistiche della creatura (tramite collegamento diretto)",
+        "Form": "Seleziona forma"
       },
       "preset": {
         "label": "Preimpostazione"
@@ -5386,6 +5461,7 @@
     }
   },
   "Hint": "Cambia un personaggio usando le statistiche di un altro.",
+  "NoForm": "Nessuna Forma",
   "Preset": {
     "Appearance": {
       "Label": "Solo Aspetto"
@@ -5543,6 +5619,7 @@
   "TemporaryClass": "Classe Temporanea",
   "Title": "Trasforma",
   "Warning": {
+    "FormActive": "{form} già attivo su {actor}.",
     "NoOwnership": "Non hai il permesso di trasformare questo personaggio.",
     "NoPermission": "Non è stato concesso il permesso di trasformazione ai giocatori.",
     "OriginalActor": "Non è stato trovato nessun personaggio originale con ID '{reference}'.",
@@ -5758,9 +5835,6 @@
     }
   },
 
-  "DND5E.Unknown": "Sconosciuto",
-  "DND5E.Unlimited": "Illimitato",
-
   "DND5E.USAGE": {
     "SECTION": {
       "Consumption": "Consumo",
@@ -5819,6 +5893,7 @@
         "Delete": "Elimina Profilo di Recupero"
       },
       "Combat": "Combattimento",
+      "Empty": "Nessun recupero specificato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungere periodi di recupero.",
       "Never": "Mai",
       "Period": {
         "Dawn": {
@@ -6346,9 +6421,11 @@
 
 "KEYBINDINGS.DND5E.DragCopy": "Forza la copia durante il trascinamento del documento",
 "KEYBINDINGS.DND5E.DragMove": "Forza il movimento durante il trascinamento del documento",
-"KEYBINDINGS.DND5E.SkipDialogNormal": "Salta la finestra di dialogo",
-"KEYBINDINGS.DND5E.SkipDialogAdvantage": "Salta la finestra di dialogo (tira con Vantaggio/Critico)",
-"KEYBINDINGS.DND5E.SkipDialogDisadvantage": "Salta la finestra di dialogo (tira con Svantaggio/Non Critico)",
+"KEYBINDINGS.DND5E.OpenCompendiumBrowser": "Apri browser dei compendi",
+"KEYBINDINGS.DND5E.SkipDialogAdvantage": "Salta finestra di dialogo (tiro con vantaggio/critico)",
+"KEYBINDINGS.DND5E.SkipDialogDisadvantage": "Salta finestra di dialogo (tiro con svantaggio/non critico)",
+"KEYBINDINGS.DND5E.SkipDialogNormal": "Salta finestra di dialogo",
+"KEYBINDINGS.DND5E.ToggleSheetMode": "Cambia modalità della scheda",
 
 "MACRO.5eMissingTargetWarn": "Il tuo personaggio controllato '{actor}' non ha un {type} con il nome '{name}'.",
 "MACRO.5eMultipleTargetsWarn": "Il tuo personaggio controllato '{actor}' ha più di un {type} con il nome '{name}'. Verrà scelto il primo corrispondente.",
@@ -6378,6 +6455,8 @@
 "SETTINGS.5eNoAdvancementsL": "Non chiedere per l'avanzamento di livello o per la creazione del personaggio.",
 "SETTINGS.5eNoConcentrationN": "Disabilita tracciamento concentrazione",
 "SETTINGS.5eNoConcentrationL": "Disabilita il tracciamento automatico della concentrazione dal sistema.",
+"SETTINGS.5eNoExhaustionN": "Disattiva automazione Indebolimento",
+"SETTINGS.5eNoExhaustionL": "Disattiva l'automazione degli effetti dell'indebolimento del sistema.",
 "SETTINGS.5eGridAlignedSquareTemplatesL": "Quando i modelli quadrati vengono creati come risultato del lancio di un incantesimo o dell'uso di un oggetto, saranno allineati alla griglia e non potranno essere ruotati.",
 "SETTINGS.5eGridAlignedSquareTemplatesN": "Modelli quadrati allineati alla griglia",
 "SETTINGS.DND5E": {
@@ -6419,6 +6498,14 @@
       "Name": "Spareggio di Destrezza",
       "Hint": "Aggiungi il punteggio di Destrezza grezzo per spareggi nell'Iniziativa."
     },
+    "AutoApplyDowned": {
+      "Name": "Applica automaticamente lo stato di incapacità",
+      "Hint": "Contrassegna automaticamente una creatura come Morta o Priva di sensi quando i suoi punti ferita vengono ridotti a 0 durante il combattimento. I PNG non importanti vengono contrassegnati come Morti. I PNG importanti e i PG vengono contrassegnati prima come Privi di sensi e poi come Morti se falliscono tre tiri salvezza contro la morte.",
+      "None": "Mai",
+      "DeadOnly": "Per i PNG (solo morti)",
+      "NPCs": "Per i PNG (morti e privi di sensi)",
+      "All": "Sempre"
+    },
     "InitiativeScore": {
       "Name": "Punteggio Iniziativa",
       "Hint": "Usa il punteggio di iniziativa di una creatura (10 + bonus) invece di tirare per l'iniziativa.",
@@ -6434,6 +6521,9 @@
       "Name": "Tiro Unico per Creatura",
       "Hint": "Utilizza lo stesso tiro di iniziativa per creature identiche."
     }
+  },
+  "CONDITIONS": {
+    "Name": "Condizioni"
   },
   "CRITICAL": {
     "Name": "Danno Critico",
@@ -6495,6 +6585,10 @@
       "Silent": "Tira senza creare la carta nella chat",
       "Yes": "Tira e crea la carta nella chat"
     }
+  },
+  "PIETY": {
+    "Hint": "Abilita il monitoraggio opzionale del punteggio di Pietà per i personaggi giocanti.",
+    "Name": "Punteggio di Pietà"
   },
   "THEME": {
     "Name": "Tema",
