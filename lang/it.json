@@ -4915,7 +4915,7 @@
     "Warning": {
       "NoOwnership": "Devi avere la proprietà di '{actor}' per poterlo evocare.",
       "NoProfile": "Impossibile trovare il profilo di evocazione {profileId} su '{item}'.",
-      "PlaceTokens": Errore posizionamento Evocazione nella scena.",
+      "PlaceTokens": "Errore posizionamento Evocazione nella scena.",
       "Wildcard": "Devi avere il permesso 'Usa il Browser di File' per evocare creature con grafica di tipo jolly."
     }
   },
