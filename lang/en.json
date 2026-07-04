@@ -915,6 +915,27 @@
 "DND5E.AdvancementTitle": "Advancement",
 "DND5E.Advantage": "Advantage",
 "DND5E.AdvantageMode": "Advantage Mode",
+
+"DND5E.ADVENTURE": {
+  "Action": {
+    "Configure": "Configure Adventure",
+    "Launch": "Launch Adventure"
+  },
+  "Finished": {
+    "one": "Finished preparing {adventure}.",
+    "other": "Finished preparing {number} adventures."
+  },
+  "ImportAction": {
+    "ActivateScene": "Activate Initial Scene",
+    "CustomizeWorld": "Customize World Details",
+    "DisplayJournal": "Display Getting Started Journal"
+  },
+  "Warning": {
+    "JournalMissing": "Journal entry `{id}` could not be found to display for {adventure}.",
+    "SceneMissing": "Scene `{id}` could not be found to activate for {adventure}."
+  }
+},
+
 "DND5E.Age": "Age",
 "DND5E.Alignment": "Alignment",
 "DND5E.AlignmentCE": "Chaotic Evil",
@@ -929,6 +950,7 @@
 "DND5E.Amount": "Amount",
 "DND5E.Appearance": "Appearance",
 "DND5E.Apply": "Apply",
+"DND5E.AttributeScores": "Attribute Scores",
 "DND5E.Attunement": "Attunement",
 "DND5E.AttunementMax": "Maximum Attuned Items",
 "DND5E.AttunementNone": "Attunement Not Required",
@@ -1249,6 +1271,7 @@
     "Create": "Create Behavior",
     "Delete": "Delete Behavior"
   },
+  "Empty": "No associated behaviors. Use the <i class=\"fas fa-plus\"></i> button above to create one.",
   "Hint": "These behaviors will apply to any area of effect placed by this activity.",
   "Label": "Behavior"
 },
@@ -2153,6 +2176,7 @@
     "Delete": "Delete Consumption Target",
     "RefundResource": "Refund Resource"
   },
+  "Empty": "No associated consumption. Use the <i class=\"fas fa-plus\"></i> button above to add consumption targets.",
   "Scaling": {
     "Amount": "Amount",
     "Automatic": "Automatic",
@@ -2396,6 +2420,8 @@
       }
     }
   },
+  "Empty": "No damage configured. Use the <i class=\"fas fa-plus\"></i> button above to add damage parts.",
+  "EmptyExceptBase": "Use the <i class=\"fas fa-plus\"></i> button above to add additional damage parts.",
   "Hint": "Damage a creature without any attack or save.",
   "Part": {
     "Action": {
@@ -3175,6 +3201,7 @@
     "Origin": "Origin Feat"
   },
   "Monster": "Monster Feature",
+  "PietyTrait": "Piety Trait",
   "Species": "Species Feature",
   "SpeciesLegacy": "Race Feature",
   "SupernaturalGift": {
@@ -3872,6 +3899,18 @@
 "DND5E.PassivePerception": "Passive Perception",
 "DND5E.Period": "Period",
 "DND5E.PersonalityTraits": "Personality Traits",
+
+"DND5E.PIETY": {
+  "Configure": "Configure Piety",
+  "Label": "Piety",
+  "FIELDS": {
+    "value": {
+      "label": "Piety Score",
+      "hint": "This character's current piety score."
+    }
+  }
+},
+
 "DND5E.Portrait": "Portrait",
 "DND5E.Prepared": "Prepared",
 "DND5E.Preparation": "Preparation",
@@ -4346,6 +4385,7 @@
 "DND5E.Shape": "Shape",
 
 "DND5E.SheetClass": {
+  "AdventureImporter": "D&D 5e Adventure Importer",
   "Character": "D&D 5e Character Sheet",
   "ClassSummary": "D&D 5e Class Summary Sheet",
   "Container": "D&D 5e Container Sheet",
@@ -5206,6 +5246,36 @@
   }
 },
 
+"DND5E.TELEPORT": {
+  "Action": {
+    "Teleport": "Teleport"
+  },
+  "FIELDS": {
+    "teleport": {
+      "label": "Distance",
+      "hint": "Set the maximum teleport distance.",
+      "override": {
+        "label": "Override",
+        "hint": "Override the activity's normal range and manually set the maximum teleport distance."
+      },
+      "units": {
+        "label": "Distance Unit"
+      },
+      "value": {
+        "label": "Maximum Distance"
+      }
+    }
+  },
+  "Hint": "Teleport a token to a chosen destination.",
+  "SECTIONS": {
+    "Teleport": "Teleport"
+  },
+  "Title": "Teleport",
+  "Warning": {
+    "InvalidDistance": "Teleport can't be used in scenes without supported movement units."
+  }
+},
+
 "DND5E.Target": "Target",
 "DND5E.TargetPl": "Targets",
 "DND5E.TargetType": "Target Type",
@@ -5370,15 +5440,20 @@
         "label": "Customize",
         "hint": "Use custom transformation settings rather than the defaults provided by the selected preset."
       },
+      "formless": {
+        "hint": "Allow creature to remove all forms and return to a default state.",
+        "label": "Formless"
+      },
       "identifier": {
         "label": "Class Identifier",
         "hint": "Identifier used to determine whether the character level or a specific class level should be used for profile level limits."
       },
       "mode": {
         "label": "Mode",
-        "hint": "Sets how the transformation source creatures are selected.",
-        "CR": "By Challenge Rating",
-        "Direct": "By Direct Link"
+        "hint": "Sets how the transformation changes are determined.",
+        "CR": "Creature Stats (by Challenge Rating)",
+        "Direct": "Creature Stats (by Direct Link)",
+        "Form": "Select Form"
       },
       "preset": {
         "label": "Preset"
@@ -5386,6 +5461,7 @@
     }
   },
   "Hint": "Change an actor using the stats of another.",
+  "NoForm": "No Form",
   "Preset": {
     "Appearance": {
       "Label": "Appearance Only"
@@ -5543,6 +5619,7 @@
   "TemporaryClass": "Temporary Class",
   "Title": "Transform",
   "Warning": {
+    "FormActive": "{form} already active on {actor}.",
     "NoOwnership": "You do not have permission to transform this actor.",
     "NoPermission": "Transformation permission haven't been granted to players.",
     "OriginalActor": "No original actor was found with ID '{reference}'.",
@@ -5758,9 +5835,6 @@
   }
 },
 
-"DND5E.Unknown": "Unknown",
-"DND5E.Unlimited": "Unlimited",
-
 "DND5E.USAGE": {
   "SECTION": {
     "Consumption": "Consumption",
@@ -5819,6 +5893,7 @@
       "Delete": "Delete Recovery Profile"
     },
     "Combat": "Combat",
+    "Empty": "No recovery specified. Use the <i class=\"fas fa-plus\"></i> button above to add recovery periods.",
     "Never": "Never",
     "Period": {
       "Dawn": {
@@ -6346,9 +6421,11 @@
 
 "KEYBINDINGS.DND5E.DragCopy": "Force Copy when Dragging Document",
 "KEYBINDINGS.DND5E.DragMove": "Force Move when Dragging Document",
-"KEYBINDINGS.DND5E.SkipDialogNormal": "Skip Dialog",
+"KEYBINDINGS.DND5E.OpenCompendiumBrowser": "Open Compendium Browser",
 "KEYBINDINGS.DND5E.SkipDialogAdvantage": "Skip Dialog (roll with Advantage/Critical)",
 "KEYBINDINGS.DND5E.SkipDialogDisadvantage": "Skip Dialog (roll with Disadvantage/Non-Critical)",
+"KEYBINDINGS.DND5E.SkipDialogNormal": "Skip Dialog",
+"KEYBINDINGS.DND5E.ToggleSheetMode": "Toggle Sheet Mode",
 
 "MACRO.5eMissingTargetWarn": "Your controlled actor '{actor}' does not have an {type} with name '{name}'.",
 "MACRO.5eMultipleTargetsWarn": "Your controlled actor '{actor}' has more than one {type} with name '{name}'. The first match will be chosen.",
@@ -6378,6 +6455,8 @@
 "SETTINGS.5eNoAdvancementsL": "Do not prompt for level-up or character creation choices.",
 "SETTINGS.5eNoConcentrationN": "Disable concentration tracking",
 "SETTINGS.5eNoConcentrationL": "Disable the system's automated tracking of concentration.",
+"SETTINGS.5eNoExhaustionN": "Disable exhaustion automation",
+"SETTINGS.5eNoExhaustionL": "Disable the system's automation of exhaustion effects.",
 "SETTINGS.5eGridAlignedSquareTemplatesL": "When square templates are created as the result of casting a spell or using an item, they will be locked to the grid alignment and unable to be rotated.",
 "SETTINGS.5eGridAlignedSquareTemplatesN": "Grid-Aligned Square Templates",
 "SETTINGS.DND5E": {
@@ -6419,6 +6498,14 @@
       "Name": "Dexterity Tiebreaker",
       "Hint": "Append the raw Dexterity ability score to break ties in Initiative."
     },
+    "AutoApplyDowned": {
+      "Name": "Auto-Apply Downed",
+      "Hint": "Automatically mark a creature as Dead or Unconscious when it is reduced to 0 HP in combat. Unimportant NPCs are marked Dead. Important NPCs and PCs are marked Unconscious first, and Dead if they fail three death saving throws.",
+      "None": "Never",
+      "DeadOnly": "For NPCs (dead only)",
+      "NPCs": "For NPCs (dead and unconscious)",
+      "All": "Always"
+    },
     "InitiativeScore": {
       "Name": "Initiative Score",
       "Hint": "Use a creature's initiative score (10 + bonus) rather than rolling for initiative.",
@@ -6434,6 +6521,9 @@
       "Name": "Roll Once per Creature",
       "Hint": "Use the same initiative roll for identical creatures."
     }
+  },
+  "CONDITIONS": {
+    "Name": "Conditions"
   },
   "CRITICAL": {
     "Name": "Critical Damage",
@@ -6495,6 +6585,10 @@
       "Silent": "Roll without creating chat card",
       "Yes": "Roll and create chat card"
     }
+  },
+  "PIETY": {
+    "Hint": "Enable optional Piety tracking for player characters.",
+    "Name": "Piety Score"
   },
   "THEME": {
     "Name": "Theme",
