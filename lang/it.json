@@ -1023,6 +1023,10 @@
           "calc": {
             "label": "Metodo Calcolo della Classe Armatura"
           },
+          "calcs": {
+            "hint": "Queste formule verranno utilizzate quando si calcola la Classe Armatura.",
+            "label": "Formule Selezionate"
+          },
           "cover": {
             "label": "Classe Armatura dalla Copertura"
           },
@@ -1064,10 +1068,6 @@
           },
           "shield": {
             "label": "Valore Scudo Equipaggiato"
-          },
-          "selectedFormulas": {
-            "hint": "Queste formule verranno utilizzate per il calcolo della Classe Armatura.",
-            "label": "Formule Selezionate"
           }
         }
       }
@@ -2584,6 +2584,10 @@
       "DeleteEffect": "Cancella Effetto",
       "DissociateEffect": "Dissocia Effetto",
       "EditEffect": "Modifica Effetto",
+      "RemoveStatus": {
+        "all": "Tutte le Fonti",
+        "label": "Fonte"
+      },
       "Search": "Cerca Effetti"
     },
     "Application": {
@@ -2629,6 +2633,10 @@
   "Status": {
     "ChangeActive": "Imposta come attivo",
     "ChangeInactive": "Imposta come inattivo",
+    "DeleteDialog": {
+      "hint": "Siete sotto gli effetti di questa condizione da più di una fonte. Scegli quale effetto terminare.",
+      "title": "Rimuovi Effetto"
+    },
     "Inactive": "Inattivo",
     "Passive": "Passivo",
     "Temporary": "Temporaneo",
@@ -3493,6 +3501,9 @@
 "DND5E.Height": "Altezza",
 
 "DND5E.HITPOINTS": {
+  "Bloodied": {
+    "label": "Soglia Sanguinante"
+  },
   "Counted": {
     "one": "{number} punto ferita",
     "other": "{number} punti ferita"
