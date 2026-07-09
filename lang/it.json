@@ -289,7 +289,7 @@
   },
 
   "DND5E.ACTIVEEFFECT": {
-    "AttributeKeyTooltip": "Per un elenco dei tasti comuni, vedere <a href=\"{url}\">the wiki</a>.",
+    "AttributeKeyTooltip": "Per un elenco dei tasti comuni e i loro valori accettati, vedere <a href=\"{url}\">the wiki</a>.",
     "FIELDS": {
       "statuses": {
         "label": "Condizioni di Stato",
@@ -2580,9 +2580,12 @@
   "DND5E.Effect": "Effetto",
   "DND5E.EFFECT": {
     "Action": {
+      "AddChange": "Aggiungi Cambio",
       "CreateEffect": "Crea Effetto",
       "DeleteEffect": "Cancella Effetto",
+      "DeleteChange": "Cancella Cambio",
       "DissociateEffect": "Dissocia Effetto",
+      "EditChange": "Modifica Cambio",
       "EditEffect": "Modifica Effetto",
       "RemoveStatus": {
         "all": "Tutte le Fonti",
@@ -2590,6 +2593,7 @@
       },
       "Search": "Cerca Effetti"
     },
+    "AdditionalChanges": "Cambi Aggiuntivi",
     "Application": {
       "Action": {
         "ApplyTokens": "Applica ai token selezionati"
@@ -2602,6 +2606,26 @@
     },
     "BASE": {
       "FIELDS": {
+        "changes": {
+          "element": {
+            "key": {
+              "label": "Chiave attributo"
+            },
+            "phase": {
+              "hint": "Il momento della preparazione dei dati, o un altro evento, in cui una modifica viene applicata.",
+              "label": "Fase"
+            },
+            "priority": {
+              "label": "Priorità"
+            },
+            "type": {
+              "label": "Tipo"
+            },
+            "value": {
+              "label": "Valore"
+            }
+          }
+        },
         "magical": {
           "hint": "Questo effetto proviene da una fonte magica e dovrebbe essere disattivato quando la magia non è disponibile.",
           "label": "Magico"
@@ -2613,6 +2637,11 @@
       "Passive": "Effetti Passivi",
       "Inactive": "Effetti Inattivi",
       "Unavailable": "Effetti Non Disponibili"
+    },
+    "Change": {
+      "Configuration": "Configurazione Cambio",
+      "Label": "Cambio",
+      "Title": "{effect} - Cambio {number}"
     },
     "DropHint": "Rilascia un Effetto Attivo qui",
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
@@ -3619,13 +3648,6 @@
 "DND5E.ItemLootType": "Tipo di Bottino",
 "DND5E.ItemName": "Nome Oggetto",
 "DND5E.ItemNew": "Nuovo {type}",
-"DND5E.ItemRarityCommon": "comune",
-"DND5E.ItemRarityMundane": "banale",
-"DND5E.ItemRarityUncommon": "non comune",
-"DND5E.ItemRarityRare": "raro",
-"DND5E.ItemRarityVeryRare": "molto raro",
-"DND5E.ItemRarityLegendary": "leggendario",
-"DND5E.ItemRarityArtifact": "artefatto",
 "DND5E.ItemRechargeCheck": "check ricarica {name} - {result}",
 "DND5E.ItemRechargeFailure": "fallimento!",
 "DND5E.ItemRechargeSuccess": "successo!",
@@ -3690,6 +3712,16 @@
     "Versatile": "Versatile",
     "Verbal": "Verbale",
     "WeightlessContents": "Contenuto Senza Peso"
+  },
+  "Rarity": {
+    "Artifact": "Artefatto",
+    "Common": "Comune",
+    "Legendary": "Leggendario",
+    "Mundane": "Non magico",
+    "Rare": "Raro",
+    "Uncommon": "Non comune",
+    "Varies": "Variabile",
+    "VeryRare": "Molto raro"
   },
   "SECTIONS": {
     "Activities": "Attività",
@@ -4396,6 +4428,7 @@
 "DND5E.Shape": "Forma",
 
 "DND5E.SheetClass": {
+  "ActiveEffect": "Scheda D&D 5e Active Effect",
   "AdventureImporter": "D&D 5e Adventure Importer",
   "Character": "Scheda Personaggio D&D 5e",
   "ClassSummary": "Scheda Riassunto Classe D&D 5e",
