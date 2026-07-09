@@ -289,7 +289,7 @@
 },
 
 "DND5E.ACTIVEEFFECT": {
-  "AttributeKeyTooltip": "For a list of common keys, see <a href=\"{url}\">the wiki</a>.",
+  "AttributeKeyTooltip": "For a list of common keys and their accepted values, see <a href=\"{url}\">the wiki</a>.",
   "FIELDS": {
     "statuses": {
       "label": "Status Conditions",
@@ -2580,9 +2580,12 @@
 "DND5E.Effect": "Effect",
 "DND5E.EFFECT": {
   "Action": {
+    "AddChange": "Add Change",
     "CreateEffect": "Create Effect",
     "DeleteEffect": "Delete Effect",
+    "DeleteChange": "Delete Change",
     "DissociateEffect": "Dissociate Effect",
+    "EditChange": "Edit Change",
     "EditEffect": "Edit Effect",
     "RemoveStatus": {
       "all": "All Sources",
@@ -2590,6 +2593,7 @@
     },
     "Search": "Search effects"
   },
+  "AdditionalChanges": "Additional Changes",
   "Application": {
     "Action": {
       "ApplyTokens": "Apply to selected tokens"
@@ -2602,6 +2606,26 @@
   },
   "BASE": {
     "FIELDS": {
+      "changes": {
+        "element": {
+          "key": {
+            "label": "Attribute Key"
+          },
+          "phase": {
+            "hint": "The point in data preparation, or another event, at which a change is to be applied.",
+            "label": "Phase"
+          },
+          "priority": {
+            "label": "Priority"
+          },
+          "type": {
+            "label": "Type"
+          },
+          "value": {
+            "label": "Value"
+          }
+        }
+      },
       "magical": {
         "hint": "This effect is from a magical source and should be disabled when magic isn't available.",
         "label": "Magical"
@@ -2613,6 +2637,11 @@
     "Passive": "Passive Effects",
     "Inactive": "Inactive Effects",
     "Unavailable": "Unavailable Effects"
+  },
+  "Change": {
+    "Configuration": "Change Configuration",
+    "Label": "Change",
+    "Title": "{effect} Change #{number}"
   },
   "DropHint": "Drop an Active Effect here",
   "Empty": "No associated effects. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
@@ -3619,13 +3648,6 @@
 "DND5E.ItemLootType": "Loot Type",
 "DND5E.ItemName": "Item Name",
 "DND5E.ItemNew": "New {type}",
-"DND5E.ItemRarityCommon": "common",
-"DND5E.ItemRarityMundane": "mundane",
-"DND5E.ItemRarityUncommon": "uncommon",
-"DND5E.ItemRarityRare": "rare",
-"DND5E.ItemRarityVeryRare": "very rare",
-"DND5E.ItemRarityLegendary": "legendary",
-"DND5E.ItemRarityArtifact": "artifact",
 "DND5E.ItemRechargeCheck": "{name} recharge check - {result}",
 "DND5E.ItemRechargeFailure": "failure!",
 "DND5E.ItemRechargeSuccess": "success!",
@@ -3690,6 +3712,16 @@
     "Versatile": "Versatile",
     "Verbal": "Verbal",
     "WeightlessContents": "Weightless Contents"
+  },
+  "Rarity": {
+    "Artifact": "Artifact",
+    "Common": "Common",
+    "Legendary": "Legendary",
+    "Mundane": "Mundane",
+    "Rare": "Rare",
+    "Uncommon": "Uncommon",
+    "Varies": "Varies",
+    "VeryRare": "Very Rare"
   },
   "SECTIONS": {
     "Activities": "Activities",
@@ -4396,6 +4428,7 @@
 "DND5E.Shape": "Shape",
 
 "DND5E.SheetClass": {
+  "ActiveEffect": "D&D 5e Active Effect Sheet",
   "AdventureImporter": "D&D 5e Adventure Importer",
   "Character": "D&D 5e Character Sheet",
   "ClassSummary": "D&D 5e Class Summary Sheet",
