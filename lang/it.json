@@ -290,6 +290,24 @@
 
   "DND5E.ACTIVEEFFECT": {
     "AttributeKeyTooltip": "Per un elenco dei tasti comuni e i loro valori accettati, vedere <a href=\"{url}\">the wiki</a>.",
+    "ChangeType": {
+      "Bonus": {
+        "Label": "Regola: Bonus"
+      }
+    },
+    "Expired": "Scaduto",
+    "Expiry": {
+      "GROUPS": {
+        "General": "Generale",
+        "Specific": "Specifico"
+      },
+      "SourceStart": "All'inizio del prossimo turno dell'origine",
+      "SourceEnd": "Alla fine del prossimo turno dell'origine",
+      "TargetStart": "All'inizio del prossimo turno del bersaglio",
+      "TargetEnd": "Alla fine del prossimo turno del bersaglio",
+      "YourStart": "All'inizio del tuo prossimo turno",
+      "YourEnd": "Alla fine del tuo prossimo turno"
+    },
     "FIELDS": {
       "statuses": {
         "label": "Condizioni di Stato",
@@ -2580,13 +2598,13 @@
   "DND5E.Effect": "Effetto",
   "DND5E.EFFECT": {
     "Action": {
-      "AddChange": "Aggiungi Cambio",
+      "AddChange": "Aggiungi Modifica",
       "CreateEffect": "Crea Effetto",
       "DeleteEffect": "Cancella Effetto",
-      "DeleteChange": "Cancella Cambio",
+      "DeleteChange": "Cancella Modifica",
       "DissociateEffect": "Dissocia Effetto",
-      "EditChange": "Modifica Cambio",
-      "EditEffect": "Modifica Effetto",
+      "EditChange": "Cambia Modifica",
+      "EditEffect": "Cambia Effetto",
       "RemoveStatus": {
         "all": "Tutte le Fonti",
         "label": "Fonte"
@@ -2608,6 +2626,10 @@
       "FIELDS": {
         "changes": {
           "element": {
+            "conditions": {
+              "hint": "Condizione che deve essere soddisfatta affinché questa modifica venga applicata.",
+              "label": "Condizioni Modifica"
+            },
             "key": {
               "label": "Chiave attributo"
             },
@@ -2626,6 +2648,10 @@
             }
           }
         },
+        "conditions": {
+          "hint": "Condizioni che determinano quando l'effetto verrà applicato.",
+          "label": "Condizioni Effetto"
+        },
         "magical": {
           "hint": "Questo effetto proviene da una fonte magica e dovrebbe essere disattivato quando la magia non è disponibile.",
           "label": "Magico"
@@ -2639,9 +2665,9 @@
       "Unavailable": "Effetti Non Disponibili"
     },
     "Change": {
-      "Configuration": "Configurazione Cambio",
-      "Label": "Cambio",
-      "Title": "{effect} - Cambio {number}"
+      "Configuration": "Configurazione Modifica",
+      "Label": "Modifica",
+      "Title": "{effect} - Modifica {number}"
     },
     "DropHint": "Rilascia un Effetto Attivo qui",
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
