@@ -290,6 +290,24 @@
 
 "DND5E.ACTIVEEFFECT": {
   "AttributeKeyTooltip": "For a list of common keys and their accepted values, see <a href=\"{url}\">the wiki</a>.",
+  "ChangeType": {
+    "Bonus": {
+      "Label": "Rule: Bonus"
+    }
+  },
+  "Expired": "Expired",
+  "Expiry": {
+    "GROUPS": {
+      "General": "General",
+      "Specific": "Specific"
+    },
+    "SourceStart": "Start of Source's Next Turn",
+    "SourceEnd": "End of Source's Next Turn",
+    "TargetStart": "Start of Target's Next Turn",
+    "TargetEnd": "End of Target's Next Turn",
+    "YourStart": "Start of Your Next Turn",
+    "YourEnd": "End of Your Next Turn"
+  },
   "FIELDS": {
     "statuses": {
       "label": "Status Conditions",
@@ -2608,6 +2626,10 @@
     "FIELDS": {
       "changes": {
         "element": {
+          "conditions": {
+            "hint": "Condition that must be met for this change to apply.",
+            "label": "Change Conditions"
+          },
           "key": {
             "label": "Attribute Key"
           },
@@ -2625,6 +2647,10 @@
             "label": "Value"
           }
         }
+      },
+      "conditions": {
+        "hint": "Conditions that control when the effect will be applied.",
+        "label": "Effect Conditions"
       },
       "magical": {
         "hint": "This effect is from a magical source and should be disabled when magic isn't available.",
