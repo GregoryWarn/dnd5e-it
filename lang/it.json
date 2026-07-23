@@ -94,6 +94,28 @@
     "SaveLabel": "TS {ability}",
     "Title": "Configura {ability}"
   },
+  "FIELDS": {
+    "abilities": {
+      "element": {
+        "check": {
+          "roll": {
+            "bonus": { "label": "Bonus alla prova" },
+            "max": { "label": "Risultato massimo della prova" },
+            "min": { "label": "Risultato minimo della prova" },
+            "mode": { "label": "Modalità vantaggio alla prova" }
+          }
+        },
+        "save": {
+          "roll": {
+            "bonus": { "label": "Bonus al tiro salvezza" },
+            "max": { "label": "Risultato massimo del tiro salvezza" },
+            "min": { "label": "Risultato minimo del tiro salvezza" },
+            "mode": { "label": "Modalità vantaggio al tiro salvezza" }
+          }
+        }
+      }
+    }
+  },
   "Formatter": {
     "Check": {
       "AdvantageMode": "Modalità Vantaggio Prove di {name}",
@@ -164,7 +186,6 @@
   "DND5E.AbilityCheckConfigure": "Prove Caratteristica {ability}",
   "DND5E.AbilityCheckConfigurationHint": "Configura i bonus alle prove.",
   "DND5E.AbilityConfigurationHint": "Configura la competenza nei tiri salvezza di Caratteristica, i bonus ai tiri salvezza e i bonus alle prove.",
-  "DND5E.AbilityCheckBonus": "Bonus alle Prove",
   "DND5E.AbilityCheckGlobalBonusHint": "Questo bonus si applica a tutte le prove di Caratteristica effettuate da questo personaggio.",
   "DND5E.Action": "Azione",
   "DND5E.ActionAbbr": "Az",
@@ -291,8 +312,22 @@
   "DND5E.ACTIVEEFFECT": {
     "AttributeKeyTooltip": "Per un elenco dei tasti comuni e i loro valori accettati, vedere <a href=\"{url}\">the wiki</a>.",
     "ChangeType": {
+      "Advantage": {
+        "Label": "Modalità Vantaggio"
+      },
       "Bonus": {
-        "Label": "Regola: Bonus"
+        "Label": "Bonus"
+      },
+      "Group": {
+        "Custom": "Personalizzato",
+        "Rules": "Regole",
+        "Standard": "Standard"
+      },
+      "Maximum": {
+        "Label": "Tira Massimo"
+      },
+      "Minimum": {
+        "Label": "Tira Minimo"
       }
     },
     "Expired": "Scaduto",
@@ -1114,8 +1149,11 @@
     "FIELDS": {
       "attack": {
         "label": "Dettagli Attacco",
+        "abilities": {
+          "label": "Opzioni Caratteristica"
+        },
         "ability": {
-          "label": "Caratteristica di Attacco",
+          "label": "Caratteristica Attacco",
           "hint": "Caratteristica usata per effettuare l'attacco e determinare i danni. Disponibile usando @mod nelle formule."
         },
         "bonus": {
@@ -1311,54 +1349,6 @@
     "bonuses": {
       "label": "Bonus Globali",
       "hint": "Bonus globali come formule che vengono aggiunti a determinati tiri.",
-      "abilities": {
-        "label": "Bonus Caratteristica Globali",
-        "check": {
-          "label": "Bonus Globale al Tiro di Caratteristica"
-        },
-        "save": {
-          "label": "Bonus Globale al Tiro di Salvezza"
-        },
-        "skill": {
-          "label": "Bonus Globale al Tiro di Caratteristica"
-        }
-      },
-      "msak": {
-        "label": "Bonus Magia Corpo a Corpo",
-        "attack": {
-          "label": "Bonus Attacco Magia Corpo a Corpo"
-        },
-        "damage": {
-          "label": "Bonus Danno Magia Corpo a Corpo"
-        }
-      },
-      "mwak": {
-        "label": "Bonus Armi Corpo a Corpo",
-        "attack": {
-          "label": "Bonus Attacco Arma Corpo a Corpo"
-        },
-        "damage": {
-          "label": "Bonus Danno Arma Corpo a Corpo"
-        }
-      },
-      "rsak": {
-        "label": "Bonus Magia a Distanza",
-        "attack": {
-          "label": "Bonus Attacco Magia a Distanza"
-        },
-        "damage": {
-          "label": "Bonus Danno Magia a Distanza"
-        }
-      },
-      "rwak": {
-        "label": "Bonus Armi a Distanza",
-        "attack": {
-          "label": "Bonus Attacco Arma a Distanza"
-        },
-        "damage": {
-          "label": "Bonus Danno Arma a Distanza"
-        }
-      },
       "spell": {
         "label": "Bonus Magia Globali",
         "dc": {
@@ -1611,6 +1601,7 @@
 
 "DND5E.CAST": {
   "Action": {
+    "DropSpell": "Trascina qui un Incantesimo",
     "RemoveSpell": "Rimuovi Incantesimo"
   },
   "Enchantment": {
@@ -1798,9 +1789,7 @@
   "ThisTool": "Questo Strumento",
   "Title": "Prova"
 },
-  
-"DND5E.CheckBonus": "Bonus Prova",
-  
+
 "DND5E.CLASS": {
   "Multiclass": {
     "Title": "Multiclasse"
@@ -1973,21 +1962,14 @@
     "FIELDS": {
       "attributes": {
         "concentration": {
-          "bonuses": {
-            "label": "Bonus alla concentrazione",
-            "save": {
-              "label": "Bonus al tiro salvezza di Concentrazione"
-            }
-          },
           "label": "Concentrazione",
-          "limit": {
-            "label": "Limite di concentrazione"
-          },
+          "limit": { "label": "Limite di concentrazione" },
           "roll": {
-            "ability": "Caratteristica del tiro salvezza di Concentrazione",
-            "max": "Risultato massimo del tiro salvezza di Concentrazione",
-            "min": "Risultato minimo del tiro salvezza di Concentrazione",
-            "mode": "Modalità vantaggio del tiro salvezza di Concentrazione"
+            "ability": { "label": "Caratteristica Concentrazione" },
+            "bonus": { "label": "Bonus Concentrazione" },
+            "max": { "label": "Tiro Massimo Concentrazione" },
+            "min": { "label": "Tiro Minimo Concentrazione" },
+            "mode": { "label": "Modalità Vantaggio Concentrazione" }
           }
         }
       }
@@ -2508,7 +2490,6 @@
   "DND5E.Dawn": "Alba",
   "DND5E.Day": "Giorno",
   "DND5E.DeathSave": "Tiri Salvezza Morte",
-  "DND5E.DeathSaveBonus": "Bonus al Tiro Salvezza Morte",
   "DND5E.DeathSaveConfigure": "Configura i Tiri Salvezza Morte",
   "DND5E.DeathSaveCriticalSuccess": "{name} ha avuto un successo critico in un tiro salvezza morte e ha recuperato 1 Punto Ferita!",
   "DND5E.DeathSaveHide": "Nascondi i Tiri Salvezza Morte",
@@ -2528,6 +2509,22 @@
   "DND5E.DeathSaveRoll": "Tira un Tiro Salvezza Morte",
   "DND5E.DeathSavingThrow": "Tiro Salvezza Morte",
   "DND5E.DeathSaveUnnecessary": "Non è necessario tirare i tiri salvezza morte poiché hai un numero positivo di punti ferita o hai già raggiunto 3 successi o fallimenti.",
+    
+  "DND5E.DEATH": {
+    "FIELDS": {
+      "attributes": {
+        "death": {
+          "roll": {
+            "bonus": { "label": "Bonus TS Morte" },
+            "max": { "label": "Tiro Massimo TS Morte" },
+            "min": { "label": "Tiro Minimo TS Morte" },
+            "mode": { "label": "Modalità Vantaggio TS Morte" }
+          }
+        }
+      }
+    }
+  },
+
   "DND5E.Default": "Predefinito",
   "DND5E.DefaultSpecific": "Predefinito ({default})",
   "DND5E.DefaultAbilityCheck": "Verifica Caratteristica Predefinita",
@@ -2671,6 +2668,10 @@
     },
     "DropHint": "Rilascia un Effetto Attivo qui",
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
+    "Expiry": {
+      "LongRest": "Fine del Riposo Lungo",
+      "ShortRest": "Fine del Riposo Breve"
+    },
     "Label": "Effetti Disponibili",
     "New": "Nuovo Effetto",
     "RIDER": {
@@ -3196,7 +3197,15 @@
     "Description": "È stato emesso l'ordine <strong>{order}</strong> alla loro {link} {facilityType}."
     }
   },
-  
+
+  "DND5E.FALLING": {
+    "DamageFlavor": "Caduto da {distance}",
+    "MovementAction": "Caduta",
+    "Warning": {
+      "NoLandingSurface": "Impossibile far precipitare {name}, non c'è alcuna superficie sotto."
+    }
+  },
+
   "DND5E.Favorite": "Preferito",
   "DND5E.FavoriteDrop": "Rimuovi dal Preferito",
   "DND5E.FavoriteRemove": "Rimuovi Preferito",
@@ -3622,10 +3631,25 @@
 "DND5E.Immunities": "Immunità",
 "DND5E.Initiative": "Iniziativa",
 "DND5E.InitiativeAbbr": "Iniz",
-"DND5E.InitiativeBonus": "Bonus Iniziativa",
 "DND5E.InitiativeRoll": "Tiro di Iniziativa",
 "DND5E.InitiativeConfig": "Configura Iniziativa",
 "DND5E.InitiativeConfigHint": "Configura i modificatori e i bonus di iniziativa che si applicano a questo personaggio.",
+
+"DND5E.INITIATIVE": {
+  "FIELDS": {
+    "attributes": {
+      "init": {
+        "roll": {
+          "bonus": { "label": "Bonus Initiativa" },
+          "max": { "label": "Tiro Massimo Iniziativa" },
+          "min": { "label": "Tiro Minimo Iniziativa" },
+          "mode": { "label": "Modalità Vantaggio Iniziativa" }
+        }
+      }
+    }
+  }
+},
+
 "DND5E.Inspiration": "Ispirazione",
 "DND5E.Inventory": "Inventario",
 "DND5E.InventorySearch": "Cerca nell'inventario",
@@ -3988,19 +4012,28 @@
   "FIELDS": {
     "prerequisites": {
       "items": {
+        "display": "{items}",
         "hint": "Identificatori elementi che il personaggio deve avere prima di selezionare questo elemento",
         "label": "Elementi Richiesti"
       },
       "label": "Prerequisiti",
       "level": {
+        "display": "Livello {level}+",
+        "displayLegacy": "{levelOrdinal} livello",
         "hint": "Livello del personaggio o della classe richiesto per selezionare questa funzione quando si sale di livello.",
         "label": "Livello Richiesto"
       },
       "repeatable": {
+        "display": "Non ancora utilizzato",
         "hint": "Questo privilegio può essere scelto più di una volta.",
         "label": "Repetibile"
       }
     }
+  },
+  "Status": {
+    "Invalid": "Convalida dei prerequisiti fallita",
+    "Unknown": "Convalida dei prerequisiti incompleta",
+    "Valid": "Convalida dei prerequisiti riuscita"
   },
   "Warning": {
     "InvalidLevel": "devi essere almeno al livello {level}",
@@ -4293,11 +4326,117 @@
 "DND5E.RitualAbbr": "R",
 
 "DND5E.ROLL": {
+  "Bonus": "Bonus al tiro",
+  "Description": {
+    "ability": "Tiro Caratteristica",
+    "attack": {
+      "classification": "Classificazione attacco",
+      "mode": "Modalità attacco",
+      "type": "Tipo attacco"
+    },
+    "proficient": "Competente",
+    "skill": "Prova di abilità",
+    "tool": "Prova con strumento",
+    "type": "Tipo di tiro"
+  },
+  "FIELDS": {
+    "rolls": {
+      "ability": {
+        "check": {
+          "bonus": { "label": "Bonus globale alle prove di caratteristica" },
+          "max": { "label": "Risultato massimo globale delle prove di caratteristica" },
+          "min": { "label": "Risultato minimo globale delle prove di caratteristica" },
+          "mode": { "label": "Modalità globale del vantaggio alle prove di caratteristica" },
+          "proficiency": { "label": "Competenza globale nelle prove di caratteristica" }
+        },
+        "label": "Modifica ai tiri di caratteristica",
+        "save": {
+          "bonus": { "label": "Bonus globale ai tiri salvezza" },
+          "max": { "label": "Risultato massimo globale dei tiri salvezza" },
+          "min": { "label": "Risultato minimo globale dei tiri salvezza" },
+          "mode": { "label": "Modalità globale del vantaggio ai tiri salvezza" },
+          "proficiency": { "label": "Competenza globale nei tiri salvezza" }
+        },
+        "skill": {
+          "bonus": { "label": "Bonus globale alle prove di abilità" },
+          "max": { "label": "Risultato massimo globale delle prove di abilità" },
+          "min": { "label": "Risultato minimo globale delle prove di abilità" },
+          "mode": { "label": "Modalità globale del vantaggio alle prove di abilità" },
+          "proficiency": { "label": "Competenza globale nelle prove di abilità" }
+        },
+        "tool": {
+          "bonus": { "label": "Bonus globale alle prove con strumenti" },
+          "max": { "label": "Risultato massimo globale delle prove con strumenti" },
+          "min": { "label": "Risultato minimo globale delle prove con strumenti" },
+          "mode": { "label": "Modalità globale del vantaggio alle prove con strumenti" },
+          "proficiency": { "label": "Competenza globale nelle prove con strumenti" }
+        }
+      },
+      "attack": {
+        "bonus": { "label": "Bonus globale all'attacco" },
+        "label": "Modifica ai tiri per colpire",
+        "max": { "label": "Risultato massimo globale del tiro per colpire" },
+        "min": { "label": "Risultato minimo globale del tiro per colpire" },
+        "mode": { "label": "Modalità globale del vantaggio al tiro per colpire" },
+        "msak": {
+          "bonus": { "label": "Bonus all'attacco con incantesimo in mischia" },
+          "max": { "label": "Risultato massimo dell'attacco con incantesimo in mischia" },
+          "min": { "label": "Risultato minimo dell'attacco con incantesimo in mischia" },
+          "mode": { "label": "Modalità del vantaggio all'attacco con incantesimo in mischia" }
+        },
+        "mwak": {
+          "bonus": { "label": "Bonus all'attacco con arma in mischia" },
+          "max": { "label": "Risultato massimo dell'attacco con arma in mischia" },
+          "min": { "label": "Risultato minimo dell'attacco con arma in mischia" },
+          "mode": { "label": "Modalità del vantaggio all'attacco con arma in mischia" }
+        },
+        "rsak": {
+          "bonus": { "label": "Bonus all'attacco con incantesimo a distanza" },
+          "max": { "label": "Risultato massimo dell'attacco con incantesimo a distanza" },
+          "min": { "label": "Risultato minimo dell'attacco con incantesimo a distanza" },
+          "mode": { "label": "Modalità del vantaggio all'attacco con incantesimo a distanza" }
+        },
+        "rwak": {
+          "bonus": { "label": "Bonus all'attacco con arma a distanza" },
+          "max": { "label": "Risultato massimo dell'attacco con arma a distanza" },
+          "min": { "label": "Risultato minimo dell'attacco con arma a distanza" },
+          "mode": { "label": "Modalità del vantaggio all'attacco con arma a distanza" }
+        }
+      },
+      "damage": {
+        "label": "Modifica ai tiri per i danni",
+        "msak": {
+          "bonus": { "label": "Bonus ai danni dell'attacco con incantesimo in mischia" }
+        },
+        "mwak": {
+          "bonus": { "label": "Bonus ai danni dell'attacco con arma in mischia" }
+        },
+        "rsak": {
+          "bonus": { "label": "Bonus ai danni dell'attacco con incantesimo a distanza" }
+        },
+        "rwak": {
+          "bonus": { "label": "Bonus ai danni dell'attacco con arma a distanza" }
+        }
+      }
+    }
+  },
   "Formatter": {
     "AdvantageMode": "Modalità vantaggio di {name}",
+    "Bonus": "Bonus Tiro di {name}",
     "Maximum": "Risultato massimo di {name}",
     "Minimum": "Risultato minimo di {name}",
     "ModifierAbility": "Modificatore Caratteristica di {name}"
+  },
+  "Generic": {
+    "D20": {
+      "bonus": { "label": "Bonus Ttiro" },
+      "max": { "label": "Risultato Massimo" },
+      "min": { "label": "Risultato Minimo" },
+      "mode": { "label": "Modalità Vantaggio" }
+    },
+    "Damage": {
+      "bonus": { "label": "Bonus Danni" }
+    }
   },
   "Range": {
     "Label": "Intervallo di Tiro",
@@ -4337,6 +4476,9 @@
     },
     "ignoredDifficultTerrain": {
       "label": "Ignorato Terreno Difficile"
+    },
+    "multiplier": {
+      "label": "Moltiplicatore Movimento"
     },
     "special": {
       "label": "Movimento speciale"
@@ -4426,7 +4568,6 @@
   }
 },
 
-"DND5E.SaveBonus": "Bonus al Tiro Salvezza",
 "DND5E.SaveGlobalBonusHint": "Questo bonus si applica a tutti i tiri salvezza effettuati da questo personaggio.",
 "DND5E.Scroll": {
   "CreateFrom": "Crea Pergamena da {spell}",
@@ -4510,6 +4651,18 @@
 "DND5E.SizeTinyAbbr": "Tn",
 
 "DND5E.SKILL": {
+  "FIELDS": {
+    "skills": {
+      "element": {
+        "roll": {
+          "bonus": { "label": "Bonus alla prova di abilità" },
+          "max": { "label": "Risultato massimo della prova di abilità" },
+          "min": { "label": "Risultato minimo della prova di abilità" },
+          "mode": { "label": "Modalità Vantaggio alla prova di abilità" }
+        }
+      }
+    }
+  },
   "Formatter": {
     "CheckBonus": "Bonus prova di {name}",
     "PassiveBonus": "Bonus passivo di {name}",
@@ -4555,7 +4708,6 @@
 "DND5E.SkillConfigure": "Configura Abilità",
 "DND5E.SkillsConfig": "Configura Abilità",
 "DND5E.SkillBonuses": "Bonus Abilità",
-"DND5E.SkillBonusCheck": "Bonus per la Prova",
 "DND5E.SkillBonusPassive": "Bonus Passivo",
 "DND5E.SkillConfigurationHint": "Configura la competenza e i bonus delle abilità.",
 "DND5E.SkillGlobalBonusCheckHint": "Questo bonus si applica a tutte le prove di abilità effettuate da questo personaggio.",
@@ -5383,6 +5535,18 @@
 "DND5E.ToggleDescription": "Attiva/Disattiva Descrizione",
   
 "DND5E.TOOL": {
+  "FIELDS": {
+    "tools": {
+      "element": {
+        "roll": {
+          "bonus": { "label": "Bonus alla prova con strumento" },
+          "max": { "label": "Risultato massimo della prova con strumento" },
+          "min": { "label": "Risultato minimo della prova con strumento" },
+          "mode": { "label": "Modalità Vantaggio alla prova con strumento" }
+        }
+      }
+    }
+  },
   "Formatter": {
     "CheckBonus": "Bonus prova di {name}",
     "Proficiency": "Competenza in {name}"
@@ -6334,6 +6498,30 @@
   }
 },
 
+"EDITOR.DND5E.Inserts": {
+  "Advice": "Consiglio generale",
+  "Attack": "Tiro per colpire",
+  "Award": "Ricompensa",
+  "Check": "Prova Caratteristica",
+  "Damage": "Danni",
+  "EnrichersGroup": "Arricchitori D&D",
+  "FloatLeft": "Allinea a sinistra",
+  "FloatRight": "Allinea a destra",
+  "Group": "Blocchi di D&D",
+  "HabitatTreasure": "Habitat e tesoro",
+  "Healing": "Guarigione",
+  "Item": "Oggetto",
+  "Lookup": "Ricerca",
+  "Narrative": "Narrativa",
+  "Notable": "Nota importante",
+  "Quest": "Missione",
+  "Quote": "Citazione in evidenza",
+  "Reference": "Riferimento",
+  "Save": "Tiro Salvezza",
+  "Skill": "Prova Abilità",
+  "VTTAdvice": "Consiglio per il VTT"
+},
+
 "EFFECT.DND5E": {
   "StatusBleeding": "Sanguinamento",
   "StatusBloodied": "Sanguinante",
@@ -6531,6 +6719,10 @@
 "SETTINGS.5eGridAlignedSquareTemplatesN": "Modelli quadrati allineati alla griglia",
 "SETTINGS.DND5E": {
   "AUTOMATION": {
+    "Falling": {
+      "Name": "Disabilita Automazione delle cadute",
+      "Hint": "Non tenere traccia dello stato di caduta dei token."
+    },
     "Movement": {
       "Name": "Disabilita Automazione Movimento",
       "Hint": "Configura la quantità di automazione dei movimenti utilizzata dal sistema: automazione completa, incluso il blocco dei token, automazione parziale solo per terreni difficili o completamente disattivata.",
