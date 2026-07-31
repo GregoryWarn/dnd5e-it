@@ -26,6 +26,7 @@
 },
 
 "TYPES.ChatMessage": {
+    "prompt": "Messaggio Prompt",
     "request": "Messaggio di Richiesta",
     "rest": "Messaggio di Riposo",
     "timePassed": "Messaggio Tempo Trascorso",
@@ -2491,16 +2492,13 @@
   "DND5E.Day": "Giorno",
   "DND5E.DeathSave": "Tiri Salvezza Morte",
   "DND5E.DeathSaveConfigure": "Configura i Tiri Salvezza Morte",
-  "DND5E.DeathSaveCriticalSuccess": "{name} ha avuto un successo critico in un tiro salvezza morte e ha recuperato 1 Punto Ferita!",
   "DND5E.DeathSaveHide": "Nascondi i Tiri Salvezza Morte",
   "DND5E.DeathSaveShow": "Mostra i Tiri Salvezza Morte",
-  "DND5E.DeathSaveSuccess": "{name} è sopravvissuto con 3 successi nei tiri salvezza morte ed è ora stabile!",
   "DND5E.DeathSaveSuccessLabel": "Successo del Tiro Salvezza Morte",
   "DND5E.DeathSaveSuccessLabelN.one": "1° successo nel tiro salvezza morte",
   "DND5E.DeathSaveSuccessLabelN.two": "2° successo nel tiro salvezza morte",
   "DND5E.DeathSaveSuccessLabelN.few": "3° successo nel tiro salvezza morte",
   "DND5E.DeathSaveSuccesses": "Successi",
-  "DND5E.DeathSaveFailure": "{name} è morto con 3 fallimenti nei tiri salvezza morte!",
   "DND5E.DeathSaveFailureLabel": "Fallimento nel Tiro Salvezza Morte",
   "DND5E.DeathSaveFailureLabelN.one": "1° fallimento nel tiro salvezza morte",
   "DND5E.DeathSaveFailureLabelN.two": "2° fallimento nel tiro salvezza morte",
@@ -2522,6 +2520,11 @@
           }
         }
       }
+    },
+    "Outcome": {
+      "death": "{name} è morto dopo aver accumulato 3 fallimenti nei tiri salvezza contro la morte!",
+      "revive": "{name} ha ottenuto un successo critico in un tiro salvezza contro la morte e ha recuperato 1 Punto Ferita!",
+      "stable": "{name} è sopravvissuto dopo aver ottenuto 3 successi nei tiri salvezza contro la morte ed è ora stabile!"
     }
   },
 
@@ -3142,7 +3145,8 @@
       },
       "Stocked": {
         "Label": "Totale Scorte",
-        "Hint": "Inserisci il costo necessario per rifornire completamente questa struttura."
+        "Hint": "Inserisci il costo necessario per rifornire completamente questa struttura.",
+        "Supplement": "Completamente rifornito"
     }
   },
   "Types": {
