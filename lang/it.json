@@ -2975,6 +2975,7 @@
         "Label": "Acquista Oggetto Base",
         "Hint": "Se selezionato, l'oggetto base verrà acquistato al prezzo pieno invece di essere creato."
       },
+      "DropHint": "Rilascia un Oggetto qui",
       "Hint": "Gli oggetti che questa struttura sta attualmente creando o raccogliendo, se presenti."
     },
     "Description": "Descrizione",
@@ -3125,11 +3126,11 @@
         "Supplement": "Acquista"
       },
       "Creatures": {
-        "Buy": "Posiziona gli animali che desideri acquistare negli slot sopra, e aggiorna il costo di conseguenza."
+        "Buy": "Posiziona gli animali che desideri acquistare negli slot sopra. Il costo viene calcolato a partire dai loro prezzi individuali e può essere regolato sotto."
       },
       "Price": {
         "Label": "Prezzo Base",
-        "Hint": "Seleziona quale stock vendere, e inserisci il prezzo base sopra."
+        "Hint": "Seleziona quale stock vendere. Il costo base viene calcolato a partire dai loro prezzi individuali e può essere regolato sopra."
       },
       "Sell": {
         "Label": "Vendi Stock",
