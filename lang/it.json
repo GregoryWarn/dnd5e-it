@@ -26,6 +26,7 @@
 },
 
 "TYPES.ChatMessage": {
+    "item": "Messaggio Elemento",
     "prompt": "Messaggio Prompt",
     "request": "Messaggio di Richiesta",
     "rest": "Messaggio di Riposo",
@@ -4339,6 +4340,9 @@
       "mode": "Modalità attacco",
       "type": "Tipo attacco"
     },
+    "damage": {
+      "type": "Tipo Danno"
+    },
     "proficient": "Competente",
     "skill": "Prova di abilità",
     "tool": "Prova con strumento",
@@ -6857,11 +6861,7 @@
     "Hint": "Abilita il monitoraggio opzionale del punteggio di Pietà per i personaggi giocanti.",
     "Name": "Punteggio di Pietà"
   },
-  "THEME": {
-    "Name": "Tema",
-    "Hint": "Tema che si applica all'interfaccia utente e a tutte le schede per impostazione predefinita. Automatico sarà determinato dalle impostazioni del browser o del sistema operativo."
-  },
-    "PERMISSIONS": {
+  "PERMISSIONS": {
     "AllowRests": {
       "Hint": "Permette ai giocatori di riposare direttamente dalle schede dei loro personaggi. Se disabilitato, i giocatori potranno riposare solo quando il GM ne farà richiesta al gruppo.",
       "Name": "Consenti Riposi Individuali"
@@ -6954,15 +6954,6 @@
    }
  },
   
-  "SHEETS.DND5E": {
-    "THEME": {
-      "Label": "Tema",
-      "Automatic": "Automatico",
-      "Dark": "Modalità Scura",
-      "Light": "Modalità Chiara"
-    }
-  },
-
 "SOURCE.BOOK.FreeRules": "Regole Libere",
 "SOURCE.BOOK.SRD51": "SRD 5.1",
 "SOURCE.BOOK.SRD52": "SRD 5.2",
