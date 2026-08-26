@@ -1,7 +1,7 @@
 {
+"DOCUMENT.Activity": "Activity",
+"DOCUMENT.Advancement": "Advancement",
 "DOCUMENT.DND5E": {
-  "Activity": "Activity",
-  "Advancement": "Advancement",
   "Warning": {
     "SelectType": "{name} type must be selected for creation."
   }
@@ -92,6 +92,7 @@
 
 "DND5E.ABILITY": {
   "Configure": {
+    "AttackLabel": "{ability} Attack",
     "CheckLabel": "{ability} Check",
     "SaveLabel": "{ability} Save",
     "Title": "Configure {ability}"
@@ -99,6 +100,14 @@
   "FIELDS": {
     "abilities": {
       "element": {
+        "attack": {
+          "roll": {
+            "bonus": { "label": "Attack Bonus" },
+            "max": { "label": "Maximum Attack Roll" },
+            "min": { "label": "Minimum Attack Roll" },
+            "mode": { "label": "Attack Advantage Mode" }
+          }
+        },
         "check": {
           "roll": {
             "bonus": { "label": "Check Bonus" },
@@ -119,6 +128,12 @@
     }
   },
   "Formatter": {
+    "Attack": {
+      "AdvantageMode": "{name} Attack Advantage Mode",
+      "Bonus": "{name} Attack Bonus",
+      "Maximum": "Maximum {name} Attack Roll",
+      "Minimum": "Minimum {name} Attack Roll"
+    },
     "Check": {
       "AdvantageMode": "{name} Check Advantage Mode",
       "Bonus": "{name} Check Bonus",
@@ -138,11 +153,11 @@
   "SECTIONS": {
     "Bonuses": {
       "Label": "{ability} Bonuses",
-      "Hint": "These bonuses apply to checks & saves made with {ability}."
+      "Hint": "These bonuses apply to attacks, checks, and saves made with {ability}."
     },
     "Global": {
       "Label": "Global Bonuses",
-      "Hint": "These bonuses apply to checks & saves made with any ability."
+      "Hint": "These bonuses apply to checks and saves made with any ability."
     },
     "Score": "{ability} Score"
   }
@@ -334,6 +349,10 @@
   },
   "Expired": "Expired",
   "Expiry": {
+    "Abbreviation": {
+      "End": "End",
+      "Start": "Start"
+    },
     "GROUPS": {
       "General": "General",
       "Specific": "Specific"
@@ -1286,10 +1305,6 @@
     },
     "Title": "Bastion Attack"
   },
-  "Button": {
-    "Label": "Show Bastion Turn Button",
-    "Hint": "Display a button for advancing bastion turns in the main game interface."
-  },
   "Configuration": {
     "Name": "Bastions",
     "Label": "Configure Bastions",
@@ -1299,12 +1314,22 @@
     "Advance": "This will advance all bastion facility order progress by {duration}, issue the maintain order to all idle facilities, and repair any disabled facilities, would you like to continue?",
     "Maintain": "This will issue the maintain order to all idle bastion facilities and repair any disabled facilities, would you like to continue?"
   },
-  "Duration": {
-    "Label": "Bastion Turn Duration (days)"
-  },
-  "Enabled": {
-    "Label": "Enable Bastion Functionality",
-    "Hint": "When enabled, player characters will have access to a new Bastion tab on their character sheets when reaching level 5, and will be able to build facilities and issue orders to them."
+  "FIELDS": {
+    "button": {
+      "hint": "Display a button for advancing bastion turns in the main game interface.",
+      "label": "Show Bastion Turn Button"
+    },
+    "duration": {
+      "label": "Bastion Turn Duration (days)"
+    },
+    "enabled": {
+      "hint": "When enabled, player characters will have access to a new Bastion tab on their character sheets when reaching level 5, and will be able to build facilities and issue orders to them.",
+      "label": "Enable Bastion Functionality"
+    },
+    "reminder": {
+      "hint": "Display a reminder in chat when the next bastion turn should occur based on the advancement of time.",
+      "label": "Automatic Turn Reminder"
+    }
   },
   "Gold": {
     "Claim": "Claim Income",
@@ -1312,6 +1337,11 @@
     "Unclaimed": "unclaimed"
   },
   "Label": "Bastion",
+  "Reminder": {
+    "Elapsed": "It has been {time} since the last bastion turn.",
+    "Triggered": "A bastion turn has occurred.",
+    "Unknown": "It has been some time since the last bastion turn."
+  },
   "Summary": {
     "Gold": "{value} ({claimed})",
     "NoOrders": "No orders issued to special facilities this turn.",
@@ -1733,7 +1763,19 @@
 "DND5E.ChatFlavor": "Chat Message Flavor",
 
 "DND5E.CHATMESSAGE": {
+  "Action": {
+    "SelectAll": "Select All Outcomes",
+    "SelectFailure": "Select Failures",
+    "SelectSuccess": "Select Successes"
+  },
   "Activities": "Activities",
+  "Button": {
+    "rollAttack": "Attack",
+    "rollCheck": "Ability Check",
+    "rollDamage": "Damage",
+    "rollFormula": "Roll",
+    "rollSave": "Saving Throw"
+  },
   "Deltas": {
     "Created": "Item Created",
     "Deleted": "Item Deleted",
@@ -1748,6 +1790,17 @@
     "Complete": "Request Fulfilled",
     "PartyMembers": "Party Members",
     "Title": "Request"
+  },
+  "Row": {
+    "Actions": "Item actions",
+    "Properties": "Item properties",
+    "Roll": "Die roll",
+    "rollCheck": "Ability checks",
+    "rollSave": "Saving throws",
+    "Targets": "Targets"
+  },
+  "Targets": {
+    "Count": "{number}× {name}"
   },
   "TURN": {
     "NoCombatant": "Combatant no longer exists!"
@@ -1959,7 +2012,10 @@
     "End": "End Concentration"
   },
   "Description": "You are maintaining concentration on the effects of the '{name}' {type}.",
-  "Duration": "Concentration, up to {duration}",
+  "Duration": {
+    "Scalar": "Concentration, up to {duration}",
+    "Special": "Concentration, {durationLc}"
+  },
   "EndChoice": "You are concentrating on effects from more than one source. Pick which effect to end.",
   "FIELDS": {
     "attributes": {
@@ -2469,6 +2525,7 @@
 
 "DND5E.Damage": "Damage",
 "DND5E.DamageApplication": {
+  "Back": "Back to previous pane",
   "Change": {
     "Modification": "{type} Modification",
     "Immunity": "{type} Immunity",
@@ -2477,7 +2534,18 @@
     "Vulnerability": "{type} Vulnerability"
   },
   "Downgrading": "Downgrading {source} to Resistance",
-  "Ignoring": "Ignoring {source}"
+  "Ignoring": "Ignoring {source}",
+  "Multiplier": "Damage multiplier",
+  "Section": {
+    "Changes": "Applied to this target",
+    "Multiplier": "Multiplier",
+    "Targets": "Targets in this group"
+  },
+  "State": {
+    "active": "Applied",
+    "downgrade": "Downgraded",
+    "ignore": "Ignored"
+  }
 },
 "DND5E.DamageModification": {
   "Label": "Damage Modification",
@@ -2600,12 +2668,16 @@
 "DND5E.EFFECT": {
   "Action": {
     "AddChange": "Add Change",
+    "Apply": "Apply",
     "CreateEffect": "Create Effect",
     "DeleteEffect": "Delete Effect",
     "DeleteChange": "Delete Change",
+    "DisableEffect": "Disable Effect",
     "DissociateEffect": "Dissociate Effect",
     "EditChange": "Edit Change",
     "EditEffect": "Edit Effect",
+    "EnableEffect": "Enable Effect",
+    "PanToToken": "Pan to token",
     "RemoveStatus": {
       "all": "All Sources",
       "label": "Source"
@@ -2619,7 +2691,6 @@
     },
     "Header": "Effects",
     "Warning": {
-      "Concentration": "Applying an effect that is being concentrated on by another character requires GM permissions.",
       "Ownership": "Effects cannot be applied to tokens you are not the owner of."
     }
   },
@@ -2640,6 +2711,10 @@
           },
           "priority": {
             "label": "Priority"
+          },
+          "replacement": {
+            "label": "Replacement",
+            "hint": "Configure whether roll data properties in the Value are replaced prior to application, and using whose data."
           },
           "type": {
             "label": "Type"
@@ -2670,6 +2745,10 @@
     "Label": "Change",
     "Title": "{effect} Change #{number}"
   },
+  "DisabledTooltip": {
+    "Disabled": "This effect is currently selected in one or more of its Item's Activities, and therefore cannot be suspended.",
+    "Transfer": "This effect is currently selected in one or more of its Item's Activities, and therefore cannot passively apply to the Item's Actor."
+  },
   "DropHint": "Drop an Active Effect here",
   "Empty": "No associated effects. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
   "Expiry": {
@@ -2678,6 +2757,11 @@
   },
   "Label": "Available Effects",
   "New": "New Effect",
+  "Replacement": {
+    "NoChange": "No Change",
+    "Origin": "Origin",
+    "Target": "Target"
+  },
   "RIDER": {
     "Activity": "Enchantment Rider Activity",
     "Effect": "Enchantment Rider Effect",
@@ -2826,6 +2910,11 @@
     "LongRest": "Long Rest",
     "Never": "Never",
     "ShortRest": "Short Rest"
+  },
+  "Transfer": {
+    "DisabledTooltip": "This Enchantment is currently selected in one or more of its Item's Enchant Activities, and therefore cannot apply directly to the Item.",
+    "Hint": "If checked, this Enchantment will be applied directly to its parent Item.",
+    "Label": "Apply Enchantment to Item"
   },
   "Warning": {
     "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
@@ -5282,8 +5371,8 @@
         "any": "any allies",
         "each": "each ally",
         "every": "every ally",
-        "one": "{number} ally",
-        "other": "{number} allies"
+        "one": "ally",
+        "other": "allies"
       }
     },
     "Any": {
@@ -5292,8 +5381,8 @@
     "Circle": {
       "Label": "Circle",
       "Counted": {
-        "one": "{number} circle",
-        "other": "{number} circles",
+        "one": "circle",
+        "other": "circles",
         "oneSized": "{sizes} Circle",
         "otherSized": "{number} {sizes} Circles"
       }
@@ -5301,8 +5390,8 @@
     "Cone": {
       "Label": "Cone",
       "Counted": {
-        "one": "{number} cone",
-        "other": "{number} cones",
+        "one": "cone",
+        "other": "cones",
         "oneSized": "{sizes} Cone",
         "otherSized": "{number} {sizes} Cones"
       }
@@ -5313,8 +5402,8 @@
         "any": "any creatures",
         "each": "each creature",
         "every": "every creature",
-        "one": "{number} creature",
-        "other": "{number} creatures"
+        "one": "creature",
+        "other": "creatures"
       }
     },
     "CreatureOrObject": {
@@ -5323,15 +5412,15 @@
         "any": "any creatures or objects",
         "each": "each creature or object",
         "every": "every creature or object",
-        "one": "{number} creature or object",
-        "other": "{number} creatures or objects"
+        "one": "creature or object",
+        "other": "creatures or objects"
       }
     },
     "Cube": {
       "Label": "Cube",
       "Counted": {
-        "one": "{number} cube",
-        "other": "{number} cubes",
+        "one": "cube",
+        "other": "cubes",
         "oneSized": "{sizes} Cube",
         "otherSized": "{number} {sizes} Cubes"
       }
@@ -5339,8 +5428,8 @@
     "Cylinder": {
       "Label": "Cylinder",
       "Counted": {
-        "one": "{number} cylinder",
-        "other": "{number} cylinders",
+        "one": "cylinder",
+        "other": "cylinders",
         "oneSized": "{sizes} Cylinder",
         "otherSized": "{number} {sizes} Cylinders"
       }
@@ -5348,8 +5437,8 @@
     "Emanation": {
       "Label": "Emanation",
       "Counted": {
-        "one": "{number} emanation",
-        "other": "{number} emanations",
+        "one": "emanation",
+        "other": "emanations",
         "oneSized": "{sizes} Emanation",
         "otherSized": "{number} {sizes} Emanations"
       }
@@ -5360,15 +5449,15 @@
         "any": "any enemies",
         "each": "each enemy",
         "every": "every enemy",
-        "one": "{number} enemy",
-        "other": "{number} enemies"
+        "one": "enemy",
+        "other": "enemies"
       }
     },
     "Line": {
       "Label": "Line",
       "Counted": {
-        "one": "{number} line",
-        "other": "{number} lines",
+        "one": "line",
+        "other": "lines",
         "oneSized": "{sizes} Line",
         "otherSized": "{number} {sizes} Lines"
       }
@@ -5379,15 +5468,15 @@
         "any": "any objects",
         "each": "each object",
         "every": "every object",
-        "one": "{number} object",
-        "other": "{number} objects"
+        "one": "object",
+        "other": "objects"
       }
     },
     "Radius": {
       "Label": "Radius",
       "Counted": {
-        "one": "{number} radius",
-        "other": "{number} radii",
+        "one": "radius",
+        "other": "radii",
         "oneSized": "{sizes} Radius",
         "otherSized": "{number} {sizes} Radii"
       }
@@ -5395,8 +5484,8 @@
     "Ring": {
       "Label": "Ring",
       "Counted": {
-        "one": "{number} ring",
-        "other": "{number} rings",
+        "one": "ring",
+        "other": "rings",
         "oneSized": "{sizes} Ring",
         "otherSized": "{number} {sizes} Rings"
       }
@@ -5410,15 +5499,15 @@
         "any": "any spaces",
         "each": "each space",
         "every": "every space",
-        "one": "{number} Space",
-        "other": "{number} Spaces"
+        "one": "space",
+        "other": "spaces"
       }
     },
     "Sphere": {
       "Label": "Sphere",
       "Counted": {
-        "one": "{number} sphere",
-        "other": "{number} spheres",
+        "one": "sphere",
+        "other": "spheres",
         "oneSized": "{sizes} Sphere",
         "otherSized": "{number} {sizes} Spheres"
       }
@@ -5429,15 +5518,15 @@
         "any": "any {special}",
         "each": "each {special}",
         "every": "every {special}",
-        "one": "{number} {special}",
-        "other": "{number} {special}"
+        "one": "{special}",
+        "other": "{special}"
       }
     },
     "Square": {
       "Label": "Square",
       "Counted": {
-        "one": "{number} square",
-        "other": "{number} squares",
+        "one": "square",
+        "other": "squares",
         "oneSized": "{sizes} Square",
         "otherSized": "{number} {sizes} Squares"
       }
@@ -5448,15 +5537,15 @@
         "any": "any targets",
         "each": "each target",
         "every": "every target",
-        "one": "{number} target",
-        "other": "{number} targets"
+        "one": "target",
+        "other": "targets"
       }
     },
     "Wall": {
       "Label": "Wall",
       "Counted": {
-        "one": "{number} wall",
-        "other": "{number} walls",
+        "one": "wall",
+        "other": "walls",
         "oneSized": "{sizes} Wall",
         "otherSized": "{number} {sizes} Walls"
       }
@@ -5467,8 +5556,8 @@
         "any": "any willing creatures",
         "each": "each willing creature",
         "every": "every willing creature",
-        "one": "{number} willing creature",
-        "other": "{number} willing creatures"
+        "one": "willing creature",
+        "other": "willing creatures"
       }
     }
   },
@@ -5535,9 +5624,19 @@
 "DND5E.TimeYear": "Years",
 "DND5E.TMP": "TMP",
 "DND5E.ToHit": "To Hit",
+
+"DND5E.TOKEN": {
+  "Attribute": {
+    "Label": "Token: {attribute}",
+    "LightBrightRadius": "Light Bright Radius",
+    "LightDimRadius": "Light Dim Radius"
+  }
+},
+
 "DND5E.Tokens": {
   "NoneSelected": "No Tokens Selected",
   "NoneTargeted": "No Tokens Targeted",
+  "NoTargets": "No Targets",
   "Selected": "Selected",
   "Targeted": "Targeted"
 },
@@ -5862,7 +5961,6 @@
   "TemporaryClass": "Temporary Class",
   "Title": "Transform",
   "Warning": {
-    "FormActive": "{form} already active on {actor}.",
     "NoOwnership": "You do not have permission to transform this actor.",
     "NoPermission": "Transformation permission haven't been granted to players.",
     "OriginalActor": "No original actor was found with ID '{reference}'.",
@@ -6753,6 +6851,15 @@
     "Player": "Only Display for Friendly Tokens",
     "None": "Never Display"
   },
+  "CHATLOG": {
+    "Hint": "Specify a theme for the chat log. By default this will inherit from the Application theme.",
+    "Name": "Chat Log Theme",
+    "Options": {
+      "blank": "Default",
+      "dark": "Dark",
+      "light": "Light"
+    }
+  },
   "COLLAPSETRAYS": {
     "Name": "Collapse Trays in Chat",
     "Hint": "Automatically collapse damage, hit, and effect trays that appear in chat cards.",
@@ -6862,6 +6969,10 @@
     "Name": "Piety Score"
   },
   "PERMISSIONS": {
+    "AllowEffects": {
+      "Hint": "Allow players to use the effect application tray when an actor they own is the target of an effect.",
+      "Name": "Allow Player Effect Application"
+    },
     "AllowRests": {
       "Hint": "Allow players to rest directly from their characters' sheets. When disabled, players will only be able to rest when the GM makes a request from the party.",
       "Name": "Allow Individual Rests"
@@ -6880,6 +6991,10 @@
     "Hint": "Change handling of various rules between the 2024 and 2014 rule sets.",
     "Legacy": "Legacy Rules (2014)",
     "Modern": "Modern Rules (2024)"
+  },
+  "SUMMARIZECHAT": {
+    "Hint": "Append certain results as summaries rather than full chat cards.",
+    "Name": "Summary Chat Cards"
   },
   "VARIANT": {
     "Hint": "Enable and configure rules variations offered by the system.",
