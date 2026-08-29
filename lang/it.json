@@ -480,11 +480,9 @@
   }
 },
   
-  "DND5E.ActiveEffectOverrideWarning": "Questo valore viene modificato da un Effetto Attivo e non può essere modificato. Disabilita l'effetto per modificarlo.",
   "DND5E.Add": "Aggiungi",
   "DND5E.AdditionalControls": "Controlli Aggiuntivi",
   "DND5E.AdditionalSettings": "Impostazioni Aggiuntive",
-  "DND5E.AddEmbeddedItemPromptHint": "Vuoi aggiungere questi oggetti alla tua scheda personaggio?",
   "DND5E.Advanced": "Avanzato",
   
   "DND5E.ADVANCEMENT": {
@@ -556,11 +554,17 @@
       "Delete": "Elimina Avanzamento",
       "Duplicate": "Duplica Avanzamento",
       "Edit": "Modifica Avanzamento",
+      "ModifyChoices": "Modifica Scelte",
       "View": "Visualizza Avanzamento"
     },
     "Config": {
       "AnyLevel": "Qualsiasi",
-      "Details": "Dettagli Avanzamento"
+      "Details": "Dettagli Avanzamento",
+      "Status": {
+        "Complete": "Totalmente Configurato",
+        "Incomplete": "Non Configurato"
+      },
+      "Title": "Configura Avanzamento {item}"
     },
     "Defaults": {
     "BackgroundFeat": "Talento Background",
@@ -580,6 +584,26 @@
     "Label": "Rimuovi Modifiche",
     "Options": "Opzioni"
   },
+  "FIELDS": {
+      "classRestriction": {
+        "label": "Restrizione Classe",
+        "none": "Tutte le classi",
+        "primary": "Solo classe originale",
+        "secondary": "Solo multiclasse"
+      },
+      "hint": {
+        "label": "Suggerimento"
+      },
+      "img": {
+        "label": "Icona personalizzata"
+      },
+      "level": {
+        "label": "Livello"
+      },
+      "name": {
+        "label": "Titolo personalizzato"
+      }
+    },
     "HitPoints": {
       "Action": {
         "RollClass": "Tira Punti Ferita {class}",
@@ -697,8 +721,15 @@
       "Warning": {
         "Container": "Il contenuto dei contenitori non verrà aggiunto insieme ai contenitori.",
         "Duplicate": "Questo oggetto esiste già in questo avanzamento.",
-        "Recursive": "Non puoi concedere un oggetto nel suo stesso avanzamento."
+        "Recursive": "Non puoi concedere un oggetto nel suo stesso avanzamento.",
+        "Type": "Oggetti {type} non possono essere aggiunti con questo tipo di avanzamento."
     }
+  },
+  "Label": "Avanzamento",
+  "Level": {
+    "Any": "Qualsiasi Livello",
+    "None": "Nessun Livello",
+    "Specific": "Livello {level}"
   },
   "Manager": {
       "Action": {
@@ -957,36 +988,6 @@
   }
 },
 
-  "DND5E.AdvancementChoices": "scelte",
-  "DND5E.AdvancementClassRestriction": "Restrizione Classe",
-  "DND5E.AdvancementClassRestrictionNone": "Tutte le Classi",
-  "DND5E.AdvancementClassRestrictionPrimary": "Solo Classe Originale",
-  "DND5E.AdvancementClassRestrictionSecondary": "Solo Multiclasse",
-  "DND5E.AdvancementConfigurationActionDisable": "Disabilita Configurazione",
-  "DND5E.AdvancementConfigurationActionEnable": "Abilita Configurazione",
-  "DND5E.AdvancementConfigurationModeDisabled": "Configurazione Disabilitata",
-  "DND5E.AdvancementConfigurationModeEnabled": "Configurazione Abilitata",
-  "DND5E.AdvancementConfigureTitle": "Configura Avanzamento {item}",
-  "DND5E.AdvancementConfigureAllowDrops": "Consenti Drop",
-  "DND5E.AdvancementConfigureAllowDropsHint": "I giocatori dovrebbero essere in grado di aggiungere le proprie scelte in questo avanzamento?",
-  "DND5E.AdvancementConfigureDropAreaHint": "Trascina gli Oggetti qui per aggiungerli al pool da cui un giocatore può scegliere.",
-  "DND5E.AdvancementConfiguredComplete": "Completamente Configurato",
-  "DND5E.AdvancementConfiguredIncomplete": "Non Configurato",
-  "DND5E.AdvancementCustomIcon": "Icona Personalizzata",
-  "DND5E.AdvancementCustomTitle": "Titolo Personalizzato",
-  "DND5E.AdvancementFlowDropAreaHint": "Trascina un Oggetto qui per sceglierlo.",
-  "DND5E.AdvancementHint": "Suggerimento",
-  "DND5E.AdvancementItemTypeInvalidWarning": "Gli oggetti di tipo {type} non possono essere aggiunti con questo tipo di avanzamento.",
-  "DND5E.AdvancementLevelHeader": "Livello {level}",
-  "DND5E.AdvancementLevelAnyHeader": "Qualsiasi Livello",
-  "DND5E.AdvancementLevelNoneHeader": "Nessun Livello",
-  "DND5E.AdvancementLevelDownConfirmationMessage": "Ridurre di livello questa classe annullerà anche tutte le scelte di avanzamento fatte per essa. Questi cambiamenti saranno rimossi dal tuo personaggio se la casella sottostante è selezionata.",
-  "DND5E.AdvancementLevelDownConfirmationTitle": "Conferma Riduzione di Livello",
-  "DND5E.AdvancementModifyChoices": "Modifica Scelte",
-  "DND5E.AdvancementSaveButton": "Salva Avanzamento",
-  "DND5E.AdvancementSelectionCreateButton": "Crea Avanzamento",
-  "DND5E.AdvancementSelectionTitle": "Seleziona Tipo di Avanzamento",
-  "DND5E.AdvancementTitle": "Avanzamento",
   "DND5E.Advantage": "Vantaggio",
   "DND5E.AdvantageMode": "Modalità Vantaggio",
   
@@ -1793,8 +1794,9 @@
   },
   "Row": {
     "Actions": "Azioni dell'oggetto",
+    "Items": "Oggetti",
     "Properties": "Proprietà dell'oggetto",
-    "Roll": "Tiro di dado",
+    "Roll": "Tiro Dado",
     "rollCheck": "Prove Caratteristica",
     "rollSave": "Tiri Salvezza",
     "Targets": "Bersagli"
@@ -5630,16 +5632,25 @@
     "Label": "Token: {attribute}",
     "LightBrightRadius": "Raggio Illuminazione intensa",
     "LightDimRadius": "Raggio Illuminazione fioca"
+  },
+  "LockScale": {
+    "Hint": "Impedisce che venga applicata una modifica alla scala del Token quando la taglia del Personaggio è Piccola.",
+    "Label": "Blocca scala"
+  },
+  "LockSize": {
+    "Hint": "Sblocca per inserire manualmente le dimensioni di questo Token e impedisce che vengano modificate automaticamente in base alla taglia della creatura.",
+    "Label": "Blocca dimensioni"
   }
 },
 
 "DND5E.Tokens": {
   "NoneSelected": "Nessun Token Selezionato",
-  "NoneTargeted": "Nessun Token Targettato",
+  "NoneTargeted": "Nessun Token Bersagliato",
   "NoTargets": "Nessun Bersaglio",
   "Selected": "Selezionato",
-  "Targeted": "Targettato"
+  "Targeted": "Bersagliato"
 },
+  
 "DND5E.ToggleDescription": "Attiva/Disattiva Descrizione",
   
 "DND5E.TOOL": {
@@ -6826,6 +6837,10 @@
 "SETTINGS.5eGridAlignedSquareTemplatesN": "Modelli quadrati allineati alla griglia",
 "SETTINGS.DND5E": {
   "AUTOMATION": {
+    "Autosize": {
+      "Hint": "Regola automaticamente le dimensioni e la scala del Token in base alla sua categoria di taglia.",
+      "Name": "Sincronizza taglia del Token"
+    },
     "Falling": {
       "Name": "Disabilita Automazione delle cadute",
       "Hint": "Non tenere traccia dello stato di caduta dei token."
@@ -6969,6 +6984,10 @@
     "Name": "Punteggio di Pietà"
   },
   "PERMISSIONS": {
+    "AllowDamage": {
+      "Hint": "Consente ai giocatori di applicare danni ai Token di loro proprietà.",
+      "Name": "Consenti ai giocatori di applicare danni"
+    },
     "AllowEffects": {
       "Hint": "Consenti ai giocatori di utilizzare il pannello di applicazione degli effetti quando un Personaggio di loro proprietà è il bersaglio di un effetto.",
       "Name": "Consenti ai giocatori di applicare effetti"
