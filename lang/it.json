@@ -6130,7 +6130,7 @@
     "WEIGHT": {
       "Label": "Unità di Peso",
       "Kilogram": {
-        "Label": "Chilogrammo",
+        "Label": "Kg",
         "Abbreviation": "kg"
       },
       "Megagram": {
@@ -6944,7 +6944,7 @@
     },
     "WeightUnits": {
       "Name": "Usa le Unità di Peso Metriche",
-      "Hint": "Sostituisce tutti i riferimenti alle libbre con chilogrammi e aggiorna i calcoli di sovraccarico per usare unità metriche di peso."
+      "Hint": "Sostituisce tutti i riferimenti alle libbre con Kg e aggiorna i calcoli di sovraccarico per usare unità metriche di peso."
     }
   },
   "NPCS": {
