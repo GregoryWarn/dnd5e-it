@@ -326,53 +326,7 @@
     }
   },
 
-  "DND5E.ACTIVEEFFECT": {
-    "AttributeKeyTooltip": "Per un elenco dei tasti comuni e i loro valori accettati, vedere <a href=\"{url}\">the wiki</a>.",
-    "ChangeType": {
-      "Advantage": {
-        "Label": "Modalità Vantaggio"
-      },
-      "Bonus": {
-        "Label": "Bonus"
-      },
-      "Group": {
-        "Custom": "Personalizzato",
-        "Rules": "Regole",
-        "Standard": "Standard"
-      },
-      "Maximum": {
-        "Label": "Tira Massimo"
-      },
-      "Minimum": {
-        "Label": "Tira Minimo"
-      }
-    },
-    "Expired": "Scaduto",
-    "Expiry": {
-      "Abbreviation": {
-        "End": "Fine",
-        "Start": "Inizio"
-      },
-      "GROUPS": {
-        "General": "Generale",
-        "Specific": "Specifico"
-      },
-      "SourceStart": "All'inizio del prossimo turno dell'origine",
-      "SourceEnd": "Alla fine del prossimo turno dell'origine",
-      "TargetStart": "All'inizio del prossimo turno del bersaglio",
-      "TargetEnd": "Alla fine del prossimo turno del bersaglio",
-      "YourStart": "All'inizio del tuo prossimo turno",
-      "YourEnd": "Alla fine del tuo prossimo turno"
-    },
-    "FIELDS": {
-      "statuses": {
-        "label": "Condizioni di Stato",
-        "hint": "Mentre è influenzato da questo Effetto Attivo, il bersaglio sarà considerato come avente queste condizioni di stato aggiuntive."
-      }
-    }
-  },
-
-"DND5E.ACTIVITY": {
+ "DND5E.ACTIVITY": {
     "Action": {
       "Create": "Crea Attività",
       "Delete": "Elimina Attività",
@@ -669,6 +623,10 @@
           "hint": "Consenti solo gli incantesimi da queste liste.",
           "label": "Liste Incantesimi"
           },
+          "school": {
+            "hint": "Consenti solo gli incantesimi appartenenti a queste scuole.",
+            "label": "Scuole di Magia"
+          },
           "subtype": {
             "label": "Sottotipo"
           },
@@ -698,7 +656,8 @@
         "NoOriginal": "La scelta precedentemente selezionata non è più disponibile per la sostituzione.",
         "SpellLevelAvailable": "Solo incantesimi di livello {level} o inferiore possono essere scelti per questo avanzamento.",
         "SpellLevelSpecific": "Solo incantesimi di livello {level} possono essere scelti per questo avanzamento.",
-        "SpellList": "Per questo avanzamento è possibile scegliere solo gli incantesimi disponibili nell'elenco degli incantesimi {lists}."
+        "SpellList": "Per questo avanzamento è possibile scegliere solo gli incantesimi disponibili nell'elenco degli incantesimi {lists}.",
+        "SpellSchool": "È possibile scegliere solo incantesimi della scuola {schools} per questo avanzamento."
       }
     },
     "ItemGrant": {
@@ -869,6 +828,9 @@
           "Hint": "Usa questo per rappresentare gli usi degli elementi in un determinato periodo.",
           "Label": "Utilizzo"
         }
+      },
+      "Warning": {
+        "DuplicateIdentifier": "Più valori di scala condividono l'identificatore {identifier}."
       }
     },
     "Size": {
@@ -992,10 +954,6 @@
   "DND5E.AdvantageMode": "Modalità Vantaggio",
   
   "DND5E.ADVENTURE": {
-    "Action": {
-      "Configure": "Configura avventura",
-      "Launch": "Avvia avventura"
-    },
     "Finished": {
       "one": "Preparazione di {adventure} completata.",
       "other": "Preparazione di {number} avventure completata."
@@ -1005,6 +963,7 @@
       "CustomizeWorld": "Personalizza i dettagli del mondo",
       "DisplayJournal": "Mostra diario introduttivo"
     },
+    "Options": "Opzioni Avventura",
     "Warning": {
       "JournalMissing": "Impossibile trovare la voce del diario `{id}` da visualizzare per {adventure}.",
       "SceneMissing": "Impossibile trovare la scena `{id}` da attivare per {adventure}."
@@ -1719,6 +1678,10 @@
     "properties": {
       "label": "Proprietà del Contenitore"
     }
+  },
+  "UnidentifiedContentsWarning": {
+    "Title": "Contenitore non identificato",
+    "Message": "Questo contenitore non è identificato. Qualsiasi cosa vi aggiungerai rimarrà nascosta finché non verrà identificato. Continuare?"
   }
 },
 
@@ -1995,7 +1958,6 @@
   "DND5E.ConExhaustion": "Indebolimento",
   "DND5E.ConFrightened": "Spaventato",
   "DND5E.ConGrappled": "Afferrato",
-  "DND5E.ConImm": "Immunità alle Condizioni",
   "DND5E.ConIncapacitated": "Incapacitato",
   "DND5E.ConInvisible": "Invisibile",
   "DND5E.ConParalyzed": "Paralizzato",
@@ -2519,12 +2481,7 @@
       "Thunder": "Tuono"
     }
   },
-  
-  "DND5E.DamImm": "Immunità al Danno",
-  "DND5E.DamMod": "Modifica del Danno",
-  "DND5E.DamRes": "Resistenze al Danno",
-  "DND5E.DamVuln": "Vulnerabilità al Danno",
-  
+   
   "DND5E.Damage": "Danno",
   "DND5E.DamageApplication": {
     "Back": "Torna al riquadro precedente",
@@ -2638,6 +2595,10 @@
           "label": "Concentrazione",
           "hint": "La creatura deve mantenere la concentrazione mentre è attivo."
         },
+        "expiry": {
+          "label": "Evento di scadenza",
+          "hint": "Evento che determina la fine dell'utilizzo."
+        },
         "override": {
           "label": "Sostituire Durata",
           "hint": "Usa questi valori di durata al posto di quelli dell'oggetto quando usi questa attività."
@@ -2696,6 +2657,7 @@
        "Ownership": "Gli effetti non possono essere applicati a token di cui non sei il proprietario."
       }
     },
+    "AttributeKeyTooltip": "Per un elenco delle chiavi comuni e dei relativi valori accettati, consulta <a href=\"{url}\">wiki</a>.",
     "BASE": {
       "FIELDS": {
         "changes": {
@@ -2744,8 +2706,27 @@
     },
     "Change": {
       "Configuration": "Configurazione Modifica",
+      "Group": {
+        "Custom": "Personalizzato",
+        "Rules": "Regole",
+        "Standard": "Standard"
+      },
       "Label": "Modifica",
-      "Title": "{effect} - Modifica {number}"
+      "Title": "{effect} Modifica #{number}",
+      "Type": {
+        "Advantage": {
+          "Label": "Modalità vantaggio"
+        },
+        "Bonus": {
+          "Label": "Bonus"
+        },
+        "Maximum": {
+          "Label": "Massimo Tiro"
+        },
+        "Minimum": {
+          "Label": "Minimo Tiro"
+        }
+      }
     },
     "DisabledTooltip": {
       "Disabled": "Questo effetto è attualmente selezionato in una o più Attività del suo Oggetto e pertanto non può essere sospeso.",
@@ -2753,9 +2734,32 @@
     },
     "DropHint": "Rilascia un Effetto Attivo qui",
     "Empty": "Nessun effetto associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per crearne uno, seleziona un effetto esistente dal menu a discesa.",
+    "Expired": "Scaduto",
     "Expiry": {
-      "LongRest": "Fine del Riposo Lungo",
-      "ShortRest": "Fine del Riposo Breve"
+      "Abbreviation": {
+        "End": "Fine",
+        "Start": "Inizio"
+      },
+      "Group": {
+        "General": "Generale",
+        "Specific": "Specifico"
+      },
+      "Type": {
+        "LongRest": "Fine del Riposo Lungo",
+        "ShortRest": "Fine del Riposo Breve",
+        "SourceEnd": "Fine del prossimo turno della fonte",
+        "SourceStart": "Inizio del prossimo turno della fonte",
+        "TargetEnd": "Fine del prossimo turno del bersaglio",
+        "TargetStart": "Inizio del prossimo turno del bersaglio",
+        "YourEnd": "Fine del tuo prossimo turno",
+        "YourStart": "Inizio del tuo prossimo turno"
+        }
+      },
+      "FIELDS": {
+        "statuses": {
+          "label": "Condizioni di stato",
+          "hint": "Finché è influenzato da questo Effetto Attivo, il bersaglio verrà considerato affetto anche da queste condizioni di stato aggiuntive."
+      }
     },
     "Label": "Effetti Disponibili",
     "New": "Nuovo Effetto",
@@ -2791,7 +2795,11 @@
   "Suppressed": {
     "Hint": "Origine elemento deve essere equipaggiata o sintonizzata affinché questi effetti siano attivi."
   },
-  "Tab": "Effetti"
+  "Tab": "Effetti",
+  "Warning": {
+    "RollCondition": "Le condizioni degli effetti non possono fare riferimento alle proprietà 'roll.'. Sposta questa condizione nelle singole modifiche affinché l'effetto venga applicato.",
+    "StatusCondition": "Gli effetti che conferiscono condizioni di stato non possono essere a loro volta condizionati da condizioni di stato. Sposta questa condizione nelle singole modifiche affinché l'effetto venga applicato."
+   }
   },
 
   "DND5E.ENCHANT": {
@@ -3856,6 +3864,7 @@
     "Thrown": "Lanciato",
     "Trait": "Tratto Passivo",
     "TwoHanded": "A Due Mani",
+    "UnidentifiedContents": "Nascondi contenuti non identificati",
     "Versatile": "Versatile",
     "Verbal": "Verbale",
     "WeightlessContents": "Contenuto Senza Peso"
@@ -5697,48 +5706,93 @@
   "DND5E.ToolPromptTitle": "Controllo {tool}",
   "DND5E.ToolThieves": "Attrezzi da Scasso",
   "DND5E.ToolVehicle": "Veicoli",
-  "DND5E.TraitAll": "Tutti {category}",
-  "DND5E.TraitArmorPlural.one": "Addestramento in Armature",
-  "DND5E.TraitArmorPlural.other": "Addestramento in Armature",
-  "DND5E.TraitArmorProf": "Addestramento in Armature",
-  "DND5E.TraitArmorLegacyPlural.one": "Competenza in Armature",
-  "DND5E.TraitArmorLegacyPlural.other": "Competenze in Armature",
-  "DND5E.TraitArmorLegacyProf": "Competenze in Armature",
-  "DND5E.TraitCIPlural.one": "Immunità alla Condizione",
-  "DND5E.TraitCIPlural.other": "Immunità alle Condizioni",
-  "DND5E.TraitConfig": "Configura {trait}",
-  "DND5E.TraitConfigChooseAnyCounted": "qualsiasi {count} {type}",
-  "DND5E.TraitConfigChooseAnyUncounted": "qualsiasi {type}",
-  "DND5E.TraitConfigChooseList": "{count} da {list}",
-  "DND5E.TraitConfigChooseOther": "{count} altri {type}",
-  "DND5E.TraitConfigChooseWrapper": "Scegli {choices}",
-  "DND5E.TraitDIPlural.one": "Immunità al Danno",
-  "DND5E.TraitDIPlural.other": "Immunità ai Danni",
-  "DND5E.TraitDMPlural.one": "Modifica al Danno",
-  "DND5E.TraitDMPlural.other": "Modifiche al Danno",
-  "DND5E.TraitDRPlural.one": "Resistenza al Danno",
-  "DND5E.TraitDRPlural.other": "Resistenze al Danno",
-  "DND5E.TraitDVPlural.one": "Vulnerabilità al Danno",
-  "DND5E.TraitDVPlural.other": "Vulnerabilità ai Danni",
-  "DND5E.TraitGenericPlural.one": "Tratto",
-  "DND5E.TraitGenericPlural.other": "Tratti",
-  "DND5E.TraitLanguagesPlural.one": "Lingua",
-  "DND5E.TraitLanguagesPlural.other": "Lingue",
-  "DND5E.TraitSave": "Aggiorna",
-  "DND5E.TraitSavesPlural.one": "Competenza nel Tiro Salvezza",
-  "DND5E.TraitSavesPlural.other": "Competenze nei Tiri Salvezza",
-  "DND5E.TraitSelectorSpecial": "Speciale (Diviso con Punto e Virgola)",
-  "DND5E.TraitSkillsPlural.one": "Competenza nelle Abilità",
-  "DND5E.TraitSkillsPlural.other": "Competenze nelle Abilità",
-  "DND5E.TraitToolPlural.one": "Competenza negli Strumenti",
-  "DND5E.TraitToolPlural.other": "Competenze negli Strumenti",
-  "DND5E.TraitToolProf": "Competenze negli Strumenti",
-  "DND5E.TraitWeaponPlural.one": "Competenza nelle Armi",
-  "DND5E.TraitWeaponPlural.other": "Competenze nelle Armi",
-  "DND5E.TraitWeaponProf": "Competenze nelle Armi",
-  "DND5E.Traits": "Tratti",
-  "DND5E.TraitsChosen": "Tratti Scelti",
   
+  "DND5E.TRAIT": {
+    "Action": {
+      "Configure": "Configura {trait}"
+    },
+    "All": "Tutti i {category}",
+    "Armor": {
+      "one": "Addestramento nelle armature",
+      "other": "Addestramento nelle armature",
+      "title": "Addestramento nelle armature"
+    },
+    "ArmorLegacy": {
+      "one": "Competenza nelle armature",
+      "other": "Competenze nelle armature",
+      "title": "Competenze nelle armature"
+    },
+    "Condition": {
+      "Immunity": {
+        "one": "Immunità alle condizioni",
+        "other": "Immunità alle condizioni",
+        "title": "Immunità alle condizioni"
+      }
+    },
+    "Choose": {
+      "AnyCounted": "qualsiasi {count} {type}",
+      "AnyUncounted": "qualsiasi {type}",
+      "List": "{count} da {list}",
+      "Other": "{count} altri {type}",
+      "Wrapper": "Scegli {choices}"
+    },
+    "Chosen": "Tratti scelti",
+    "Damage": {
+      "Immunity": {
+        "one": "Immunità ai danni",
+        "other": "Immunità ai danni",
+        "title": "Immunità ai danni"
+      },
+      "Modification": {
+        "one": "Modifica ai danni",
+        "other": "Modifiche ai danni",
+        "title": "Modifica ai danni"
+      },
+      "Resistance": {
+        "one": "Resistenza ai danni",
+        "other": "Resistenze ai danni",
+        "title": "Resistenze ai danni"
+      },
+      "Vulnerability": {
+        "one": "Vulnerabilità ai danni",
+        "other": "Vulnerabilità ai danni",
+        "title": "Vulnerabilità ai danni"
+      }
+    },
+    "Generic": {
+      "one": "Tratto",
+      "other": "Tratti",
+      "title": "Tratti"
+    },
+    "Language": {
+      "one": "Lingua",
+      "other": "Lingue",
+      "title": "Lingue"
+    },
+    "Save": {
+      "one": "Competenza nei tiri salvezza",
+      "other": "Competenze nei tiri salvezza",
+      "title": "Competenze nei tiri salvezza"
+    },
+    "Skill": {
+      "one": "Competenza nelle abilità",
+      "other": "Competenze nelle abilità",
+      "title": "Competenze nelle abilità"
+    },
+    "Tool": {
+      "one": "Competenza negli strumenti",
+      "other": "Competenze negli strumenti",
+      "title": "Competenze negli strumenti"
+    },
+    "Weapon": {
+      "one": "Competenza nelle armi",
+      "other": "Competenze nelle armi",
+      "title": "Competenze nelle armi"
+    }
+  },
+  
+  "DND5E.Traits": "Tratti",
+   
   "DND5E.TRANSFORM": {
   "Action": {
     "Restore": "Ripristina Trasformazione",
@@ -6576,6 +6630,41 @@
 "DND5E.WeaponSimpleProficiency": "Semplice",
 "DND5E.WeaponSimpleR": "Semplice a Distanza",
 "DND5E.Weight": "Peso",
+
+"DND5E.WELCOME": {
+  "Button": "Schermata di benvenuto",
+  "Message": {
+    "Bugs": "<p>Hai riscontrato dei problemi? Ottieni assistenza dalla community sul <a href=\"{discord}\">Discord ufficiale</a> oppure segnala il problema nel <a href=\"{issues}\">tracker delle segnalazioni</a> del sistema.</p>",
+    "Changes": "<p>Scopri le <a href=\"{changes}\">modifiche</a> introdotte nell'ultima versione.</p>",
+    "Content": "<p>Vai alla scheda <strong>Contenuti ufficiali</strong> per vedere quali manuali di D&D 5e sono disponibili e abilitarli in questo mondo.</p>",
+    "Documentation": "<p>Consulta la <a href=\"{wiki}\">Wiki della documentazione</a> per informazioni dettagliate su come utilizzare il sistema.</p>",
+    "Introduction": "<p>Benvenuto nel sistema di gioco ufficiale per <strong>Dungeons & Dragons Quinta Edizione</strong>.</p>",
+    "MoreContent": "<p>Trova altri contenuti per Dungeons & Dragons Quinta Edizione sul <a href=\"{marketplace}\">Marketplace ufficiale di Foundry VTT</a>.</p>"
+  },
+  "Module": {
+    "Enabled": "Abilitato",
+    "NotInstalled": "Non installato"
+  },
+  "Section": {
+    "adventures": "Avventure",
+    "core": "Manuali delle regole fondamentali",
+    "expanded": "Manuali delle regole espansi",
+    "more": "Altri contenuti"
+  },
+  "Settings": {
+    "Label": "Impostazioni",
+    "Metric": {
+      "Hint": "Utilizza il sistema metrico come impostazione predefinita per distanze, pesi e volumi.",
+      "Label": "Usa il sistema metrico"
+    }
+  },
+  "Tab": {
+    "main": "Benvenuto",
+    "modules": "Contenuti ufficiali"
+  },
+  "Title": "Benvenuto in D&D 5e"
+},
+
 "DND5E.WhisperedTo": "Sussurrato a",
 "DND5E.Wiki": "Wiki",
 "DND5E.available": "disponibile",
@@ -6593,10 +6682,11 @@
   "CheckShort": "{check}",
   "CheckLong": "Prova {check}",
   "CheckUsing": "{check} uso {tool}",
-  "DamageExtended": "<em>Colpo:</em> {damage} danno",
+  "DamageAverage": "{average} <span class=\"formula-group\">({formula})</span> {type}",
   "DamageDouble": "{first} più {second}",
+  "DamageExtended": "<em>Colpisce:</em> {damage}",
+  "DamageLong": "{damage} danni",
   "DamageShort": "{formula} {type}",
-  "DamageLong": "{average} <span class=\"formula-group\">({formula})</span> {type}",
   "DC": "CD {dc} {check}",
   "DCPassiveShort": "CD {dc} {check} passiva ",
   "DCPassiveLong": "punteggio passivo {check} di {dc} o superiore",
