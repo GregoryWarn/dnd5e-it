@@ -1090,7 +1090,7 @@
                 "required": "Scudo Richiesto"
               }
             },
-            "label": "Formule"
+            "label": "Formule CA"
           },
           "label": "Classe Armatura",
           "min": {
@@ -2509,7 +2509,8 @@
   "DND5E.DamageModification": {
     "Label": "Modifica del Danno",
     "Hint": "Formule per quantità che verranno aggiunte al danno di tipo applicato a questo personaggio. I valori negativi ridurranno il danno ricevuto.",
-    "BypassHint": "Queste proprietà delle armi bypasseranno la modifica del danno per danni fisici."
+    "BypassHint": "Queste proprietà delle armi bypasseranno la modifica del danno per danni fisici.",
+    "Formatter": "Modifica Danni {name}"
   },
   "DND5E.DamageRoll": "Tiro del Danno",
   "DND5E.DamageThreshold": "Soglia del Danno",
