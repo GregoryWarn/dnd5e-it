@@ -905,7 +905,7 @@
         "choices": {
           "hint": "I seguenti tratti saranno presentati come scelte al giocatore.",
           "label": "Scelte",
-          "FIELDS": {
+          "element": {
             "count": {
               "label": "Conteggio"
             },
