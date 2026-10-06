@@ -4731,7 +4731,7 @@
 "DND5E.SavingThrow": "Tiro Salvezza",
 "DND5E.SavingThrowDC": "CD {dc} Tiro Salvezza {ability}",
 "DND5E.SavingThrowRoll": "Tiro Salvezza {ability}",
-"DND5E.SavingThrowShort": "Salva",
+"DND5E.SavingThrowShort": "TS",
 "DND5E.SaveDC": "CD {dc} {ability}",
 "DND5E.SavePromptTitle": "Tiro Salvezza {ability}",
 "DND5E.ScalingFormula": "Formula Scalabilità",
