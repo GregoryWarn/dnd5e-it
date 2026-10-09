@@ -12,6 +12,8 @@
   "characterPl": "PG",
   "encounter": "Incontro",
   "encounterPl": "Incontri",
+  "faction": "Fazione",
+  "factionPl": "Fazioni",
   "group": "Gruppo",
   "groupPl": "Gruppi",
   "npc": "PNG",
@@ -56,6 +58,8 @@
   "racePl": "Specie",
   "raceLegacy": "Razza",
   "raceLegacyPl": "Razze",
+  "renown": "Fama",
+  "renownPl": "Fama",
   "spell": "Incantesimo",
   "spellPl": "Incantesimi",
   "subclass": "Sottoclasse",
@@ -67,6 +71,7 @@
 },
 
 "TYPES.RegionBehavior": {
+  "dnd5e.antimagic": "Antimagia",
   "dnd5e.applyActiveEffect": "Applica Active Effect (5e)",
   "dnd5e.difficultTerrain": "Terreno Difficile",
   "dnd5e.rotateArea": "Ruota Area"
@@ -74,8 +79,9 @@
 
 "TYPES.HINTS": {
   "RegionBehavior": {
+    "dnd5e.antimagic": "Impedisce l'utilizzo di qualsiasi capacità magica o oggetto magico all'interno della Regione.",
     "dnd5e.applyActiveEffect": "Applica Active Effects ai Token mentre sono all'interno della Regione e soddisfano determinati criteri.",
-    "dnd5e.difficultTerrain": "Contrassegna una regione come terreno difficile e impostane il tipo e chi ne è interessato.",
+    "dnd5e.difficultTerrain": "Contrassegna una Regione come Terreno Difficile, impostane il tipo e chi ne è interessato.",
     "dnd5e.rotateArea": "Ruota token, tessere, muri e altri oggetti attorno a un punto di rotazione centrale."
   }
 },
@@ -2457,6 +2463,10 @@
       "Hint": "Queste proprietà dell'arma aggireranno la resistenza ai danni per i danni fisici.",
       "Label": "Bypass Fisici"
    },
+    "Resistance": {
+      "Falling": "Caduta",
+      "UniqueCategory": "Tipologie uniche"
+    },
     "Scaling": {
       "Half": "Ogni Altra Livello",
       "HalfCantrip": "Scalabilità Mezzo Cantrip",
@@ -2711,6 +2721,14 @@
         "Custom": "Personalizzato",
         "Rules": "Regole",
         "Standard": "Standard"
+      },
+      "Key": {
+        "Attack": "Tiri per Colpire",
+        "Check": "Prove Caratteristica",
+        "D20": "Prove con D20",
+        "Damage": "Tiri per Danni",
+        "Healing": "Tiri Guarigione",
+        "Save": "Tiri Salvezza"
       },
       "Label": "Modifica",
       "Title": "{effect} Modifica #{number}",
@@ -3304,6 +3322,12 @@
     }
   },
 
+  "DND5E.FACTION": {
+    "Action": {
+      "AddMember": "Aggiungi Membro"
+    }
+  },
+  
   "DND5E.FALLING": {
     "DamageFlavor": "Caduto da {distance}",
     "MovementAction": "Caduta",
@@ -3380,8 +3404,11 @@
     },
     "Monster": "Mostro",
     "PietyTrait": "Tratto di Pietà",
-    "Species": "Specie",
-    "SpeciesLegacy": "Razza",
+    "Species": {
+      "Label": "Privilegio Specie",
+      "LabelLegacy": "Privilegio Razza",
+      "Lineage": "Lignaggio"
+    },
     "SupernaturalGift": {
       "Label": "Dono Sovrannaturale",
       "Blessing": "Benedizione",
@@ -3440,6 +3467,7 @@
   "DND5E.Filter": "Filtra",
   "DND5E.FilterClear": "Pulisci Filtri",
   "DND5E.FilterGroupCategory": "Raggruppa per Categoria",
+  "DND5E.FilterGroupFaction": "Raggruppa per Fazione",
   "DND5E.FilterGroupOrigin": "Raggruppa per Origine",
   "DND5E.FilterGroupAction": "Raggruppa per Azione",
   "DND5E.FilterNoSpells": "Nessun incantesimo trovato per questo set di filtri.",
@@ -3574,8 +3602,8 @@
     }
   },
   "Warning": {
-    "PhysicalItemOnly": "Sono supportati solo gli elementi fisici.",
-    "PlaceMembers": "Errore posizionamento token nella scena."
+    "PlaceMembers": "Errore posizionamento token nella scena.",
+    "SupportedItemOnly": "Sono supportati solo gli elementi fisici e quelli legati alla fama.",
   }
 },
 "DND5E.Habitat": {
@@ -4346,6 +4374,28 @@
   }
 },
 
+"DND5E.RENOWN": {
+  "Action": {
+    "AddModifier": "Aggiungi modificatore Fama",
+    "DeleteModifier": "Elimina modificatore Fama"
+  },
+  "Empty": "Nessun modificatore di Fama presente. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungerne uno.",
+  "FIELDS": {
+    "modifiers": {
+      "element": {
+        "faction.label": "Fazione",
+        "value": {
+          "label": "Valore",
+          "placeholder": "0"
+        }
+      },
+      "label": "Modificatori"
+    }
+  },
+  "Search": "Cerca Fama",
+  "Unknown": "Sconosciuto"
+},
+  
 "DND5E.Remaining": "Rimanenti",
 "DND5E.RequiredMaterials": "Materiali Richiesti",
 "DND5E.Requirements": "Requisiti",
@@ -4712,6 +4762,7 @@
   "Container": "Scheda Contenitore D&D 5e",
   "DifficultTerrain": "Scheda terreno difficile D&D 5e",
   "Encounter": "Scheda Incontro D&D 5e",
+  "Faction": "Scheda Fazione D&D 5e",
   "Group": "Scheda Gruppo D&D 5e",
   "Item": "Scheda Oggetto D&D 5e",
   "JournalEntry": "Scheda Voce Diario D&D 5e",
@@ -6732,6 +6783,7 @@
 },
 
 "EFFECT.DND5E": {
+  "StatusAntimagic": "Antimagia",
   "StatusBleeding": "Sanguinamento",
   "StatusBloodied": "Sanguinante",
   "StatusBurning": "Bruciando",
@@ -7095,6 +7147,10 @@
       "Hint": "Permette ai giocatori di trasformare i propri personaggi. I giocatori devono anche avere il permesso base Crea Personaggio e Crea Token.",
       "Name": "Consenti Trasformazione"
     }
+  },
+  "RENOWN": {
+    "Hint": "Abilita monitoraggio opzionale della Fama per personaggi e gruppi.",
+    "Name": "Punteggi Fama"
   },
   "RULESVERSION": {
     "Name": "Versione delle Regole",
