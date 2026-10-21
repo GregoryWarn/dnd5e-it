@@ -2928,6 +2928,21 @@
      "magical": {
         "hint": "Questo incantamento è magico e dovrebbe essere disattivato quando la magia non è disponibile.",
         "label": "Magico"
+      },
+      "rider": {
+        "activities": {
+          "hint": "Queste attività aggiuntive verranno aggiunte all'oggetto incantato quando questo incantamento viene applicato e rimosse quando l'incantamento viene rimosso.",
+          "label": "Attività aggiuntive"
+        },
+        "effects": {
+          "hint": "Questi effetti aggiuntivi verranno aggiunti all'oggetto incantato quando questo incantamento viene applicato e rimossi quando l'incantamento viene rimosso.",
+          "label": "Effetti aggiuntivi"
+        },
+        "items": {
+          "hint": "Questi elementi aggiuntivi verranno aggiunti alla creatura quando uno dei suoi oggetti viene incantato e verranno rimossi se l'incantamento viene rimosso.",
+          "label": "Elementi aggiuntivi"
+        },
+        "label": "Collegato"
       }
     },
     "Items": {
@@ -2939,6 +2954,9 @@
       "LongRest": "Riposo Lungo",
       "Never": "Mai",
       "ShortRest": "Riposo Breve"
+    },
+    "Rider": {
+      "Activity": "Attività Associata all'Incantamento"
     },
     "Transfer": {
       "DisabledTooltip": "Questo Incantamento è attualmente selezionato in una o più Attività di Incantamento del suo Oggetto e pertanto non può essere applicato direttamente all'Oggetto.",
