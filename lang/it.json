@@ -2719,6 +2719,7 @@
       "Configuration": "Configurazione Modifica",
       "Group": {
         "Custom": "Personalizzato",
+        "DamageApplicationOptions": "Opzioni Applicazione Danno",
         "Rules": "Regole",
         "Standard": "Standard"
       },
@@ -2738,6 +2739,18 @@
         },
         "Bonus": {
           "Label": "Bonus"
+        },
+        "DowngradeImmunityResistance": {
+          "Label": "Riduci Immunità e Resistenza"
+        },
+        "IgnoreImmunity": {
+          "Label": "Ignora Immunità"
+        },
+        "IgnoreResistance": {
+          "Label": "Ignora Resistenza"
+        },
+        "IgnoreVulnerability": {
+          "Label": "Ignora Vulnerabilità"
         },
         "Maximum": {
           "Label": "Massimo Tiro"
@@ -3970,6 +3983,10 @@
     "Standard": "Lingue Standard"
   },
   "Communication": {
+     "Formatter": {
+      "Units": "Unità {name}",
+      "Value": "Distanza {name}"
+    },
     "Label": "Comunicazione a Distanza",
     "Telepathy": "Telepatia"
   },
@@ -5290,6 +5307,9 @@
     "CreatureChanges": {
       "Label": "Modifiche Creatura",
       "Hint": "Modifiche che verranno fatte alla creatura evocata. Qualsiasi riferimento @ usato nelle seguenti formule si baserà sulle statistiche dell'evocatore. Le statistiche delle creature evocate possono essere referenziate usando @summon (es. @summon.attributes.hd.max per fare riferimento al numero di dadi vita della creatura)."
+    },
+    "DamageChanges": {
+      "Label": "Cambiamenti Danno"
     },
     "Hint": "Evoca una nuova creatura sulla scena.",
     "ItemChanges": {
