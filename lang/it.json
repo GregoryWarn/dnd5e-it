@@ -2833,6 +2833,7 @@
   },
   "Tab": "Effetti",
   "Warning": {
+    "DependentsWithoutGM": "Rimuovere {name} rimuove anche elementi, attività o effetti associati e richiede un GM attivo.",
     "RollCondition": "Le condizioni degli effetti non possono fare riferimento alle proprietà 'roll.'. Sposta questa condizione nelle singole modifiche affinché l'effetto venga applicato.",
     "StatusCondition": "Gli effetti che conferiscono condizioni di stato non possono essere a loro volta condizionati da condizioni di stato. Sposta questa condizione nelle singole modifiche affinché l'effetto venga applicato."
    }
