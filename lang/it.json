@@ -667,6 +667,10 @@
       }
     },
     "ItemGrant": {
+      "DefaultTitle": {
+        "ClassFeatures": "Privilegi Classe",
+        "SubclassFeatures": "Privilegi Sottoclasse"
+      },
       "Details": "Dettagli della concessione",
       "DropHint": "Trascina qui gli oggetti per aggiungerli alla lista concessa da questo avanzamento.",
       "FIELDS": {
