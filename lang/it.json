@@ -1744,11 +1744,26 @@
   },
   "Activities": "Attività",
   "Button": {
-    "rollAttack": "Attacco",
-    "rollCheck": "Prova Caratteristica",
-    "rollDamage": "Danni",
-    "rollFormula": "Tiro",
-    "rollSave": "Tiro salvezza"
+    "rollAttack": {
+      "Full": "Attacco",
+      "Short": "Attacco"
+    },
+    "rollCheck": {
+      "Full": "Prova Caratteristica",
+      "Short": "Prova"
+    },
+    "rollDamage": {
+      "Full": "Danni",
+      "Short": "Danni"
+    },
+    "rollFormula": {
+      "Full": "Tiro",
+      "Short": "Tiro"
+    },
+    "rollSave": {
+      "Full": "Tiro Salvezza",
+      "Short": "TS"
+    }
   },
   "Deltas": {
     "Created": "Elemento Creato",
@@ -1767,6 +1782,7 @@
   },
   "Row": {
     "Actions": "Azioni dell'oggetto",
+    "Additional": "Azioni Aggiuntive",
     "Items": "Oggetti",
     "Properties": "Proprietà dell'oggetto",
     "Roll": "Tiro Dado",
@@ -1982,7 +1998,10 @@
   "DND5E.CONCENTRATION": {
     "Abbreviation": "C",
     "Action": {
-      "Break": "Interrompi la concentrazione",
+      "Break": {
+        "Full": "Interrompi Concentrazione",
+        "Short": "Interrompi"
+      },
       "End": "Termina la concentrazione"
     },
     "Description": "Stai mantenendo la concentrazione sugli effetti di {type} '{name}'.",
@@ -2203,10 +2222,16 @@
       }
     },
     "Action": {
-      "ConsumeResource": "Consumare Risorsa",
+      "ConsumeResource": {
+        "Full": "Consuma Risorsa",
+        "Short": "Consuma"
+      },
       "Create": "Crea Obiettivo di Consumo",
       "Delete": "Elimina Obiettivo di Consumo",
-      "RefundResource": "Rimborsa Risorsa"
+      "RefundResource": {
+        "Full": "Rimborsa Risorsa",
+        "Short": "Rimborsa"
+      }
     },
     "Empty": "Nessun consumo associato. Usa il pulsante <i class=\"fas fa-plus\"></i> qui sopra per aggiungere risorse da consumare.",
     "Scaling": {
@@ -3718,7 +3743,10 @@
       }
     }
   },
-  "HealingButton": "Guarigione",
+  "HealingButton": {
+    "Full": "Guarigione",
+    "Short": "Cura"
+  },
   "HealingRoll": "Tiro Guarigione",
   "Hint": "Guarisci una creatura",
   "Title": "Guarire",
@@ -4045,7 +4073,10 @@
 
 "DND5E.LegendaryResistance": {
   "Action": {
-    "Resist": "Resistenza Leggendaria"
+    "Resist": {
+      "Full": "Resistenza Leggendaria",
+      "Short": "Resistenza"
+    }
   },
   "Label": "Resistenza Leggendaria",
   "LabelPl": "Resistenze Leggendarie",
@@ -5396,7 +5427,10 @@
   
   "DND5E.TARGET": {
     "Action": {
-      "PlaceTemplate": "Posiziona Modello Misurato"
+      "PlaceTemplate": {
+        "Full": "Posiziona Modello Misurazione",
+        "Short": "Area"
+      }
     },
     "Count": {
       "Any": "Qualsiasi",
