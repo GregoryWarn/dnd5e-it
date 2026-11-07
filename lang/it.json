@@ -3664,7 +3664,7 @@
   },
   "Warning": {
     "PlaceMembers": "Errore posizionamento token nella scena.",
-    "SupportedItemOnly": "Sono supportati solo gli elementi fisici e quelli legati alla fama.",
+    "SupportedItemOnly": "Sono supportati solo gli elementi fisici e quelli legati alla fama."
   }
 },
 "DND5E.Habitat": {
